@@ -1,24 +1,34 @@
 // import { useState } from 'react'
-import SectionContainer from "./components/SectionContainer"
+import SectionSeparator from "./components/SectionSeparator"
+import Navbar from "./components/Navbar"
+import Footer from "./components/Footer"
+
+import PageHero from "./sections/PageHero"
+import Characters from "./sections/Characters"
+import NewsAndInfo from "./sections/NewsAndInfo"
+import GameplayFeature from "./sections/GameplayFeature"
+import Background from "./sections/Background"
 
 function App() {
   return (
     <>
-      <SectionContainer className="h-screen" backgroundImage="url('/page-hero-bg.png')">
-        <img src="/logo.svg" className="w-1/2" alt="Brimvahl Crown Logo" />
-      </SectionContainer>
-      <SectionContainer className="h-screen" backgroundImage="url('/characters-section-bg.png')">
-        <h1 className="font-bold text-5xl text-white">Characters</h1>
-      </SectionContainer>
-      <SectionContainer className="h-screen" backgroundImage="url('/news-and-info-section-bg.png')">
-        <h1 className="font-bold text-5xl text-white">News and Info</h1>
-      </SectionContainer>
-      <SectionContainer className="h-screen" backgroundImage="url('/gameplay-feature-section-bg.png')">
-        <h1 className="font-bold text-5xl text-white">Gameplay Feature</h1>
-      </SectionContainer>
-      <SectionContainer className="h-screen" backgroundImage="url('/background-section-bg.png')">
-        <h1 className="font-bold text-5xl text-white">Background</h1>
-      </SectionContainer>
+      <Navbar />
+      
+      <PageHero /> 
+      <SectionSeparator />
+
+      <Characters />
+      <SectionSeparator />
+
+      <NewsAndInfo />
+      <SectionSeparator />
+
+      <GameplayFeature />
+      <SectionSeparator />
+      
+      <Background />
+
+      <Footer />
     </>
   )
 }
