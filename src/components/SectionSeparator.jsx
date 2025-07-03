@@ -1,3 +1,7 @@
 export default function SectionSeparator() {
-	return <img src="/section-separator.png" className="w-full" alt="Brimvahl-Crown-Section-Separator" />
+	return (
+		<div className="w-full flex gap-6 bg-stone-950 h-[90px]">
+			<img src="/fancy-border-2.png" className="w-full h-full" alt="Brimvahl-Crown-Fancy-Border" />
+		</div>
+	)
 }
