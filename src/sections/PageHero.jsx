@@ -15,7 +15,7 @@ export default function PageHero() {
 				<div className="flex flex-col justify-center items-center w-1/2">
 					{/* Logo and text card */}
 					<div className="w-full flex flex-col items-center justify-center">
-						<img src="/logo.svg" className="w-11/12 z-5" alt="Brimvahl-Crown-Logo" />
+						<img src="/logo-gold.png" className="w-11/12 z-5" alt="Brimvahl-Crown-Logo" />
 						<div className="relative flex flex-col items-center w-full mt-[-150px]">
 							<img src="/page-hero-text-card.png" className="w-full h-full absolute top-0" alt="Brimvahl-Crown-Text-Card" />
 							<div className="w-3/4 text-lg relative py-18">	
