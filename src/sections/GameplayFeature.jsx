@@ -5,6 +5,8 @@ import { Pagination } from 'swiper/modules';
 import 'swiper/css/pagination';
 
 import SectionContainer from "../components/SectionContainer"
+import ArrowLeft from "../components/ArrowLeft";
+import ArrowRight from "../components/ArrowRight";
 
 const features = [
 	{ id: 1, image: '/gameplay-features/battlearena.png', desc: 'Visual storytelling that tells about the main character development and adventures from the beginning. The lore and story then getting more intense and dramatic, we bring user to enjoy the best experiences.' },
@@ -71,12 +73,8 @@ export default function GameplayFeature() {
 					))}
 
 					{/* Navigations */}
-					<button onClick={handlePrev} className="absolute left-15 z-10 top-80 hover:drop-shadow-[0px_0px_5px_oklch(79.5%_0.184_86.047)]">
-							<img src="/arrow-left.png" className="w-20" alt="Brimvahl-Crown-Arrow" />
-					</button>
-					<button onClick={handleNext} className="absolute right-15 z-10 top-80 hover:drop-shadow-[0px_0px_5px_oklch(79.5%_0.184_86.047)]">
-						<img src="/arrow-right.png" className="w-20" alt="Brimvahl-Crown-Arrow" />
-					</button>
+					<ArrowLeft onClick={handlePrev} className="absolute left-5 z-10 top-84" />
+					<ArrowRight onClick={handleNext} className="absolute right-5 z-10 top-84" />
 				</Swiper>
 
 				{/* Card */}

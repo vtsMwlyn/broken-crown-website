@@ -5,6 +5,8 @@ import { Pagination } from 'swiper/modules';
 import 'swiper/css/pagination';
 
 import SectionContainer from "../components/SectionContainer"
+import ArrowLeft from "../components/ArrowLeft";
+import ArrowRight from "../components/ArrowRight";
 
 const news = [
 	{ id: 1, type: 'image', source: '/news-and-info/livingroom.png', desc: 'Concept artists are developing variative visual story backgrounds. The living room is one of them, where Kazmiel spend her morning and night, before and after her adventure.' },
@@ -43,7 +45,7 @@ export default function NewsAndInfo() {
 
 	return (
 		<SectionContainer className="min-h-screen" id="news-and-info" backgroundImage="url('/news-and-info-section-bg.png')">
-			<div className="h-full w-full flex flex-col items-center justify-center	 relative mb-20">
+			<div className="w-full flex flex-col items-center justify-center	relative mb-20">
 				{/* Background */}
 				<img src="/wooden-board.png" className="w-3/4 h-[650px] absolute top-20" alt="Brimvahl-Crown-News-And-Info-Board" />
 
@@ -91,17 +93,13 @@ export default function NewsAndInfo() {
 					</Swiper>
 
 					{/* Navigations */}
-					<button onClick={handlePrev} className="absolute left-5 z-10 top-88 hover:drop-shadow-[0px_0px_5px_oklch(79.5%_0.184_86.047)]">
-							<img src="/arrow-left.png" className="w-15" alt="Brimvahl-Crown-Arrow" />
-					</button>
-					<button onClick={handleNext} className="absolute right-5 z-10 top-88 hover:drop-shadow-[0px_0px_5px_oklch(79.5%_0.184_86.047)]">
-						<img src="/arrow-right.png" className="w-15" alt="Brimvahl-Crown-Arrow" />
-					</button>
+					<ArrowLeft onClick={handlePrev} className="absolute left-5 z-10 top-84" />
+					<ArrowRight onClick={handleNext} className="absolute right-5 z-10 top-84" />
 				</div>
 
 				{/* Card */}
 				<div className="relative flex flex-col items-center w-3/5 mt-10">
-					<img src="/page-hero-text-card.png" className="w-full h-full absolute top-0" alt="Brimvahl-Crown-Text-Card" />
+					<img src="/normal-text-card.png" className="w-5/6 h-5/6 absolute top-4" alt="Brimvahl-Crown-Text-Card" />
 					<div className="w-3/4 text-lg relative py-18">
 						<p className="w-full">{activeNews ? activeNews.desc : 'Concept artists are developing variative visual story backgrounds. The living room is one of them, where Kazmiel spend her morning and night, before and after her adventure.'}</p>
 					</div>

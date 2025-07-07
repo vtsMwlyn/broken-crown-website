@@ -32,3 +32,29 @@ button, a {
   background-color: #A5784C !important;
   opacity: 1;
 }
+
+.animate-arrow-left {
+  animation: float-left-right 1.5s ease-in-out infinite;
+}
+
+.animate-arrow-right {
+  animation: float-right-left 1.5s ease-in-out infinite;
+}
+
+@keyframes float-left-right {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+}
+
+@keyframes float-right-left {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+}

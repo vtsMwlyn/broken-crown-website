@@ -1,4 +1,5 @@
-// import { useState } from 'react'
+import 'bootstrap-icons/font/bootstrap-icons.css';
+
 import SectionSeparator from "./components/SectionSeparator"
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"

@@ -3,6 +3,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
 
 import SectionContainer from "../components/SectionContainer"
+import ArrowLeft from "../components/ArrowLeft";
+import ArrowRight from "../components/ArrowRight";
 
 // Sample data
 const characters = [
@@ -44,21 +46,20 @@ export default function Characters() {
 
 	return (
 		<SectionContainer className="min-h-screen" id="characters" backgroundImage="url('/characters-section-bg.png')">
-			{/* Border */}
-			<div className="absolute h-full w-full p-10">
-				<img src="/fancy-border.png" className="h-full w-full" alt="Brimvahl-Crown-Fancy-Border" />
-			</div>
+			<div className="w-full flex flex-col items-center relative z-10 py-20">
+				{/* Border */}
+				<div className="absolute top-0 z-0 h-full w-full p-10">
+					<img src="/fancy-border.png" className="h-full w-full" alt="Brimvahl-Crown-Fancy-Border" />
+				</div>
 
-			{/* Main content */}
-			<div className="h-full w-full flex flex-col items-center relative z-10">
 				{/* Section Title */}
-				<div className="relative mt-3 h-1/6">
+				<div className="relative mt-[-70px] h-1/6">
 					<img src="/title-card.png" className="w-[350px]" alt="Brimvahl-Crown-Title-Card" />
 					<div className="absolute top-6 w-full flex justify-center items-center text-4xl">Characters</div>
 				</div>
 
 				{/* Character showcase */}
-				<div className="w-4/5 flex items-center h-4/6">
+				<div className="w-4/5 flex items-center h-4/6 mt-20 relative z-5">
 					{/* Left side */}
 					<div className="w-3/5 flex flex-col items-center">
 						{/* Character name */}
@@ -74,9 +75,7 @@ export default function Characters() {
 
 						{/* Selector */}
 						<div className="flex gap-5 justify-center w-3/4 mt-6" id="character-icon">
-							<button onClick={handlePrev} className="w-1/6 hover:drop-shadow-[0px_0px_5px_oklch(79.5%_0.184_86.047)]">
-								<img src="/arrow-left.png" className="w-15" alt="Brimvahl-Crown-Arrow" />
-							</button>
+							<ArrowLeft onClick={handlePrev} />
 
 							<Swiper
 								onSlideChange={handleSlideChange}
@@ -94,9 +93,7 @@ export default function Characters() {
 								))}
 							</Swiper>
 
-							<button onClick={handleNext} className="w-1/6 hover:drop-shadow-[0px_0px_5px_oklch(79.5%_0.184_86.047)]">
-								<img src="/arrow-right.png" className="w-15" alt="Brimvahl-Crown-Arrow" />
-							</button>
+							<ArrowRight onClick={handleNext} />
 						</div>
 					</div>
 
