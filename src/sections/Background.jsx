@@ -1,11 +1,11 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper-bundle.css';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
+import { PageFlip } from 'page-flip';
+import '../flipbook.css'; // Your styles
 
 import SectionContainer from "../components/SectionContainer"
 import ArrowLeft from "../components/ArrowLeft";
 import ArrowRight from "../components/ArrowRight";
-import { useState } from 'react';
+import { useEffect } from 'react';
 
 const backgrounds = [
 	{ id: 1, desc: 'The game is taking middle-european age style as background. You can encounter these aspect in the battle arena and visual story background.' },
@@ -17,35 +17,128 @@ const galeries = [
 	['/background/style1.png', '/background/inspired1.png', '/background/tools1.png'],
 	['/background/style2.png', '/background/inspired2.png', '/background/tools2.png'],
 	['/background/style3.png', '/background/inspired3.png', '/background/tools3.png'],
-]
+];
+
+function Flipbook({ onNextClick, onPrevClick }) {
+	const bookRef = useRef(null);
+	const pageFlipInstance = useRef(null);
+	
+	const handleNextPage = () => {
+		if (pageFlipInstance.current) {
+			onNextClick();
+			pageFlipInstance.current.flipNext();
+		}
+	};
+
+	const handlePrevPage = () => {
+		if (pageFlipInstance.current) {
+			onPrevClick();
+			pageFlipInstance.current.flipPrev();
+		}
+	};
+
+	useEffect(() => {
+		const timer = setTimeout(() => {
+			if (bookRef.current) {
+				pageFlipInstance.current = new PageFlip(bookRef.current, {
+					width: 480,
+					height: 550,
+					showCover: false, // <-- Change this to false
+					maxShadowOpacity: 0.5,
+				});
+
+				const pages = document.querySelectorAll('.my-page');
+				if (pages.length > 0) {
+					pageFlipInstance.current.loadFromHTML(pages);
+
+					// Get the total number of pages
+					const pageCount = pageFlipInstance.current.getPageCount();
+
+					// Set initial z-index for all pages
+					document.querySelectorAll('.my-page').forEach((page, index) => {
+						page.style.zIndex = pageCount - index;
+					});
+
+					// Add an event listener for the 'flip' event
+					pageFlipInstance.current.on('flip', (e) => {
+						// e.data is the page number that was just flipped (e.g., 2)
+						const currentPageNum = e.data;
+
+						document.querySelectorAll('.my-page').forEach((page, index) => {
+							if (index <= currentPageNum) {
+								// Set z-index for pages on the left (already flipped)
+								page.style.zIndex = index + 1;
+							} else {
+								// Set z-index for pages on the right
+								page.style.zIndex = pageCount - index;
+							}
+						});
+					});
+				}
+			}
+		}, 100);
+
+		return () => {
+			clearTimeout(timer);
+			if (pageFlipInstance.current) {
+				pageFlipInstance.current.destroy();
+				pageFlipInstance.current = null;
+			}
+		};
+	}, []);
+
+	return (
+		<div className="flipbook-container cursor-grab" ref={bookRef}>
+			{/* Dynamic pages */}
+			{galeries.map((gallery, index) => (
+				<div key={index}>
+					<div className="my-page">
+						<div className="page-content">
+							<div className="flex flex-col w-3/4 h-full gap-10">
+								<div className="bg-black w-full h-3/5" >
+									<img src={gallery[0]} className="w-full h-full" style={{ objectFit: 'cover', objectPosition: 'center' }} alt="Brimvahl-Crown-Background-Galery" />
+								</div>
+								<div className="bg-black w-full h-2/5" >
+									<img src={gallery[1]} className="w-full h-full" style={{ objectFit: 'cover', objectPosition: 'center' }} alt="Brimvahl-Crown-Background-Galery" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div className="my-page">
+						<div className="page-content">
+							<div className="bg-black h-full w-3/4" >
+								<img src={gallery[2]} className="w-full h-full" style={{ objectFit: 'cover', objectPosition: 'center' }} alt="Brimvahl-Crown-Background-Galery" />
+							</div>
+						</div>
+					</div>
+				</div>
+			))}
+
+			<ArrowLeft onClick={handlePrevPage} className="absolute left-[-120px] top-60 rotate-5" />
+			<ArrowRight onClick={handleNextPage} className="absolute right-[-120px] top-70 rotate-5" />
+		</div>
+	);
+	}
 
 export default function Background() {
-	/* SWIPER NAVIGATION BUTTONS MECHANISM */
-	const swiperRefs = useRef([]);
-
-	// Function to handle the next slide
-	const handleNext = () => {
-		swiperRefs.current.forEach((swiper) => {
-			swiper?.slideNext();
-		});
-	};
-
-	// Handler to slide all to the previous item
-	const handlePrev = () => {
-		swiperRefs.current.forEach((swiper) => {
-			swiper?.slidePrev();
-		});
-	};
-
+	const [currentPage, setCurrentPage] = useState(0);
 	const [activeBackground, setActiveBackground] = useState(backgrounds[0]);
 
-	// Function to handle the slide change event
-	const handleSlideChange = (swiper) => {
-		// swiper.realIndex gives the correct index even in loop mode
-		const currentIndex = swiper.realIndex;
-		const currentCharacter = backgrounds[currentIndex];
-		setActiveBackground(currentCharacter);
-	};
+	const handleNextClick = () => {
+		if (currentPage < backgrounds.length - 1) {
+			let newCurrentPage = currentPage + 1;
+			setCurrentPage(newCurrentPage);
+			setActiveBackground(backgrounds[newCurrentPage]);
+		}
+	}
+
+	const handlePrevClick = () => {
+		if (currentPage > 0) {
+			let newCurrentPage = currentPage - 1;
+			setCurrentPage(newCurrentPage);
+			setActiveBackground(backgrounds[newCurrentPage]);
+		}
+	}
 
 	return (
 		<SectionContainer className="min-h-screen pb-20" id="background" backgroundImage="url('/background-section-bg.png')">
@@ -62,34 +155,9 @@ export default function Background() {
 				<img src="/book.png" className="h-[700px] mt-30 relative z-0" alt="Brimvahl-Crown-Background-Book" />
 
 				{/* Galery on book */}
-				<div className="absolute top-45 ml-[-30px] flex w-4/5 h-3/5 gap-16 z-5 rotate-z-[7.5deg] rotate-x-25">
-					<div className="flex flex-col w-14/30 gap-10">
-						<Swiper slidesPerView={1} onSwiper={(swiper) => (swiperRefs.current[0] = swiper)} onSlideChange={handleSlideChange} className="bg-black w-full h-3/5" loop>
-							{galeries && galeries[0].map(image => (
-								<SwiperSlide>
-									<img src={image} className="w-full h-full" style={{ objectFit: 'cover', objectPosition: 'center' }} alt="Brimvahl-Crown-Background-Galery" />
-								</SwiperSlide>
-							))}
-						</Swiper>
-						<Swiper slidesPerView={1} onSwiper={(swiper) => (swiperRefs.current[1] = swiper)} className="bg-black w-full h-2/5" loop>
-							{galeries && galeries[1].map(image => (
-								<SwiperSlide>
-									<img src={image} className="w-full h-full" style={{ objectFit: 'cover', objectPosition: 'center' }} alt="Brimvahl-Crown-Background-Galery" />
-								</SwiperSlide>
-							))}
-						</Swiper>
-					</div>
-					<Swiper slidesPerView={1} onSwiper={(swiper) => (swiperRefs.current[2] = swiper)} className="bg-black h-full w-14/30" loop>
-						{galeries && galeries[2].map(image => (
-							<SwiperSlide>
-								<img src={image} className="w-full h-full" style={{ objectFit: 'cover', objectPosition: 'center' }} alt="Brimvahl-Crown-Background-Galery" />
-							</SwiperSlide>
-						))}
-					</Swiper>
+				<div className="absolute top-40 flex w-full h-3/5 gap-16 z-5 rotate-z-[7.5deg] rotate-x-25">
+					<Flipbook onNextClick={handleNextClick} onPrevClick={handlePrevClick} />
 				</div>
-
-				<ArrowLeft onClick={handlePrev} className="absolute left-[-90px] top-80 rotate-8" />
-				<ArrowRight onClick={handleNext} className="absolute right-[-90px] top-120 rotate-8" />
 
 				{/* Card */}
 				<div className="absolute flex flex-col items-center w-3/4 bottom-[-60px] z-10">

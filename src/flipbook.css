@@ -1,0 +1,21 @@
+.flipbook-container {
+  margin: auto;
+}
+
+.my-page .page-content {
+  padding: 20px;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  pointer-events: none;
+}
+
+/*
+ * 4. Disable Flip on Last Page (if odd)
+ * ---------------------------------------------- */
+.my-page.disable-flip {
+  pointer-events: none;
+}

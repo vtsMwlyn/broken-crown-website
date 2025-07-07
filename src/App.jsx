@@ -16,16 +16,16 @@ function App() {
       <Navbar />
       
       <PageHero /> 
-      {/* <SectionSeparator /> */}
+
 
       <Characters />
-      {/* <SectionSeparator /> */}
+
 
       <NewsAndInfo />
-      {/* <SectionSeparator /> */}
+
 
       <GameplayFeature />
-      {/* <SectionSeparator /> */}
+
       
       <Background />
 
