@@ -8,15 +8,34 @@ import ArrowRight from "../components/ArrowRight";
 import { useEffect } from 'react';
 
 const backgrounds = [
-	{ id: 1, desc: 'The game is taking middle-european age style as background. You can encounter these aspect in the battle arena and visual story background.' },
-	{ id: 2, desc: 'The characters is also inspired from other popular games as well, but we add special touching so the character will have their unique aspects, making they become different than others.' },
-	{ id: 3, desc: 'Our team is using various modern tools and softwares while developing the whole game, such as Autodesk Maya and Unity Game Engine.' },
+	{
+		title: 'Elydnia',
+		desc: 'Known as the Island of Eternal Winter, is a barren and inhospitable land where vegetation cannot thrive, and resources are exceedingly scarce. To sustain their survival, its inhabitants are forced to raid neighboring nations relentlessly. The island is geographically divided into two distinct regions: the Highlands and the Lowlands. The Highlands are home to affluent supporters of the Queen, who benefit from the spoils of conquest, while the Lowlands house those who oppose her pillaging ways, living in impoverished conditions as a result.'
+	},
+	{
+		title: 'Town square',
+		desc: 'The vibrant heart of Fennora Village, this bustling square serves as the settlement\'s sole hub of activity. Villagers gather daily to barter at makeshift stalls, purchase provisions, and exchange news, transforming the space into a lively mosaic of commerce and community. From dusk till dawn, the square thrums with the rhythms of life, remaining the only place where the last lowland village truly feels alive.'
+	},
+	{
+		title: 'Outskirts',
+		desc: 'Once considered part of Fennora Village, these lawless land have been abandoned to chaos. Now dominated by the notorious Laughing Death bandits, the region serves as their base camp of operations, rendering travel through the area perilous.'
+	},
+	{
+		title: 'Sylphor cave',
+		desc: 'This mysterious cavern serves as the primary source of seraphalum ore, its depths illuminated by pools of radiant golden water whose origins remain unknown. Though nobody can explain its luminous properties, many reverently regard it as sacred, dubbing it "holy water" and attributing mystical significance to its glow. The cave\'s eerie luminescence and valuable ore make it both a vital resource and a site of whispered legends in Eldynia.'
+	},
+	{
+		title: 'Serapheum arena',
+		desc: 'Forged from the spoils of countless raids on Nyxopolis, this arena stands as Eldynia\'s answer to mockery of foreign decadence. More than mere entertainment, the arena serves as a proving ground where people could endure trials to become guards, settle disputes between citizens, and find out the true mightiest warrior. Its a testament to Eldynia\'s belief that only the strong has the right to lead.'
+	},
 ];
 
 const galeries = [
 	['/background/style1.png', '/background/inspired1.png', '/background/tools1.png'],
 	['/background/style2.png', '/background/inspired2.png', '/background/tools2.png'],
 	['/background/style3.png', '/background/inspired3.png', '/background/tools3.png'],
+	['/background/style1.png', '/background/inspired1.png', '/background/tools1.png'],
+	['/background/style2.png', '/background/inspired2.png', '/background/tools2.png'],
 ];
 
 function Flipbook({ onNextClick, onPrevClick }) {
@@ -141,7 +160,7 @@ export default function Background() {
 	}
 
 	return (
-		<SectionContainer className="min-h-screen pb-20" id="background" backgroundImage="url('/background-section-bg.png')">
+		<SectionContainer className="min-h-screen pb-60" id="background" backgroundImage="url('/background-section-bg.png')">
 			{/* Header */}
 			<div className="bg-[#181818] w-full flex flex-col items-center text-white absolute top-0 left-0 text-4xl py-5">
 				<div className="w-11/12 xl:w-5/6 max-w-[1500px] ml-40 relative">
@@ -160,10 +179,11 @@ export default function Background() {
 				</div>
 
 				{/* Card */}
-				<div className="absolute flex flex-col items-center w-3/4 bottom-[-60px] z-10">
+				<div className="absolute flex flex-col items-center w-4/5 bottom-[-180px] z-10">
 					<img src="/normal-text-card.png" className="w-5/6 h-5/6 absolute top-4" alt="Brimvahl-Crown-Text-Card" />
-					<div className="w-3/4 text-lg relative py-18">
-						<p className="w-full">{activeBackground ? activeBackground.desc : 'The game is taking middle-european age style as background. You can encounter these aspect in the battle arena and visual story background'}</p>
+					<div className="w-3/4 text-base relative pt-10 pb-20 px-4">
+						<h1 className="text-xl font-bold">{activeBackground.title}</h1>
+						<p className="w-full mt-4">{activeBackground.desc}</p>
 					</div>
 				</div>
 			</div>

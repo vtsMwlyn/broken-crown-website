@@ -9,9 +9,21 @@ import ArrowLeft from "../components/ArrowLeft";
 import ArrowRight from "../components/ArrowRight";
 
 const features = [
-	{ id: 1, image: '/gameplay-features/battlearena.png', desc: 'Visual storytelling that tells about the main character development and adventures from the beginning. The lore and story then getting more intense and dramatic, we bring user to enjoy the best experiences.' },
-	{ id: 2, image: '/gameplay-features/mechanics.png', desc: 'Interesting battle mechanics, enemy and boss battles, also stunning background music and effect is the main key to make sure we bring you the best experience of gaming. Find out multiple maps and enemies along with your journey!' },
-	{ id: 3, image: '/gameplay-features/visualization.png', desc: 'Comic style and cut scenes awaits you to serve unboring visualization of the story that full of texts and static images. This will keep user to feel the atmosphere and enjoy the story well.' },
+	{
+		id: 1,
+		image: '/gameplay-features/battlearena.png',
+		desc: 'Engage in classic one on one cinematic boss fights with quick time events.'
+	},
+	{
+		id: 2,
+		image: '/gameplay-features/mechanics.png',
+		desc: 'Fully voiced visual novel and comics where choices affects the combat! (Yes even the side quests are voiced)'
+	},
+	{
+		id: 3,
+		image: '/gameplay-features/visualization.png',
+		desc: 'Mix and match Kazmiel\'s armor and make her the best version of herself.'
+	},
 ];
 
 export default function GameplayFeature() {
@@ -80,8 +92,8 @@ export default function GameplayFeature() {
 				{/* Card */}
 				<div className="relative bottom-10 flex flex-col items-center w-3/5 z-10">
 					<img src="/text-paper.png" className="w-full h-full absolute top-0" alt="Brimvahl-Crown-Text-Card" />
-					<div className="w-4/5 text-lg relative py-10">
-						<p className="w-full">{activeFeatures ? activeFeatures.desc : 'Visual storytelling that tells about the main character development and adventures from the beginning. The lore and story then getting more intense and dramatic, we bring user to enjoy the best experiences.'}</p>
+					<div className="w-4/5 text-2xl relative py-10">
+						<p className="w-full">{activeFeatures.desc}</p>
 					</div>
 				</div>
 			</div>

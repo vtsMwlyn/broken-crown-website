@@ -9,10 +9,30 @@ import ArrowLeft from "../components/ArrowLeft";
 import ArrowRight from "../components/ArrowRight";
 
 const news = [
-	{ id: 1, type: 'image', source: '/news-and-info/livingroom.png', desc: 'Concept artists are developing variative visual story backgrounds. The living room is one of them, where Kazmiel spend her morning and night, before and after her adventure.' },
-	{ id: 2, type: 'video', source: '/news-and-info/gameplay.mp4', desc: 'The game programmer is really working hard on implementing the UI/UX and the game design into real gameplay!' },
-	{ id: 3, type: 'image', source: '/news-and-info/map.png', desc: '3D artists are developing the 3D map area for battles Kazmiel encountered during her adventure!' },
-	{ id: 4, type: 'youtube', source: 'https://www.youtube.com/embed/eW_SOi1Xr-U?si=PBuLZAf2Xsfob41N', desc: 'Sangnila has uploaded their recent tutorial, check it out and get a new knowledge!' }
+	{
+		id: 1,
+		type: 'image',
+		source: '/news-and-info/livingroom.png',
+		desc: 'Concept artists are developing variative visual story backgrounds. The living room is one of them, where Kazmiel spend her morning and night, before and after her adventure.'
+	},
+	{
+		id: 2,
+		type: 'video',
+		source: '/news-and-info/gameplay.mp4',
+		desc: 'The game programmer is really working hard on implementing the UI/UX and the game design into real gameplay!'
+	},
+	{
+		id: 3,
+		type: 'image',
+		source: '/news-and-info/map.png',
+		desc: '3D artists are developing the 3D map area for battles Kazmiel encountered during her adventure!'
+	},
+	{
+		id: 4,
+		type: 'youtube',
+		source: 'https://www.youtube.com/embed/eW_SOi1Xr-U?si=PBuLZAf2Xsfob41N',
+		desc: 'Sangnila has uploaded their recent tutorial, check it out and get a new knowledge!'
+	}
 ];
 
 export default function NewsAndInfo() {
@@ -101,7 +121,7 @@ export default function NewsAndInfo() {
 				<div className="relative flex flex-col items-center w-3/5 mt-10">
 					<img src="/normal-text-card.png" className="w-5/6 h-5/6 absolute top-4" alt="Brimvahl-Crown-Text-Card" />
 					<div className="w-3/4 text-lg relative py-18">
-						<p className="w-full">{activeNews ? activeNews.desc : 'Concept artists are developing variative visual story backgrounds. The living room is one of them, where Kazmiel spend her morning and night, before and after her adventure.'}</p>
+						<p className="w-full">{activeNews.desc}</p>
 					</div>
 				</div>
 			</div>

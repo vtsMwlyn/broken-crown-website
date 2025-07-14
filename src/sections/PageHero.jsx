@@ -16,11 +16,10 @@ export default function PageHero() {
 					{/* Logo and text card */}
 					<div className="w-full flex flex-col items-center justify-center">
 						<img src="/logo-gold.png" className="w-11/12 z-5" alt="Brimvahl-Crown-Logo" />
-						<div className="relative flex flex-col items-center w-full mt-[-150px]">
+						<div className="relative flex flex-col items-center w-full mt-[-80px]">
 							<img src="/page-hero-text-card.png" className="w-full h-full absolute top-0" alt="Brimvahl-Crown-Text-Card" />
 							<div className="w-3/4 text-lg relative py-18">	
-								<p className="w-5/6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate dolores quibusdam veritatis ad laborum cum natus totam nam tempore, ex, reprehenderit maxime!.</p>
-								<p className="mt-4 w-full">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet hic iste corrupti commodi!</p>
+								<p>Brimvahl Crown is an immersive fantasy dueling game that delivers a cinematic, one-on-one boss battle experience. Enhanced by a rich narrative told through visual novels and dynamic comics, players will engage in intense, strategic combat while uncovering a deep and compelling story.</p>
 							</div>
 						</div>
 					</div>
