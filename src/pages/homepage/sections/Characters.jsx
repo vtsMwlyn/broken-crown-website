@@ -16,7 +16,7 @@ const factions = [
 			{
 				name: 'Mariel Elandys – The Last True Seraph',
 				desc: 'The current Queen of Eldynia and the final pure-blooded seraph, Mariel rules with calculated aggression and unshakable confidence. Though she lacks the overwhelming strength of her ancestors, her sharp wit and commanding presence deter challengers. Through sheer force of will, she maintains the illusion of invincibility, ensuring her kingdom’s survival in an era of decline.',
-				image: '/characters/unknown-portrait	.png',
+				image: '/characters/unknown-portrait.png',
 				icon: '/character-icon-placeholder.png',
 			},
 			{
@@ -83,9 +83,9 @@ const factions = [
 		]
 	},
 	{
-		name: 'Unknown Faction',
-		icon: '/character-icon-placeholder.png',
-		desc: 'The unknown faction is literally unknown, no one ever met or see the faction. Maybe someday someone will figure this mysterious unknown faction?',
+		name: 'Unknown Faction 1',
+		icon: '/characters/factionph1.png',
+		desc: 'The unknown faction 1 is literally unknown, no one ever met or see the faction. Maybe someday someone will figure this mysterious unknown faction?',
 		characters: [
 			{
 				name: 'Unknown 1',
@@ -120,9 +120,9 @@ const factions = [
 		]
 	},
 	{
-		name: 'Unknown Faction',
-		icon: '/character-icon-placeholder.png',
-		desc: 'The unknown faction is literally unknown, no one ever met or see the faction. Maybe someday someone will figure this mysterious unknown faction?',
+		name: 'Unknown Faction 2',
+		icon: '/characters/factionph2.png',
+		desc: 'The unknown faction 2 is literally unknown, no one ever met or see the faction. Maybe someday someone will figure this mysterious unknown faction?',
 		characters: [
 			{
 				name: 'Unknown 1',
@@ -157,9 +157,9 @@ const factions = [
 		]
 	},
 	{
-		name: 'Unknown Faction',
-		icon: '/character-icon-placeholder.png',
-		desc: 'The unknown faction is literally unknown, no one ever met or see the faction. Maybe someday someone will figure this mysterious unknown faction?',
+		name: 'Unknown Faction 3',
+		icon: '/characters/factionph3.png',
+		desc: 'The unknown faction 3 is literally unknown, no one ever met or see the faction. Maybe someday someone will figure this mysterious unknown faction?',
 		characters: [
 			{
 				name: 'Unknown 1',
@@ -237,92 +237,109 @@ export default function Characters() {
 	};
 
 	return (
-		<SectionContainer className="min-h-screen" id="characters" backgroundImage="url('/characters-section-bg.png')">
-			<div className="w-full flex flex-col items-center relative z-10 py-20">
-				{/* Border */}
-				<div className="absolute top-0 z-0 h-full w-full p-10">
-					<img src="/fancy-border.png" className="h-full w-full" alt="Brimvahl-Crown-Fancy-Border" />
-				</div>
+		<SectionContainer className="min-h-screen" id="characters" backgroundImage="url('/characters-bg.png')" isFullWidth={true}>
+			{/* Section Title */}
+			<div className="absolute top-0 z-6 h-1/6">
+				<img src="/title-card.png" className="w-[350px]" alt="Brimvahl-Crown-Title-Card" />
+				<div className="absolute top-6 w-full flex justify-center items-center text-4xl">Characters</div>
+			</div>
 
-				{/* Section Title */}
-				<div className="relative mt-[-70px] h-1/6">
-					<img src="/title-card.png" className="w-[350px]" alt="Brimvahl-Crown-Title-Card" />
-					<div className="absolute top-6 w-full flex justify-center items-center text-4xl">Characters</div>
-				</div>
+			<div className="w-full flex items-stretch h-full relative z-5">
+				{/* Left side */}
+				<div className="w-2/5 flex flex-col justify-center items-center">
+					{/* Character name */}
+					<div className="relative mt-[50px]">
+						<img src="/title-card.png" className="w-[380px]" alt="Brimvahl-Crown-Title-Card" />
+						<div className="absolute top-7 w-full flex justify-center items-center text-4xl">{activeFaction ? activeFaction.name : activeFaction[0].name}</div>
+					</div>
 
-				{/* Character showcase */}
-				<div className="w-4/5 flex items-center h-4/6 mt-20 relative z-5">
-					{/* Left side */}
-					<div className="w-1/8 flex flex-col items-center">
-						{/* Selector */}
-						<div className="flex flex-col h-full justify-center w-3/4 mt-6" id="character-icon">
-							<div className="h-[550px] flex flex-col items-center gap-5">
-								<ArrowLeft className="rotate-[90deg]" onClick={() => handlePrev(factionSwiperRef)} />
-
-								<Swiper
-									direction={'vertical'}
-									onSlideChange={handleFactionSlideChange}
-									className="w-full h-full cursor-grab"
-									slidesPerView={3}
-									centeredSlides={true}
-									spaceBetween={0}
-									ref={factionSwiperRef}
-									loop
-								>
-									{factions && factions.map((f, index) => (
-										<SwiperSlide key={index} onClick={() => factionSwiperRef.current?.swiper.slideToLoop(index)}>
-											<img src={f.icon} className="scale-[0.7] transition duration-300 ease-in-out" alt="Brimvahl-Crown-Faction-Icon" />
-										</SwiperSlide>
-									))}
-								</Swiper>
-
-								<ArrowRight className="rotate-[90deg]" onClick={() => handleNext(factionSwiperRef)} />
-							</div>
+					{/* Card */}
+					<div className="relative flex flex-col items-center w-7/8 mt-10">
+						<img src="/normal-text-card.png" className="w-full h-full absolute top-0" alt="Brimvahl-Crown-Text-Card" />
+						<div className="w-3/4 text-base relative py-8">
+							<p className="w-full">{activeFaction ? activeFaction.desc : activeFaction[0].desc}</p>
 						</div>
 					</div>
 
-					{/* Middle side */}
-					<div className="w-4/8 flex flex-col items-center">
-						{/* Character name */}
-						<h1 className="text-4xl text-white ml-25 self-start">{activeCharacter ? activeCharacter.name : activeFaction.characters[0].name}</h1>
+					{/* Selector (Temporary disabled, will be moved to characters page) */}
+					{/* <div className="flex gap-5 justify-center w-3/4 mt-6" id="character-icon">
+						<ArrowLeft onClick={() => handlePrev(characterSwiperRef)} />
 
-						{/* Card */}
-						<div className="relative flex flex-col items-center w-7/8 mt-[-15px]">
-							<img src="/page-hero-text-card.png" className="w-full h-full absolute top-0" alt="Brimvahl-Crown-Text-Card" />
-							<div className="w-3/4 text-base relative pt-12 pb-16">
-								<p className="w-full">{activeCharacter ? activeCharacter.desc : activeFaction.characters[0].desc}</p>
-							</div>
+						<Swiper
+							onSlideChange={handleCharacterSlideChange}
+							className="w-2/3 cursor-grab"
+							slidesPerView={3}
+							centeredSlides={true}
+							spaceBetween={0}
+							ref={characterSwiperRef}
+							loop
+						>
+							{activeFaction.characters?.map((c, index) => (
+								<SwiperSlide key={index} onClick={() => characterSwiperRef.current?.swiper.slideToLoop(index)}>
+									<img src={c.icon} className="scale-[0.7] transition duration-300 ease-in-out" alt="Brimvahl-Crown-Character-Icon" />
+								</SwiperSlide>
+							))}
+						</Swiper>
+
+						<ArrowRight onClick={() => handleNext(characterSwiperRef)} />
+					</div> */}
+				</div>
+
+				{/* Middle side */}
+				<div className="w-1/5 h-full flex flex-col items-center bg-green-100">
+					<div className="absolute top-0 w-full h-full flex flex-col items-center">
+						<div className="h-1/3 w-1/5 flex items-center justify-center bg-[#101010]">
+							<div className="bg-[#D9D9D9] rounded-full w-60 h-60"></div>
 						</div>
+						<div className="h-1/3 w-1/5 flex items-center justify-center bg-[#2A2A2A]">
+							<div className="bg-[#D9D9D9] rounded-full w-60 h-60"></div>
+						</div>
+						<div className="h-1/3 w-1/5 flex items-center justify-center bg-[#101010]">
+							<div className="bg-[#D9D9D9] rounded-full w-60 h-60"></div>
+						</div>
+					</div>
 
-						{/* Selector */}
-						<div className="flex gap-5 justify-center w-3/4 mt-6" id="character-icon">
-							<ArrowLeft onClick={() => handlePrev(characterSwiperRef)} />
+					{/* Selector */}
+					<div className="flex flex-col h-screen justify-center w-full" id="faction-section">
+						<div className="w-full h-full flex flex-col items-center gap-5 relative">
+							<ArrowLeft className="rotate-[90deg] absolute z-5 top-50" onClick={() => handlePrev(factionSwiperRef)} />
 
 							<Swiper
-								onSlideChange={handleCharacterSlideChange}
-								className="w-2/3 cursor-grab"
+								direction={'vertical'}
+								onSlideChange={handleFactionSlideChange}
+								className="w-full h-full cursor-grab"
 								slidesPerView={3}
 								centeredSlides={true}
 								spaceBetween={0}
-								ref={characterSwiperRef}
+								ref={factionSwiperRef}
 								loop
 							>
-								{activeFaction.characters?.map((c, index) => (
-									<SwiperSlide key={index} onClick={() => characterSwiperRef.current?.swiper.slideToLoop(index)}>
-										<img src={c.icon} className="scale-[0.7] transition duration-300 ease-in-out" alt="Brimvahl-Crown-Character-Icon" />
+								{factions && factions.map((f, index) => (
+									<SwiperSlide key={index} onClick={() => factionSwiperRef.current?.swiper.slideToLoop(index)}>
+										<div className="w-full h-full flex items-center justify-center">
+											<img src={f.icon} className="transition-all ease-in-out duration-300 w-50 h-50 brightness-25" alt="Brimvahl-Crown-Faction-Icon" />
+										</div>
 									</SwiperSlide>
 								))}
 							</Swiper>
 
-							<ArrowRight onClick={() => handleNext(characterSwiperRef)} />
+							<ArrowRight className="rotate-[90deg] absolute z-5 bottom-50" onClick={() => handleNext(factionSwiperRef)} />
 						</div>
 					</div>
-
-					{/* Character photo (right side) */}
-					<div className="w-3/8 relative flex flex-col items-center">
-						<img src="/character-border.png" className="w-5/6" alt="Brimvahl-Crown-Character-Border" />
-						<div className="w-1/2 h-3/5 flex items-center justify-center absolute top-26">
-							<img src={activeCharacter ? activeCharacter.image : activeFaction.characters[0].image} className="w-full h-full" alt="Brimvahl-Crown-Character" />
+				</div>
+				
+				{/* Character photo (right side) */}
+				<div className="w-2/5 h-full relative">
+					<div className="w-full h-1/2 flex items-center justify-center bg-[#6D6D6D]">
+						<p>Faction Image</p>
+					</div>
+					<div className="w-full h-1/2 flex items-center justify-center">
+						<div className="w-fit grid grid-cols-3">
+							{activeFaction.characters?.map((c, index) => (
+								<div key={index} className="w-35 h-35 flex items-center justify-center">
+									<img src={c.icon} className="w-full h-full" alt="Brimvahl-Crown-Character-Icon" />
+								</div>
+							))}
 						</div>
 					</div>
 				</div>

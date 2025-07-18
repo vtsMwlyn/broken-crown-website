@@ -14,8 +14,12 @@ button, a {
 /* For characters section swiper (border for selected slide item) */
 @layer utilities {
   /* Target the image inside the active slide */
-  #character-icon .swiper-slide-active img {
+  #character-slider .swiper-slide-active img {
     @apply border-4 border-[#A5784C] rounded-xl scale-100;
+  }
+
+  #faction-section .swiper-slide-active img {
+    @apply brightness-100;
   }
 }
 
