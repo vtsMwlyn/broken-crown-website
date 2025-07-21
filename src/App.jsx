@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 
 import Home from './pages/homepage/Index';
 import Characters from './pages/Characters';
+import CharacterSingle from './pages/CharacterSingle';
 import Merch from './pages/Merch';
 import FanArts from './pages/FanArts';
 import Background from './pages/Background';
@@ -37,6 +38,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/characters" element={<Characters />} />
+            <Route path="/characters/:slug" element={<CharacterSingle />} />
             <Route path="/merch" element={<Merch />} />
             <Route path="/fan-arts" element={<FanArts />} />
             <Route path="/background" element={<Background />} />

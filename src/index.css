@@ -23,6 +23,21 @@ button, a {
   }
 }
 
+/* Characters grid indentation */
+.grid-container {
+    display: grid;
+    /* Change the '3' here if you want more or fewer columns */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.grid-container > div:nth-child(6n + 4),
+.grid-container > div:nth-child(6n + 5),
+.grid-container > div:nth-child(6n + 6) {
+    transform: translateX(6rem); /* The horizontal offset! */
+}
+
 /* For swipers that need pagination (bullets navigations) */
 .swiper-pagination-bullet {
   width: 16px !important;

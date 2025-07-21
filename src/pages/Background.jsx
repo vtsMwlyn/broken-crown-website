@@ -31,11 +31,11 @@ const backgrounds = [
 ];
 
 const galeries = [
-	['/background/style1.png', '/background/inspired1.png', '/background/tools1.png'],
-	['/background/style2.png', '/background/inspired2.png', '/background/tools2.png'],
-	['/background/style3.png', '/background/inspired3.png', '/background/tools3.png'],
-	['/background/style1.png', '/background/inspired1.png', '/background/tools1.png'],
-	['/background/style2.png', '/background/inspired2.png', '/background/tools2.png'],
+	['/background/elydnia1.png', '/background/elydnia2.png', '/background/elydnia3.jpg'],
+	['/background/townsquare3.png', '/background/townsquare2.webp', '/background/townsquare1.png'],
+	['/background/outskirt3.png', '/background/outskirt2.png', '/background/outskirt1.png'],
+	['/background/sylphorcave1.webp', '/background/sylphorcave2.jpg', '/background/sylphorcave3.webp'],
+	['/background/seraphiumarena1.png', '/background/seraphiumarena2.png', '/background/seraphiumarena3.png'],
 ];
 
 function Flipbook({ onNextClick, onPrevClick }) {
