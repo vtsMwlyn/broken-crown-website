@@ -1,42 +1,12 @@
 import { useRef, useState } from 'react';
 import { PageFlip } from 'page-flip';
-import '../flipbook.css'; // Your styles
+import '../flipbook.css';
+import backgrounds from './data/backgrounds';
 
 import SectionContainer from "../components/SectionContainer"
 import ArrowLeft from "../components/ArrowLeft";
 import ArrowRight from "../components/ArrowRight";
 import { useEffect } from 'react';
-
-const backgrounds = [
-	{
-		title: 'Elydnia',
-		desc: 'Known as the Island of Eternal Winter, is a barren and inhospitable land where vegetation cannot thrive, and resources are exceedingly scarce. To sustain their survival, its inhabitants are forced to raid neighboring nations relentlessly. The island is geographically divided into two distinct regions: the Highlands and the Lowlands. The Highlands are home to affluent supporters of the Queen, who benefit from the spoils of conquest, while the Lowlands house those who oppose her pillaging ways, living in impoverished conditions as a result.'
-	},
-	{
-		title: 'Town square',
-		desc: 'The vibrant heart of Fennora Village, this bustling square serves as the settlement\'s sole hub of activity. Villagers gather daily to barter at makeshift stalls, purchase provisions, and exchange news, transforming the space into a lively mosaic of commerce and community. From dusk till dawn, the square thrums with the rhythms of life, remaining the only place where the last lowland village truly feels alive.'
-	},
-	{
-		title: 'Outskirts',
-		desc: 'Once considered part of Fennora Village, these lawless land have been abandoned to chaos. Now dominated by the notorious Laughing Death bandits, the region serves as their base camp of operations, rendering travel through the area perilous.'
-	},
-	{
-		title: 'Sylphor cave',
-		desc: 'This mysterious cavern serves as the primary source of seraphalum ore, its depths illuminated by pools of radiant golden water whose origins remain unknown. Though nobody can explain its luminous properties, many reverently regard it as sacred, dubbing it "holy water" and attributing mystical significance to its glow. The cave\'s eerie luminescence and valuable ore make it both a vital resource and a site of whispered legends in Eldynia.'
-	},
-	{
-		title: 'Serapheum arena',
-		desc: 'Forged from the spoils of countless raids on Nyxopolis, this arena stands as Eldynia\'s answer to mockery of foreign decadence. More than mere entertainment, the arena serves as a proving ground where people could endure trials to become guards, settle disputes between citizens, and find out the true mightiest warrior. Its a testament to Eldynia\'s belief that only the strong has the right to lead.'
-	},
-];
-
-const galeries = [
-	['/background/elydnia1.png', '/background/elydnia2.png', '/background/elydnia3.jpg'],
-	['/background/townsquare3.png', '/background/townsquare2.webp', '/background/townsquare1.png'],
-	['/background/outskirt3.png', '/background/outskirt2.png', '/background/outskirt1.png'],
-	['/background/sylphorcave1.webp', '/background/sylphorcave2.jpg', '/background/sylphorcave3.webp'],
-	['/background/seraphiumarena1.png', '/background/seraphiumarena2.png', '/background/seraphiumarena3.png'],
-];
 
 function Flipbook({ onNextClick, onPrevClick }) {
 	const bookRef = useRef(null);
@@ -109,16 +79,16 @@ function Flipbook({ onNextClick, onPrevClick }) {
 	return (
 		<div className="flipbook-container cursor-grab" ref={bookRef}>
 			{/* Dynamic pages */}
-			{galeries.map((gallery, index) => (
+			{backgrounds?.map((b, index) => (
 				<div key={index}>
 					<div className="my-page">
 						<div className="page-content">
 							<div className="flex flex-col w-3/4 h-full gap-10">
 								<div className="bg-black w-full h-3/5" >
-									<img src={gallery[0]} className="w-full h-full" style={{ objectFit: 'cover', objectPosition: 'center' }} alt="Brimvahl-Crown-Background-Galery" />
+									<img src={b.gallery[0]} className="w-full h-full" style={{ objectFit: 'cover', objectPosition: 'center' }} alt="Brimvahl-Crown-Background-Galery" />
 								</div>
 								<div className="bg-black w-full h-2/5" >
-									<img src={gallery[1]} className="w-full h-full" style={{ objectFit: 'cover', objectPosition: 'center' }} alt="Brimvahl-Crown-Background-Galery" />
+									<img src={b.gallery[1]} className="w-full h-full" style={{ objectFit: 'cover', objectPosition: 'center' }} alt="Brimvahl-Crown-Background-Galery" />
 								</div>
 							</div>
 						</div>
@@ -126,7 +96,7 @@ function Flipbook({ onNextClick, onPrevClick }) {
 					<div className="my-page">
 						<div className="page-content">
 							<div className="bg-black h-full w-3/4" >
-								<img src={gallery[2]} className="w-full h-full" style={{ objectFit: 'cover', objectPosition: 'center' }} alt="Brimvahl-Crown-Background-Galery" />
+								<img src={b.gallery[2]} className="w-full h-full" style={{ objectFit: 'cover', objectPosition: 'center' }} alt="Brimvahl-Crown-Background-Galery" />
 							</div>
 						</div>
 					</div>
@@ -162,15 +132,15 @@ export default function Background() {
 	return (
 		<SectionContainer className="min-h-screen pb-60" id="background" backgroundImage="url('/background-section-bg.png')">
 			{/* Header */}
-			<div className="bg-[#181818] w-full flex flex-col items-center text-white absolute top-40 left-0 text-4xl py-5">
-				<div className="w-11/12 xl:w-5/6 max-w-[1500px] ml-40 relative">
-					<h1>Background</h1>
-					<img src="/fancy-underline.png" className="absolute top-5 left-[-100px] w-110" alt="Brimvahl-Crown-Fancy-Underline" />
+			<div className="w-full flex flex-col items-center text-white absolute top-30 left-0 text-4xl py-5">
+				<div className="w-11/12 xl:w-5/6 max-w-[1500px] ml-40 relative flex justify-end">
+					<h1 className="text-5xl">Background</h1>
+					<img src="/fancy-underline.png" className="absolute top-8 right-[-100px] w-130" alt="Brimvahl-Crown-Fancy-Underline" />
 				</div>
 			</div>
 
 			{/* Main content */}
-			<div className="flex flex-col w-2/3 items-center relative mt-40">
+			<div className="flex flex-col w-2/3 items-center relative mt-20">
 				<img src="/book.png" className="h-[700px] mt-30 relative z-0" alt="Brimvahl-Crown-Background-Book" />
 
 				{/* Galery on book */}

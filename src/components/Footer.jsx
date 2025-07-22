@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 export default function Footer() {
 	return (
-		<footer className="w-full text-black text-xl flex flex-col items-center" style={{ background: 'url("/footer-bg.png") no-repeat center / cover' }}>
+		<footer className="w-full text-black text-xl flex flex-col items-center relative" style={{ background: 'url("/footer-bg.png") no-repeat center / cover' }}>
 			<div className="flex w-11/12 xl:w-5/6 max-w-[1500px] py-20 gap-40 relative z-5">
 				<div className="flex flex-col">
 					<h1 className="font-bold mb-8">Brimvahl Crown</h1>
@@ -36,6 +36,11 @@ export default function Footer() {
 					<Link to="#" className="text-black hover:text-yellow-800 hover:font-semibold">Link</Link>
 				</div>
 			</div>
+
+			<Link to="/" className="absolute top-[-10px] right-30 z-20 text-white hover:text-yellow-500 hover:drop-shadow-[0px_0px_5px_oklch(79.5%_0.184_86.047)]">
+				<img src="/footer-menu-bg-red.png" className="w-[160px]" alt="Brimvahl-Crown-Navbar-Menu" />
+				<div className="absolute top-6 text-center w-full">Back to<br/>Home</div>
+			</Link>
 		</footer>
 	)
 }

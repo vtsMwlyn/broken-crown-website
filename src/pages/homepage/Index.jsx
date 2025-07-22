@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 import PageHero from "./sections/PageHero"
 import Characters from "./sections/Characters"
 import GameplayFeature from "./sections/GameplayFeature"

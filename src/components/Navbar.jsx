@@ -9,7 +9,7 @@ export default function Navbar() {
 
 	return (
 		<nav className="w-full fixed top-0 z-100 flex gap-6 h-[100px]">
-			<img src="/navbar-bg.png" className="w-full h-full absolute" alt="Brimvahl-Crown-Fancy-Border" />
+			<img src="/battlements-top.png" className="w-full h-full absolute" alt="Brimvahl-Crown-Navbar-BG" />
 			<div className="flex w-11/12 xl:w-5/6">
 				<img src="/navbar-logo.png" className="h-[220px] relative top-[-10px] ml-60" alt="Brimvahl-Crown-Navbar-Logo" />
 				<div className="relative top-[-20px] flex gap-3 ml-10">

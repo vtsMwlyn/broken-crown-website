@@ -2,38 +2,38 @@ const factions = [
 	{
 		slug: 'elandys-family',
 		name: 'The Elandys Family',
-		icon: '/characters/factionlogoph1.png',
-		banner: '/characters/factionbannerph1.png',
+		logo: '/factions/logos/elandys-family.png',
+		banner: '/factions/banners/elandys-family.png',
 		desc: 'Once revered as the world’s most powerful bloodline, the Elandys family stands as the last surviving lineage of seraphs. Their dwindling numbers have led to generations of inbreeding and mixed unions, weakening their once-unrivaled divine heritage. Now, they cling to power through cunning, legacy, and the fading embers of their celestial might.',
 	},
 	{
 		slug: 'brimvahl-guards',
 		name: 'Brimvahl Guards',
-		icon: '/characters/factionlogoph2.png',
-		banner: '/characters/factionbannerph2.png',
+		logo: '/factions/logos/brimvahl-guards.png',
+		banner: '/factions/banners/brimvahl-guards.png',
 		desc: 'The Brimvahl Guards are elite warriors hardened through countless battles and pillaging campaigns. Personally trained by grandmaster Kazmiel and grand mage Flaire, they master both spear combat and fundamental battle magic, making them versatile and formidable opponents on any battlefield. Their extensive experience and dual expertise in martial and arcane warfare establish them as one of Eldynia\'s most respected and feared fighting forces. They are now led by their new grandmaster Trixarina Moonwhisper.',
 	},
 	{
-		slug: 'unknown1',
-		name: 'Unknown Faction 1',
-		icon: '/characters/factionlogoph3.png',
-		banner: '/characters/factionbannerph3.png',
-		desc: 'The Shadow Syndicate operates from hidden enclaves, their members trained in the forgotten arts of espionage and illusion. Guided by a mysterious council known only as the Veiled Hand, they manipulate events from behind the scenes. Their agents are masters of disguise and silent infiltration, capable of toppling kingdoms without ever drawing a sword. Their influence is a closely guarded secret, making them one of the most powerful yet unseen forces in the realm, now under the rumored direction of a spymaster called "The Whisper."',
-	},
-	{
-		slug: 'unknown2',
-		name: 'Unknown Faction 2',
-		icon: '/characters/factionlogoph4.png',
-		banner: '/characters/factionbannerph4.png',
+		slug: 'fennora-village',
+		name: 'Fennora Village',
+		logo: '/factions/logos/fennora-village.png',
+		banner: '/factions/banners/fennora-village.png',
 		desc: 'The Ironclad Artificers are a guild of brilliant inventors who have rediscovered the lost arts of arcane engineering. From their workshops deep within the mountains, they forge powerful automatons and reality-bending devices. Led by the visionary inventor Alistair Cogsworth, they blend magic with machinery to create wonders unseen for centuries. Their technological superiority and control over rare resources make them a formidable economic and military power, capable of shaping the future of warfare and industry.',
 	},
 	{
-		slug: 'unknown3',
-		name: 'Unknown Faction 3',
-		icon: '/characters/factionlogoph5.png',
-		banner: '/characters/factionbannerph5.png',
+		slug: 'laughing-death',
+		name: 'The Laughing Death',
+		logo: '/factions/logos/laughing-death.png',
+		banner: '/factions/banners/laughing-death.png',
 		desc: 'The Wardens of the Grove are ancient protectors bound by a primeval pact to safeguard the balance of nature. Drawing power from the very elements, their druids and rangers are masters of both earth magic and guerrilla warfare, guided by the Archdruid Elara Whisperwind. They can command forests to rise and rivers to change course, making their territory impassable to invaders. Their deep connection to the land and its creatures makes them a patient but overwhelming force when the natural order is threatened.',
-	}
+	},
+	{
+		slug: 'unknown',
+		name: 'Unknown Faction',
+		logo: '/factions/logos/unknown.png',
+		banner: '/factions/banners/unknown.png',
+		desc: 'The Shadow Syndicate operates from hidden enclaves, their members trained in the forgotten arts of espionage and illusion. Guided by a mysterious council known only as the Veiled Hand, they manipulate events from behind the scenes. Their agents are masters of disguise and silent infiltration, capable of toppling kingdoms without ever drawing a sword. Their influence is a closely guarded secret, making them one of the most powerful yet unseen forces in the realm, now under the rumored direction of a spymaster called "The Whisper."',
+	},
 ];
 
 export default factions;
