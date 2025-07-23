@@ -34,7 +34,7 @@ export default function CharacterSingle() {
 	}
 
 	return (
-		<SectionContainer className="h-screen overflow-y-hidden pt-20" backgroundImage="url('/page-hero-bg.png')">
+		<SectionContainer className="h-screen overflow-y-hidden pt-20" backgroundImage="url('/single-character-bg.png')">
 			<div className="w-full h-full flex items-center">
 				<div className="w-full h-fit flex items-center">
 					<div className="w-1/2 flex flex-col pr-20">

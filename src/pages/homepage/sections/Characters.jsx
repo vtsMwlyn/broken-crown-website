@@ -2,30 +2,29 @@ import { Link } from "react-router-dom"
 import characters from "../../data/characters"
 
 import SectionContainer from "../../../components/SectionContainer"
+import LinkButton from "../../../components/Button";
 
 const highlightedCharacters = ['flaire-eladryn', 'kazmiel-elandys', 'deathless-king'];
 
-function CharacterCard({ character, className, style, children }) {
+function CharacterCard({ character, className, style }) {
 	const chara = characters.find(c => c.slug === character);
 
 	return (
-		<div className={`w-full relative flex flex-col items-center transition ease-in-out duration-500 ${className}`} style={style}>
-			<div className="w-full relative flex flex-col items-center">
-				<img src="/character-card.png" className="w-full" alt="Brimvahl-Crown-Character-Card" />
-				<img src={chara?.sprite} className="h-3/4 absolute top-10" alt="Brimvahl-Crown-Character-Sprite" />
-				<h1 className="absolute bottom-8 left-8 text-3xl text-white uppercase">{chara?.nickName}</h1>
+		<Link to={`/characters/${chara?.slug}`} className={`w-full relative flex flex-col items-center text-white transition-transform ease-in-out duration-500 hover:translate-y-[-30px] hover:drop-shadow-[0px_0px_5px_oklch(79.5%_0.184_86.047)] cursor-pointer ${className}`} style={style}>
+			<div className="w-full h-full relative flex flex-col items-center">
+				<img src="/character-card.png" className="w-full h-full" alt="Brimvahl-Crown-Character-Card" />
+				<img src={chara?.half} className="w-full h-full absolute p-4 z-5" alt="Brimvahl-Crown-Character-Sprite" />
+				<h1 className="absolute top-8 left-8 text-6xl text-[#A27A4F] uppercase">{chara?.nickName[0]}</h1>
+				<h1 className="absolute bottom-8 right-8 text-6xl text-[#A27A4F] uppercase">{chara?.nickName[0]}</h1>
 			</div>
-			<p className="text-white text-xl w-full px-6 mt-4">{chara?.desc.split('.')[0]}</p>
-
-			{children}
-		</div>
+		</Link>
 	)
 }
 
 export default function Characters() {
 	return (
-		<SectionContainer className="min-h-screen py-20 pb-40" backgroundImage="url('/characters-bg.png')">
-			<div className="w-full h-full flex flex-col items-center">
+		<SectionContainer className="h-screen py-6" backgroundImage="url('/highlighted-characters-bg.png')">
+			<div className="w-full h-full flex flex-col items-center justify-between">
 				{/* Section Title */}
 				<div className="w-fit relative">
 					<img src="/title-card.png" className="w-[350px]" alt="Brimvahl-Crown-Title-Card" />
@@ -33,16 +32,20 @@ export default function Characters() {
 				</div>
 
 				{/* Cards */}
-				<div className="grid grid-cols-3 w-3/4 gap-10 mt-10">
-					<CharacterCard character={highlightedCharacters[0]} className="transform translate-y-30" />
-					<CharacterCard character={highlightedCharacters[1]}>
-						<Link to="/characters" target="_blank" className="relative mt-10 text-white hover:text-yellow-500 hover:drop-shadow-[0px_0px_5px_oklch(79.5%_0.184_86.047)]">
-							<img src="/button-bg.png" className="w-[180px]" alt="Brimvahl-Crown-Button" />
-							<div className="absolute top-4 left-3 w-5/6 text-center text-xl">View More</div>
-						</Link>
-					</CharacterCard>
-					<CharacterCard character={highlightedCharacters[2]} className="transform translate-y-30" />
+				<div className="grid grid-cols-3 w-3/4 gap-10">
+					<div>
+						<CharacterCard character={highlightedCharacters[0]} />
+					</div>
+					<div>
+						<CharacterCard character={highlightedCharacters[1]} />
+					</div>
+					<div>
+						<CharacterCard character={highlightedCharacters[2]} />
+					</div>
 				</div>
+
+				{/* View More */}
+				<LinkButton to="/characters" text="View More" className="w-[250px]" />
 			</div>
 		</SectionContainer>
 	)

@@ -65,7 +65,7 @@ export default function NewsAndInfo() {
 
 	return (
 		<SectionContainer className="min-h-screen" id="news-and-info" backgroundImage="url('/news-and-info-section-bg.png')">
-			<div className="w-full flex flex-col items-center justify-center	relative mb-20">
+			<div className="w-full flex flex-col items-center justify-center relative mb-20">
 				{/* Background */}
 				<img src="/wooden-board.png" className="w-3/4 h-[650px] absolute top-20" alt="Brimvahl-Crown-News-And-Info-Board" />
 

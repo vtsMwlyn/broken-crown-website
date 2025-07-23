@@ -11,48 +11,33 @@ import ArrowRight from "../components/ArrowRight";
 
 export default function Characters() {
 	/* SWIPER NAVIGATION BUTTONS MECHANISM */
-	// const characterSwiperRef = useRef(null); // Create a reference for the Swiper instance
-	const factionSwiperRef = useRef(null);
+	const swiperRef = useRef(null);
 
 	// Function to handle the next slide
-	function handleNext(swiperRef) {
+	function handleNext() {
 		if (swiperRef.current) {
 			swiperRef.current.swiper.slideNext();
 		}
 	};
 
 	// Function to handle the previous slide
-	function handlePrev(swiperRef) {
+	function handlePrev() {
 		if (swiperRef.current) {
 			swiperRef.current.swiper.slidePrev();
 		}
 	};
 
 	const [activeFaction, setActiveFaction] = useState(factions[0])
-	// const [activeCharacter, setActiveCharacter] = useState(factions[0].characters[0]);
 
 	// Function to handle the slide change event
 	const handleFactionSlideChange = (swiper) => {
 		const currentIndex = swiper.realIndex;
 		const currentFaction = factions[currentIndex];
 		setActiveFaction(currentFaction);
-		// setActiveCharacter(currentFaction.characters[0]);
-
-		// Add this line to reset the character swiper's position
-		// if (characterSwiperRef.current) {
-		// 	characterSwiperRef?.current?.swiper?.slideToLoop(0);
-		// }
 	};
 
-	// const handleCharacterSlideChange = (swiper) => {
-	// 	const currentIndex = swiper.realIndex;
-	// 	const currentCharacter = activeFaction.characters[currentIndex];
-	// 	setActiveCharacter(currentCharacter);
-	// };
-
-
 	return (
-		<SectionContainer className="min-h-screen" id="characters" backgroundImage="url('/characters-bg.png')" isFullWidth={true}>
+		<SectionContainer className="min-h-screen" id="characters" backgroundImage="url('/factions-selection-bg.png')" isFullWidth={true}>
 			{/* Section Title */}
 			<div className="absolute top-25 z-6 h-1/6">
 				<img src="/title-card.png" className="w-[350px]" alt="Brimvahl-Crown-Title-Card" />
@@ -75,29 +60,6 @@ export default function Characters() {
 							<p className="w-full">{activeFaction ? activeFaction.desc : activeFaction[0].desc}</p>
 						</div>
 					</div>
-
-					{/* Selector (Temporary disabled, will be moved to characters page) */}
-					{/* <div className="flex gap-5 justify-center w-3/4 mt-6" id="character-icon">
-						<ArrowLeft onClick={() => handlePrev(characterSwiperRef)} />
-
-						<Swiper
-							onSlideChange={handleCharacterSlideChange}
-							className="w-2/3 cursor-grab"
-							slidesPerView={3}
-							centeredSlides={true}
-							spaceBetween={0}
-							ref={characterSwiperRef}
-							loop
-						>
-							{activeFaction.characters?.map((c, index) => (
-								<SwiperSlide key={index} onClick={() => characterSwiperRef.current?.swiper.slideToLoop(index)}>
-									<img src={c.icon} className="scale-[0.7] transition duration-300 ease-in-out" alt="Brimvahl-Crown-Character-Icon" />
-								</SwiperSlide>
-							))}
-						</Swiper>
-
-						<ArrowRight onClick={() => handleNext(characterSwiperRef)} />
-					</div> */}
 				</div>
 
 				{/* Middle side */}
@@ -118,7 +80,7 @@ export default function Characters() {
 					<div className="flex flex-col h-screen justify-center w-full" id="faction-section">
 						<div className="w-full h-full flex flex-col items-center gap-5 relative">
 							<div className="absolute z-5 top-[30vh] bg-white rounded-full h-15 w-15 pb-2">
-								<ArrowLeft className="rotate-[90deg] scale-[0.8]" onClick={() => handlePrev(factionSwiperRef)} />
+								<ArrowLeft className="rotate-[90deg] scale-[0.8]" onClick={handlePrev} />
 							</div>
 
 							<Swiper
@@ -128,11 +90,11 @@ export default function Characters() {
 								slidesPerView={3}
 								centeredSlides={true}
 								spaceBetween={0}
-								ref={factionSwiperRef}
+								ref={swiperRef}
 								loop
 							>
 								{factions && factions.map((f, index) => (
-									<SwiperSlide key={index} onClick={() => factionSwiperRef.current?.swiper.slideToLoop(index)}>
+									<SwiperSlide key={index} onClick={() => swiperRef.current?.swiper.slideToLoop(index)}>
 										<div className="w-full h-full flex items-center justify-center">
 											<img src={f.logo} className="transition-all ease-in-out duration-300 w-50 h-50 brightness-25" alt="Brimvahl-Crown-Faction-Icon" />
 										</div>
@@ -141,7 +103,7 @@ export default function Characters() {
 							</Swiper>
 
 							<div className="absolute z-5 bottom-[30vh] bg-white rounded-full h-15 w-15 pt-2">
-								<ArrowRight className="rotate-[90deg] scale-[0.8]" onClick={() => handleNext(factionSwiperRef)} />
+								<ArrowRight className="rotate-[90deg] scale-[0.8]" onClick={handleNext} />
 							</div>
 						</div>
 					</div>

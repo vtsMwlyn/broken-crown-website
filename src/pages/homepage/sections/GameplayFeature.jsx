@@ -90,7 +90,7 @@ export default function GameplayFeature() {
 				</Swiper>
 
 				{/* Card */}
-				<div className="relative bottom-10 flex flex-col items-center w-3/5 z-10">
+				<div className="relative bottom-0 flex flex-col items-center w-3/5 z-10">
 					<img src="/text-paper.png" className="w-full h-full absolute top-0" alt="Brimvahl-Crown-Text-Card" />
 					<div className="w-4/5 text-2xl relative py-10">
 						<p className="w-full">{activeFeatures.desc}</p>

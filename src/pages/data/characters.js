@@ -24,6 +24,7 @@ const characters = [
 		fullName: 'Kazmiel Elandys',
 		nickName: 'Kazmiel',
 		sprite: '/characters/sprites/kazmiel.png',
+		half: '/characters/half-kazmiel.png',
 		icon: '/characters/icons/kazmiel.png',
 		desc: 'Mariel’s firstborn, a half-seraph, was born without wings, a mark of no divinity. Yet, when her father was slain, Kazmiel awakened her latent power, manifesting glowing wings and ascending as one of history’s most formidable warriors. Her plundering missions brought immeasurable wealth to Eldynia, but her love for a lowlander led to her abandoning war. Deemed a traitor to the crown, she was exiled, removed from history.',
 
@@ -54,6 +55,7 @@ const characters = [
 		fullName: 'Flaire Eldryn',
 		nickName: 'Flaire',
 		sprite: '/characters/sprites/flaire.png',
+		half: '/characters/half-flaire.png',
 		icon: '/characters/icons/flaire.png',
 		desc: 'The enigmatic Grand Mage of Eldynia, Flaire serves as both advisor and caretaker to the royal family. Despite her claims of being human, her unnaturally long life, spanning even the Queen’s reign, hints at hidden origins. Knowledgeable, discreet, and impossibly ancient, she has guided three generations of Elandys rulers, her true motives as veiled as her past.',
 
@@ -69,6 +71,7 @@ const characters = [
 		fullName: '?????',
 		nickName: '?????',
 		sprite: '/characters/sprites/deathless-king.png',
+		half: '/characters/half-deathless-king.png',
 		icon: '/characters/icons/deathless-king.png',
 		desc: 'A swordsman with extraordinary powers.',
 
