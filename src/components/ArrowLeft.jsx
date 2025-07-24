@@ -1,7 +1,7 @@
-export default function ArrowLeft({ onClick, className, style }) {
+export default function ArrowLeft({ onClick, className, style, type = 1 }) {
 	return (
 		<button onClick={onClick} className={`hover:drop-shadow-[0px_0px_5px_oklch(79.5%_0.184_86.047)] animate-arrow-left ${className}`} style={{ style }}>
-			<img src="/arrow-left.png" className="w-25" alt="Brimvahl-Crown-Arrow" />
+			<img src={type === 1 ? '/arrow-left.png' : '/arrow-left-white.png'} className={type == 1 ? 'w-25' : 'w-15'} alt="Brimvahl-Crown-Arrow" />
 		</button>
 	)
 }

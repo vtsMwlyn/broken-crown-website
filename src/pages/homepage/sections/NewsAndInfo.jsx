@@ -119,8 +119,8 @@ export default function NewsAndInfo() {
 
 				{/* Card */}
 				<div className="relative flex flex-col items-center w-3/5 mt-10">
-					<img src="/normal-text-card.png" className="w-5/6 h-5/6 absolute top-4" alt="Brimvahl-Crown-Text-Card" />
-					<div className="w-3/4 text-lg relative py-18">
+					<img src="text-card.png" className="w-5/6 h-5/6 absolute top-4" alt="Brimvahl-Crown-Text-Card" />
+					<div className="w-2/3 text-lg relative py-18">
 						<p className="w-full">{activeNews.desc}</p>
 					</div>
 				</div>

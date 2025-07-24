@@ -55,7 +55,7 @@ export default function Characters() {
 
 					{/* Card */}
 					<div className="relative flex flex-col items-center w-7/8 mt-10">
-						<img src="/normal-text-card.png" className="w-full h-full absolute top-0" alt="Brimvahl-Crown-Text-Card" />
+						<img src="/text-card.png" className="w-full h-full absolute top-0" alt="Brimvahl-Crown-Text-Card" />
 						<div className="w-3/4 text-base relative py-8">
 							<p className="w-full">{activeFaction ? activeFaction.desc : activeFaction[0].desc}</p>
 						</div>

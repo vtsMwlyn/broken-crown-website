@@ -150,8 +150,8 @@ export default function Background() {
 
 				{/* Card */}
 				<div className="absolute flex flex-col items-center w-4/5 bottom-[-180px] z-10">
-					<img src="/normal-text-card.png" className="w-5/6 h-5/6 absolute top-4" alt="Brimvahl-Crown-Text-Card" />
-					<div className="w-3/4 text-base relative pt-10 pb-20 px-4">
+					<img src="/text-card.png" className="w-5/6 h-5/6 absolute top-8" alt="Brimvahl-Crown-Text-Card" />
+					<div className="w-3/4 text-base relative py-20 px-4">
 						<h1 className="text-xl font-bold">{activeBackground.title}</h1>
 						<p className="w-full mt-4">{activeBackground.desc}</p>
 					</div>

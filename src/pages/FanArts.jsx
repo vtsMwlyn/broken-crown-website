@@ -3,9 +3,11 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
 import { Pagination } from 'swiper/modules';
 import 'swiper/css/pagination';
+import allFanarts from "./data/fan-arts";
 
 import SectionContainer from "../components/SectionContainer";
-import allFanarts from "./data/fan-arts";
+import ArrowLeft from "../components/ArrowLeft";
+import ArrowRight from "../components/ArrowRight";
 
 function HorizontalFanArtCard({fanart}) {
 	return (
@@ -35,19 +37,19 @@ export default function FanArts() {
 	const fanarts = allFanarts;
 	const swiperRef = useRef(null);
 
-	// // Function to handle the next slide
-	// function handleNext() {
-	// 	if (swiperRef.current) {
-	// 		swiperRef.current.swiper.slideNext();
-	// 	}
-	// };
+	// Function to handle the next slide
+	function handleNext() {
+		if (swiperRef.current) {
+			swiperRef.current.swiper.slideNext();
+		}
+	};
 
-	// // Function to handle the previous slide
-	// function handlePrev() {
-	// 	if (swiperRef.current) {
-	// 		swiperRef.current.swiper.slidePrev();
-	// 	}
-	// };
+	// Function to handle the previous slide
+	function handlePrev() {
+		if (swiperRef.current) {
+			swiperRef.current.swiper.slidePrev();
+		}
+	};
 
 	return (
 		<SectionContainer className="py-40" backgroundImage="url('/fanarts-bg.png')" id="fan-arts">
@@ -58,7 +60,7 @@ export default function FanArts() {
 					className="w-full cursor-grab"
 					ref={swiperRef}
 					modules={[Pagination]}
-					pagination={{ clickable: true }}
+					pagination={{ clickable: true, dynamicBullets: true }}
 					slidesPerView={1}
 					loop={true}
 				>
@@ -87,6 +89,9 @@ export default function FanArts() {
 						</SwiperSlide>
 					))}
 				</Swiper>
+
+				<ArrowLeft onClick={handlePrev} className="absolute bottom-38 left-180 z-10" type={2} />
+				<ArrowRight onClick={handleNext} className="absolute bottom-38 right-180 z-10" type={2} />
 			</div>
 		</SectionContainer>
 	)

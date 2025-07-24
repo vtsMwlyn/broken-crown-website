@@ -8,17 +8,18 @@ body {
   scroll-behavior: smooth;
 }
 
-button, a {
-  @apply cursor-pointer;
-}
-
 /* For characters section swiper (border for selected slide item) */
 @layer utilities {
-  /* Target the image inside the active slide */
-  #character-slider .swiper-slide-active img {
-    @apply border-4 border-[#A5784C] rounded-xl scale-100;
+  button, a {
+    @apply cursor-pointer;
   }
 
+  /* Target the image inside the active slide (UNUSED/OUTDATED) */
+  /* #character-slider .swiper-slide-active img {
+    @apply border-4 border-[#A5784C] rounded-xl scale-100;
+  } */
+
+  /* FACTION SWIPER */
   #faction-section .swiper-slide-active img {
     @apply brightness-100;
   }
@@ -36,10 +37,11 @@ button, a {
 .grid-container > a:nth-child(6n + 4),
 .grid-container > a:nth-child(6n + 5),
 .grid-container > a:nth-child(6n + 6) {
-    transform: translateX(6rem); /* The horizontal offset! */
+    transform: translateX(6rem);
 }
 
-/* For swipers that need pagination (bullets navigations) */
+/* For swipers that need custom pagination (bullets navigations) */
+/* NEWS AND INFO SWIPER */
 #news-and-info .swiper-pagination-bullet {
   width: 16px !important;
   height: 16px !important;
@@ -54,6 +56,7 @@ button, a {
   opacity: 1;
 }
 
+/* GAMEPLAY FEATURE SWIPER */
 #gameplay-feature .swiper-pagination-bullet {
   width: 16px !important;
   height: 16px !important;
@@ -69,31 +72,62 @@ button, a {
   margin: 0 10px;
 }
 
+/* FAN ARTS SWIPER (LIMITED NUMBER OF PAGINATION BULLETS) */
 #fan-arts .swiper {
   padding-bottom: 100px !important;
 }
 
-#fan-arts .swiper-pagination {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 #fan-arts .swiper-pagination-bullet {
-  width: 16px !important;
-  height: 16px !important;
+  width: 26px !important;
+  height: 26px !important;
   background-color: #ffffff;
   opacity: 0.5;
-  transition: opacity 0.3s ease; 
-  margin: 0 10px;
-}
+  margin: auto 10px;
+  transform: scale(0.7);
+} 
 
 #fan-arts .swiper-pagination-bullet-active {
   background-color: white !important;
   opacity: 1;
   width: 26px !important;
   height: 26px !important;
-  margin: 0 10px;
+  margin: auto 10px;
+  transform: scale(1);
+}
+
+/* For swipers that need custom styling */
+/* MERCH SWIPER (HALF-TOP-CIRCULAR ILLUSION) */
+#merchs .swiper {
+  padding: 100px !important;
+}
+
+#merchs .swiper-slide {
+  transition: transform 0.3s ease;
+  transform: translateY(600px);
+}
+
+#merchs .swiper-slide-active {
+  transform: translateY(200px) !important;
+}
+
+#merchs .swiper-slide-next {
+  transform: translateY(-40px) !important;
+}
+
+#merchs .swiper-slide-next + .swiper-slide {
+  transform: translateY(-120px) !important;
+}
+
+#merchs .swiper-slide-next + .swiper-slide + .swiper-slide {
+  transform: translateY(-120px) !important;
+}
+
+#merchs .swiper-slide-next + .swiper-slide + .swiper-slide + .swiper-slide {
+  transform: translateY(-40px) !important;
+}
+
+#merchs .swiper-slide-next + .swiper-slide + .swiper-slide + .swiper-slide + .swiper-slide {
+  transform: translateY(200px) !important;
 }
 
 .animate-arrow-left {
