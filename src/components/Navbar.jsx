@@ -11,6 +11,8 @@ export default function Navbar() {
 
 	useEffect(() => {
 		if (location.pathname === '/') {
+			setIsAtThePageTop(true);
+
 			const handleScroll = () => {
 				// Check if the user has scrolled more than 100vh
 				// window.innerHeight is the pixel height of the viewport
@@ -29,6 +31,8 @@ export default function Navbar() {
 			return () => {
 				window.removeEventListener('scroll', handleScroll);
 			};
+		} else {
+			setIsAtThePageTop(false);
 		}
 	}, [location.pathname]);
 

@@ -73,8 +73,8 @@ export default function NewsAndInfo() {
 				<div className="w-1/2 relative">
 					{/* Section Title */}
 					<div className="h-1/6 relative mt-20 flex justify-center items-center">
-						<img src="/title-card.png" className="w-[300px]" alt="Brimvahl-Crown-Title-Card" />
-						<div className="absolute top-7 text-3xl">News and Info</div>
+						<img src="/title-card.png" className="w-[400px]" alt="Brimvahl-Crown-Title-Card" />
+						<div className="font-3 font-bold absolute top-8 text-4xl">News and Info</div>
 					</div>
 
 					{/* Slider */}

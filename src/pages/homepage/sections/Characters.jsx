@@ -28,7 +28,7 @@ export default function Characters() {
 				{/* Section Title */}
 				<div className="w-fit relative">
 					<img src="/title-card.png" className="w-[350px]" alt="Brimvahl-Crown-Title-Card" />
-					<div className="absolute top-6 w-full flex justify-center items-center text-4xl">Characters</div>
+					<div className="font-2 absolute top-7 w-full flex justify-center items-center text-4xl uppercase font-bold">Characters</div>
 				</div>
 
 				{/* Cards */}

@@ -54,7 +54,10 @@ export default function FanArts() {
 	return (
 		<SectionContainer className="py-40" backgroundImage="url('/fanarts-bg.png')" id="fan-arts">
 			<div className="w-full flex flex-col items-center">
-				<h1 className="text-6xl text-white mb-20">Fan Art Gallery</h1>
+				<div className="mb-20 flex flex-col items-center">
+					<h1 className="text-6xl text-white font-3 font-bold">Fan Art Gallery</h1>
+					<img src="/underline-white.png" className="w-2/3" alt="Brimvahl-Crown-Underline" />
+				</div>
 
 				<Swiper
 					className="w-full cursor-grab"

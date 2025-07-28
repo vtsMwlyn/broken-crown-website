@@ -64,8 +64,8 @@ export default function GameplayFeature() {
 
 				{/* Section Title */}
 				<div className="relative z-10 mt-20">
-					<img src="/title-card.png" className="w-[450px]" alt="Brimvahl-Crown-Title-Card" />
-					<div className="absolute top-10 w-full flex justify-center items-center text-4xl">Gameplay Features</div>
+					<img src="/title-card.png" className="w-[530px]" alt="Brimvahl-Crown-Title-Card" />
+					<div className="font-3 font-bold absolute top-13 w-full flex justify-center items-center text-4xl">Gameplay Features</div>
 				</div>
 
 				{/* Slider */}

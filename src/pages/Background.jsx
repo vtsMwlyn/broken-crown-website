@@ -132,11 +132,9 @@ export default function Background() {
 	return (
 		<SectionContainer className="min-h-screen pb-60" id="background" backgroundImage="url('/background-section-bg.png')">
 			{/* Header */}
-			<div className="w-full flex flex-col items-center text-white absolute top-30 left-0 text-4xl py-5">
-				<div className="w-11/12 xl:w-5/6 max-w-[1500px] ml-40 relative flex justify-end">
-					<h1 className="text-5xl">Background</h1>
-					<img src="/fancy-underline.png" className="absolute top-8 right-[-100px] w-130" alt="Brimvahl-Crown-Fancy-Underline" />
-				</div>
+			<div className="absolute top-30 right-10 flex flex-col items-center">
+				<h1 className="text-6xl text-[#C29948] font-3 font-bold">Background</h1>
+				<img src="/underline-gold.png" className="w-2/3" alt="Brimvahl-Crown-Underline" />
 			</div>
 
 			{/* Main content */}

@@ -54,6 +54,13 @@ export default function Merch() {
 		<>
 			<div className="w-full flex justify-center relative min-h-screen" id="merchs" style={{background: `url('/merch-bg.png') no-repeat center center / cover`}}>
 				<div className="w-full flex flex-col justify-between items-center">
+					{/* Title */}
+					<div className="flex flex-col items-center absolute top-26 right-10">
+						<h1 className="text-5xl text-white font-3 font-bold">Merch Store</h1>
+						<img src="/underline-white.png" className="w-2/5" alt="Brimvahl-Crown-Underline" />
+					</div>
+
+					{/* Featured marchs */}
 					<div className="w-11/12 xl:w-5/6 flex flex-col items-center mt-40">
 						<div className="w-full flex justify-start">
 							<div className="w-1/2 grid grid-cols-2 gap-8">

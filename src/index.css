@@ -8,6 +8,14 @@ body {
   scroll-behavior: smooth;
 }
 
+.font-2 {
+  font-family: "Cinzel", serif;
+}
+
+.font-3 {
+  font-family: "Cinzel Decorative", serif;
+}
+
 /* For characters section swiper (border for selected slide item) */
 @layer utilities {
   button, a {
