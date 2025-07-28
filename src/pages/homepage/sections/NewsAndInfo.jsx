@@ -12,7 +12,7 @@ const news = [
 	{
 		id: 1,
 		type: 'image',
-		source: '/news-and-info/livingroom.png',
+		source: '/news-and-info/livingroom.webp',
 		desc: 'Concept artists are developing variative visual story backgrounds. The living room is one of them, where Kazmiel spend her morning and night, before and after her adventure.'
 	},
 	{
@@ -24,7 +24,7 @@ const news = [
 	{
 		id: 3,
 		type: 'image',
-		source: '/news-and-info/map.png',
+		source: '/news-and-info/map.webp',
 		desc: '3D artists are developing the 3D map area for battles Kazmiel encountered during her adventure!'
 	},
 	{
@@ -64,16 +64,16 @@ export default function NewsAndInfo() {
 	};
 
 	return (
-		<SectionContainer className="min-h-screen" id="news-and-info" backgroundImage="url('/news-and-info-section-bg.png')">
+		<SectionContainer className="min-h-screen" id="news-and-info" backgroundImage="url('/news-and-info-section-bg.webp')">
 			<div className="w-full flex flex-col items-center justify-center relative mb-20">
 				{/* Background */}
-				<img src="/wooden-board.png" className="w-3/4 h-[650px] absolute top-20" alt="Brimvahl-Crown-News-And-Info-Board" />
+				<img src="/wooden-board.webp" className="w-3/4 h-[650px] absolute top-20" alt="Brimvahl-Crown-News-And-Info-Board" />
 
 				{/* Content */}
 				<div className="w-1/2 relative">
 					{/* Section Title */}
 					<div className="h-1/6 relative mt-20 flex justify-center items-center">
-						<img src="/title-card.png" className="w-[400px]" alt="Brimvahl-Crown-Title-Card" />
+						<img src="/title-card.webp" className="w-[400px]" alt="Brimvahl-Crown-Title-Card" />
 						<div className="font-3 font-bold absolute top-8 text-4xl">News and Info</div>
 					</div>
 
@@ -102,7 +102,7 @@ export default function NewsAndInfo() {
 										</video>
 									</SwiperSlide>
 								)
-							} else if(n.type === 'youtube') {
+							} else if (n.type === 'youtube') {
 								return (
 									<SwiperSlide key={index}>
 										<iframe className="w-full h-full" src={n.source} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
@@ -119,7 +119,7 @@ export default function NewsAndInfo() {
 
 				{/* Card */}
 				<div className="relative flex flex-col items-center w-3/5 mt-10">
-					<img src="text-card.png" className="w-5/6 h-5/6 absolute top-4" alt="Brimvahl-Crown-Text-Card" />
+					<img src="text-card.webp" className="w-5/6 h-5/6 absolute top-4" alt="Brimvahl-Crown-Text-Card" />
 					<div className="w-2/3 text-lg relative py-18">
 						<p className="w-full">{activeNews.desc}</p>
 					</div>

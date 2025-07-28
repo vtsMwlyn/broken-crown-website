@@ -9,11 +9,11 @@ import SectionContainer from "../components/SectionContainer";
 import ArrowLeft from "../components/ArrowLeft";
 import ArrowRight from "../components/ArrowRight";
 
-function HorizontalFanArtCard({fanart}) {
+function HorizontalFanArtCard({ fanart }) {
 	return (
 		<div className="w-full flex flex-col items-center">
 			<div className="w-full h-full relative flex items-center justify-center">
-				<img src="/fanart-card-horizontal.png" className="w-[580px] h-[400px]" alt="Brimvahl-Crown-Fan-Art-Border" />
+				<img src="/fanart-card-horizontal.webp" className="w-[580px] h-[400px]" alt="Brimvahl-Crown-Fan-Art-Border" />
 				<img src={fanart?.image} className="absolute z-5 w-[500px] h-[320px] object-cover object-center rounded-2xl" alt="Brimvahl-Crown-Fan-Art" />
 			</div>
 			<p className="text-white text-start w-full text-xl mt-4 pl-4">{fanart?.title}, {fanart?.name}</p>
@@ -21,11 +21,11 @@ function HorizontalFanArtCard({fanart}) {
 	)
 }
 
-function VerticalFanArtCard({fanart}) {
+function VerticalFanArtCard({ fanart }) {
 	return (
 		<div className="w-full flex flex-col items-center">
 			<div className="w-full h-full relative flex items-center justify-center">
-				<img src="/fanart-card-vertical.png" className="w-[380px] h-[580px]" alt="Brimvahl-Crown-Fan-Art-Border" />
+				<img src="/fanart-card-vertical.webp" className="w-[380px] h-[580px]" alt="Brimvahl-Crown-Fan-Art-Border" />
 				<img src={fanart?.image} className="absolute z-5 w-[300px] h-[500px] object-cover object-center rounded-2xl" alt="Brimvahl-Crown-Fan-Art" />
 			</div>
 			<p className="text-white text-start w-full text-xl mt-4 pl-4">{fanart?.title}, {fanart?.name}</p>
@@ -52,11 +52,11 @@ export default function FanArts() {
 	};
 
 	return (
-		<SectionContainer className="py-40" backgroundImage="url('/fanarts-bg.png')" id="fan-arts">
+		<SectionContainer className="py-40" backgroundImage="url('/fanarts-bg.webp')" id="fan-arts">
 			<div className="w-full flex flex-col items-center">
 				<div className="mb-20 flex flex-col items-center">
 					<h1 className="text-6xl text-white font-3 font-bold">Fan Art Gallery</h1>
-					<img src="/underline-white.png" className="w-2/3" alt="Brimvahl-Crown-Underline" />
+					<img src="/underline-white.webp" className="w-2/3" alt="Brimvahl-Crown-Underline" />
 				</div>
 
 				<Swiper

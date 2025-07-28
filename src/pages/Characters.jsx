@@ -37,10 +37,10 @@ export default function Characters() {
 	};
 
 	return (
-		<SectionContainer className="min-h-screen" id="characters" backgroundImage="url('/factions-selection-bg.png')" isFullWidth={true}>
+		<SectionContainer className="min-h-screen" id="characters" backgroundImage="url('/factions-selection-bg.webp')" isFullWidth={true}>
 			{/* Section Title */}
 			<div className="absolute top-25 z-6 h-1/6">
-				<img src="/title-card.png" className="w-[350px]" alt="Brimvahl-Crown-Title-Card" />
+				<img src="/title-card.webp" className="w-[350px]" alt="Brimvahl-Crown-Title-Card" />
 				<div className="absolute top-6 w-full flex justify-center items-center text-4xl">Characters</div>
 			</div>
 
@@ -49,13 +49,13 @@ export default function Characters() {
 				<div className="w-2/5 flex flex-col justify-center items-center pl-16 pr-2">
 					{/* Character name */}
 					<div className="relative mt-[50px]">
-						<img src="/title-card.png" className="w-[380px]" alt="Brimvahl-Crown-Title-Card" />
+						<img src="/title-card.webp" className="w-[380px]" alt="Brimvahl-Crown-Title-Card" />
 						<div className="absolute top-7 w-full flex justify-center items-center text-4xl">{activeFaction ? activeFaction.name : activeFaction[0].name}</div>
 					</div>
 
 					{/* Card */}
 					<div className="relative flex flex-col items-center w-7/8 mt-10">
-						<img src="/text-card.png" className="w-full h-full absolute top-0" alt="Brimvahl-Crown-Text-Card" />
+						<img src="/text-card.webp" className="w-full h-full absolute top-0" alt="Brimvahl-Crown-Text-Card" />
 						<div className="w-3/4 text-base relative py-8">
 							<p className="w-full">{activeFaction ? activeFaction.desc : activeFaction[0].desc}</p>
 						</div>
@@ -127,12 +127,12 @@ export default function Characters() {
 			</div>
 
 			{/* Pillars */}
-			<img src="/pillar-left.png" className="absolute h-screen top-0 left-0 z-9" alt="Brimvahl-Crown-Pillar" />
-			<img src="/pillar-right.png" className="absolute h-screen top-0 right-0 z-9" alt="Brimvahl-Crown-Pillar" />
+			<img src="/pillar-left.webp" className="absolute h-screen top-0 left-0 z-9" alt="Brimvahl-Crown-Pillar" />
+			<img src="/pillar-right.webp" className="absolute h-screen top-0 right-0 z-9" alt="Brimvahl-Crown-Pillar" />
 
 			{/* Bottom Battlements */}
 			<div className="w-full absolute bottom-0 z-10 flex gap-6 h-[100px]">
-				<img src="/battlements-bottom.png" className="w-full h-full absolute" alt="Brimvahl-Crown-Bottom-Separator" />
+				<img src="/battlements-bottom.webp" className="w-full h-full absolute" alt="Brimvahl-Crown-Bottom-Separator" />
 			</div>
 		</SectionContainer>
 	)

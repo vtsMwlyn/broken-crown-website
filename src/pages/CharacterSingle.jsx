@@ -34,7 +34,7 @@ export default function CharacterSingle() {
 	}
 
 	return (
-		<SectionContainer className="h-screen overflow-y-hidden pt-20" backgroundImage="url('/single-character-bg.png')">
+		<SectionContainer className="h-screen overflow-y-hidden pt-20" backgroundImage="url('/single-character-bg.webp')">
 			<div className="w-full h-full flex items-center">
 				<div className="w-full h-fit flex items-center">
 					<div className="w-1/2 flex flex-col pr-20">
@@ -45,7 +45,7 @@ export default function CharacterSingle() {
 								<h2 className="text-white pl-16 pr-4 text-xl">{character?.title}</h2>
 							)}
 							<div className="flex w-full items-center">
-								<img src="/character-name-underline-verticle.png" className="w-10" alt="Brimvahl-Crown-Character-Underline" />
+								<img src="/character-name-underline-verticle.webp" className="w-10" alt="Brimvahl-Crown-Character-Underline" />
 								<div className="h-2 w-full ml-[-10px] bg-[#C29948] rounded-r-lg"></div>
 							</div>
 						</div>
@@ -55,7 +55,7 @@ export default function CharacterSingle() {
 							<div className="flex items-center gap-4 pl-16">
 								<audio src={character?.voiceline} ref={audioRef} onEnded={() => setIsPlayingAudio(false)} />
 								<button onClick={toggleAudioPlay} className="w-10 h-10">
-									<img src="/va-icon.svg" className="w-full-h-full" alt="Brimvahl-Crown-VA-Icon" />
+									<img src="/va-icon.webp" className="w-full-h-full" alt="Brimvahl-Crown-VA-Icon" />
 								</button>
 								<h1 className="text-[#C29948] text-xl">VA: {character?.VA}</h1>
 							</div>
@@ -66,7 +66,7 @@ export default function CharacterSingle() {
 					</div>
 					<div className="w-1/2 flex flex-col items-center relative">
 						{/* Character/Weapon Sprite */}
-						<img src="/character-circle.png" className="w-full" alt="Brimvahl-Crown-Character-Circle" />
+						<img src="/character-circle.webp" className="w-full" alt="Brimvahl-Crown-Character-Circle" />
 						<img src={currentlyShowing === 'character' ? character?.sprite : weapon?.sprite} className="w-3/4 absolute top-0 h-screen object-contain" alt="Brimvahl-Crown-Character-Sprite" />
 
 						{/* Switch Character/Weapon */}

@@ -11,7 +11,7 @@ import { useEffect } from 'react';
 function Flipbook({ onNextClick, onPrevClick }) {
 	const bookRef = useRef(null);
 	const pageFlipInstance = useRef(null);
-	
+
 	const handleNextPage = () => {
 		if (pageFlipInstance.current) {
 			onNextClick();
@@ -107,7 +107,7 @@ function Flipbook({ onNextClick, onPrevClick }) {
 			<ArrowRight onClick={handleNextPage} className="absolute right-[-120px] top-70 rotate-5" />
 		</div>
 	);
-	}
+}
 
 export default function Background() {
 	const [currentPage, setCurrentPage] = useState(0);
@@ -130,16 +130,16 @@ export default function Background() {
 	}
 
 	return (
-		<SectionContainer className="min-h-screen pb-60" id="background" backgroundImage="url('/background-section-bg.png')">
+		<SectionContainer className="min-h-screen pb-60" id="background" backgroundImage="url('/background-section-bg.webp')">
 			{/* Header */}
 			<div className="absolute top-30 right-10 flex flex-col items-center">
 				<h1 className="text-6xl text-[#C29948] font-3 font-bold">Background</h1>
-				<img src="/underline-gold.png" className="w-2/3" alt="Brimvahl-Crown-Underline" />
+				<img src="/underline-gold.webp" className="w-2/3" alt="Brimvahl-Crown-Underline" />
 			</div>
 
 			{/* Main content */}
 			<div className="flex flex-col w-2/3 items-center relative mt-20">
-				<img src="/book.png" className="h-[700px] mt-30 relative z-0" alt="Brimvahl-Crown-Background-Book" />
+				<img src="/book.webp" className="h-[700px] mt-30 relative z-0" alt="Brimvahl-Crown-Background-Book" />
 
 				{/* Galery on book */}
 				<div className="absolute top-40 flex w-full h-3/5 gap-16 z-5 rotate-z-[7.5deg] rotate-x-25">
@@ -148,7 +148,7 @@ export default function Background() {
 
 				{/* Card */}
 				<div className="absolute flex flex-col items-center w-4/5 bottom-[-180px] z-10">
-					<img src="/text-card.png" className="w-5/6 h-5/6 absolute top-8" alt="Brimvahl-Crown-Text-Card" />
+					<img src="/text-card.webp" className="w-5/6 h-5/6 absolute top-8" alt="Brimvahl-Crown-Text-Card" />
 					<div className="w-3/4 text-base relative py-20 px-4">
 						<h1 className="text-xl font-bold">{activeBackground.title}</h1>
 						<p className="w-full mt-4">{activeBackground.desc}</p>

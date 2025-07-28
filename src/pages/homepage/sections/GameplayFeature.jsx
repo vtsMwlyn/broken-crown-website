@@ -11,17 +11,17 @@ import ArrowRight from "../../../components/ArrowRight";
 const features = [
 	{
 		id: 1,
-		image: '/gameplay-features/battlearena.png',
+		image: '/gameplay-features/battlearena.webp',
 		desc: 'Engage in classic one on one cinematic boss fights with quick time events.'
 	},
 	{
 		id: 2,
-		image: '/gameplay-features/mechanics.png',
+		image: '/gameplay-features/mechanics.webp',
 		desc: 'Fully voiced visual novel and comics where choices affects the combat! (Yes even the side quests are voiced)'
 	},
 	{
 		id: 3,
-		image: '/gameplay-features/visualization.png',
+		image: '/gameplay-features/visualization.webp',
 		desc: 'Mix and match Kazmiel\'s armor and make her the best version of herself.'
 	},
 ];
@@ -55,16 +55,16 @@ export default function GameplayFeature() {
 	};
 
 	return (
-		<SectionContainer className="min-h-screen mb-20" id="gameplay-feature" backgroundImage="url('/gameplay-feature-section-bg.png')">
+		<SectionContainer className="min-h-screen mb-20" id="gameplay-feature" backgroundImage="url('/gameplay-feature-section-bg.webp')">
 			<div className="h-full w-full flex flex-col items-center justify-center relative z-10">
 				{/* Border */}
 				<div className="absolute h-full max-h-[900px] w-full max-w-[1500px] px-30 py-20">
-					<img src="/fancy-border.png" className="h-full w-full" alt="Brimvahl-Crown-Fancy-Border" />
+					<img src="/fancy-border.webp" className="h-full w-full" alt="Brimvahl-Crown-Fancy-Border" />
 				</div>
 
 				{/* Section Title */}
 				<div className="relative z-10 mt-20">
-					<img src="/title-card.png" className="w-[530px]" alt="Brimvahl-Crown-Title-Card" />
+					<img src="/title-card.webp" className="w-[530px]" alt="Brimvahl-Crown-Title-Card" />
 					<div className="font-3 font-bold absolute top-13 w-full flex justify-center items-center text-4xl">Gameplay Features</div>
 				</div>
 
@@ -91,7 +91,7 @@ export default function GameplayFeature() {
 
 				{/* Card */}
 				<div className="relative bottom-0 flex flex-col items-center w-3/5 z-10">
-					<img src="/text-paper.png" className="w-full h-full absolute top-0" alt="Brimvahl-Crown-Text-Card" />
+					<img src="/text-paper.webp" className="w-full h-full absolute top-0" alt="Brimvahl-Crown-Text-Card" />
 					<div className="w-4/5 text-2xl relative py-10">
 						<p className="w-full">{activeFeatures.desc}</p>
 					</div>

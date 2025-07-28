@@ -4,8 +4,8 @@ const fs = require('fs');
 const path = require('path');
 
 const imagesToConvert = [
-  'femaleeliteguard.jpg',
-  'maleeliteguard.jpg'
+  'femaleeliteguard.webp',
+  'maleeliteguard.webp'
   // Add any other image names here
 ];
 
@@ -16,7 +16,7 @@ async function convertImages() {
 
   for (const imageName of imagesToConvert) {
     const inputPath = path.join(publicFolder, imageName);
-    const outputFileName = `${path.parse(imageName).name}.png`;
+    const outputFileName = `${path.parse(imageName).name}.webp`;
     const outputPath = path.join(publicFolder, outputFileName);
 
     if (!fs.existsSync(inputPath)) {

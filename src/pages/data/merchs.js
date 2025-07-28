@@ -31,61 +31,61 @@ const merchs = {
 	others: [
 		{
 			title: 'Tartaglia Frame',
-			image: '/merchs/tartaglia-frame.png',
+			image: '/merchs/tartaglia-frame.webp',
 			price: 0,
 			link: 'https://genshinfans.com/'
 		},
 		{
 			title: 'Custom Visions',
-			image: '/merchs/vision.png',
+			image: '/merchs/vision.webp',
 			price: 0,
 			link: 'https://genshinfans.com/'
 		},
 		{
 			title: 'Figure - Wriothesley',
-			image: '/merchs/wriothesley-figure.png',
+			image: '/merchs/wriothesley-figure.webp',
 			price: 0,
 			link: 'https://genshinfans.com/'
 		},
 		{
 			title: 'Fox Yae Miko',
-			image: '/merchs/fox-yae-miko.png',
+			image: '/merchs/fox-yae-miko.webp',
 			price: 0,
 			link: 'https://genshinfans.com/'
 		},
 		{
 			title: 'Yae Miko Joystick',
-			image: '/merchs/yae-miko-joystick.png',
+			image: '/merchs/yae-miko-joystick.webp',
 			price: 0,
 			link: 'https://genshinfans.com/'
 		},
 		{
 			title: 'Hutao Keyboard',
-			image: '/merchs/hutao-keyboard.png',
+			image: '/merchs/hutao-keyboard.webp',
 			price: 0,
 			link: 'https://genshinfans.com/'
 		},
 		{
 			title: 'Alhaitham Totebag',
-			image: '/merchs/alhaitham-totebag.png',
+			image: '/merchs/alhaitham-totebag.webp',
 			price: 0,
 			link: 'https://genshinfans.com/'
 		},
 		{
 			title: 'TCG Mousepad',
-			image: '/merchs/tcg-mousepad.png',
+			image: '/merchs/tcg-mousepad.webp',
 			price: 0,
 			link: 'https://genshinfans.com/'
 		},
 		{
 			title: 'Furina Figure',
-			image: '/merchs/furina-figure.png',
+			image: '/merchs/furina-figure.webp',
 			price: 0,
 			link: 'https://genshinfans.com/'
 		},
 		{
 			title: 'Cacucu Plushie',
-			image: '/merchs/cacucu-plushie.png',
+			image: '/merchs/cacucu-plushie.webp',
 			price: 0,
 			link: 'https://genshinfans.com/'
 		},
