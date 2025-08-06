@@ -13,7 +13,7 @@ async function convertImage(filePath) {
   const webpPath = filePath.replace(ext, '.webp');
 
   try {
-    await sharp(filePath)
+    await sharp(filePath, { unlimited: true })
       .webp({ quality: 80 })
       .toFile(webpPath);
 
