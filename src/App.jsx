@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useLocation, Navigate } from 'react-router-dom';
 import { useEffect } from 'react';
-// zaka 
+
 import Home from './pages/homepage/Index';
 import Characters from './pages/Characters';
 import CharacterSingle from './pages/CharacterSingle';
