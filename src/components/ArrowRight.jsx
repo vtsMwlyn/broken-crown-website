@@ -1,7 +1,18 @@
-export default function ArrowRight({ onClick, className, style, type = 1 }) {
-	return (
-		<button onClick={onClick} className={`hover:drop-shadow-[0px_0px_5px_oklch(79.5%_0.184_86.047)] animate-arrow-right ${className}`} style={{ style }}>
-			<img src={type === 1 ? '/arrow-right.webp' : '/arrow-right-white.webp'} className={type == 1 ? 'w-25' : 'w-15'} alt="Brimvahl-Crown-Arrow" />
-		</button>
-	)
+export default function ArrowRight({ onClick, className = "", type = 1 }) {
+  return (
+    <button
+      onClick={onClick}
+      className={`hover:drop-shadow-[0px_0px_5px_oklch(79.5%_0.184_86.047)] animate-arrow-right ${className}`}
+    >
+      <img
+        src={type === 1 ? "/arrow-right.webp" : "/arrow-right-white.webp"}
+        className={
+          type === 1
+            ? "w-10 sm:w-14 md:w-20 lg:w-24" 
+            : "w-6 sm:w-8 md:w-12 lg:w-16"   
+        }
+        alt="Brimvahl-Crown-Arrow"
+      />
+    </button>
+  );
 }
