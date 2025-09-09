@@ -55,7 +55,7 @@ export default function Characters() {
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full md:w-3/4 gap-6 md:gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full lg:w-3/4 gap-6 lg:gap-10">
           {highlightedCharacters.map((slug, i) => (
             <CharacterCard key={i} character={slug} />
           ))}

@@ -72,16 +72,13 @@ export default function FanArts() {
       id="fan-arts"
     >
       <div className="w-full flex flex-col items-center">
-        {/* Title */}
-        <div className="mb-10 sm:mb-16 lg:mb-20 flex flex-col items-center text-center">
+        <div className="mt-24 sm:mt-0 mb-10 sm:mb-16 lg:mb-20 flex flex-col items-center text-center">
           <h1 className="text-3xl sm:text-5xl lg:text-6xl text-white font-3 font-bold">
             Fan Art Gallery
           </h1>
-          <img src="/underline-white.webp" className="w-2/3 sm:w-1/2 lg:w-1/3" alt="Brimvahl-Crown-Underline"/>
+          <img  src="/underline-white.webp"  className="w-2/3 sm:w-1/2 lg:w-1/3"  alt="Brimvahl-Crown-Underline"/>
         </div>
 
-
-        {/* Swiper */}
         <Swiper
           className="w-full cursor-grab"
           ref={swiperRef}
@@ -117,9 +114,10 @@ export default function FanArts() {
         </Swiper>
 
         {/* Arrows */}
-        <ArrowLeft onClick={handlePrev} className="absolute bottom-10 sm:bottom-20 left-5 sm:left-20 z-10" type={2} />
-        <ArrowRight onClick={handleNext} className="absolute bottom-10 sm:bottom-20 right-5 sm:right-20 z-10" type={2}/>
+        <ArrowLeft onClick={handlePrev} className="absolute bottom-22 sm:bottom-20 left-5 sm:left-20 z-10" type={2} />
+        <ArrowRight  onClick={handleNext} className="absolute bottom-22 sm:bottom-20 right-5 sm:right-20 z-10" type={2}/>
       </div>
+      
     </SectionContainer>
   );
 }

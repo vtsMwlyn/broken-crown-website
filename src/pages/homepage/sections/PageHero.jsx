@@ -16,7 +16,7 @@ export default function PageHero() {
 				<source src="/page-hero-animation2.mp4" type="video/mp4" />
 			</video>
 
-			<div className="flex h-full w-full mt-10 md:mt-22 pb-10 justify-center items-end">
+			<div className="flex h-full w-full mt-10 lg:mt-22 pb-10 justify-center items-center lg:items-end">
 				<div className="flex flex-col justify-center items-center w-11/12 sm:w-4/5 md:w-1/2 text-center">
 					{/* Logo and text card */}
 					<div className="w-full flex flex-col items-center justify-center animate-brimvahl-crown-logo">

@@ -55,15 +55,14 @@ export default function GameplayFeature() {
     >
       <div className="h-full w-full flex flex-col items-center justify-center relative z-10">
         {/* Border */}
-        <div className="absolute inset-0 max-h-[900px] w-full max-w-[1500px] px-10 md:px-30 py-10 md:py-20">
-          <img src="/fancy-border.webp" className="h-full w-full" alt="Brimvahl-Crown-Fancy-Border" />
+        <div className="hidden lg:block absolute inset-0 max-h-[900px] w-full max-w-[1500px] px-10 lg:px-30 py-10 lg:py-20">
+          <img src="/fancy-border.webp" className="h-full w-full" alt="Brimvahl-Crown-Fancy-Border"/>
         </div>
 
         {/* Section Title */}
         <div className="relative z-10 mt-16 md:mt-20 flex justify-center">
           <img src="/title-card.webp" className="w-[250px] md:w-[530px]" alt="Brimvahl-Crown-Title-Card" />
-          <div className="
-					font-3 font-bold absolute top-4 sm:top-5 md:top-8 lg:top-10 w-full flex justify-center items-center text-lg sm:text-xl md:text-3xl lg:text-4xl">
+          <div className="font-3 font-bold absolute top-5 sm:top-5 md:top-14 lg:top-13 w-full flex justify-center items-center text-lg sm:text-xl md:text-3xl lg:text-4xl">
 					Gameplay Features
 				</div>
 
@@ -95,8 +94,10 @@ export default function GameplayFeature() {
         {/* Card */}
         <div className="relative flex flex-col items-center w-full md:w-3/5 mt-6 md:mt-10 z-10">
           <img src="/text-paper.webp" className="w-11/12 md:w-full h-auto absolute top-0" alt="Brimvahl-Crown-Text-Card" />
-          <div className="w-5/6 text-base md:text-2xl relative py-8 md:py-10">
-            <p className="text-center">{activeFeatures.desc}</p>
+          <div className="w-5/6 relative py-6 sm:py-8 md:py-10">
+            <p className="relative text-center text-xs -top-5 sm:text-sm md:text-lg md:-top-5 lg:text-xl xl:text-2xl lg:top-3 leading-relaxed">
+              {activeFeatures.desc}
+            </p>
           </div>
         </div>
       </div>

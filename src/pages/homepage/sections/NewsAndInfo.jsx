@@ -81,7 +81,7 @@ export default function NewsAndInfo() {
               className="w-[250px] md:w-[400px]"
               alt="Brimvahl-Crown-Title-Card"
             />
-            <div className="font-3 font-bold absolute top-6 md:top-8 text-2xl md:text-4xl">
+            <div className="font-3 font-bold absolute top-4 sm:top-5 md:top-5 lg:top-9 w-full flex justify-center items-center text-lg sm:text-xl md:text-3xl lg:text-4xl">
               News and Info
             </div>
           </div>
@@ -90,8 +90,7 @@ export default function NewsAndInfo() {
 							modules={[Pagination]}
 							pagination={{ clickable: true }}
 							onSlideChange={handleSlideChange}
-							className="cursor-grab w-full bg-black rounded-xl md:rounded-3xl aspect-video" 
-							// aspect-video = 16:9 biar proporsional
+							className="cursor-grab w-full bg-black rounded-xl md:rounded-3xl aspect-video md:top-8" 
 							slidesPerView={1}
 							ref={swiperRef}
 							loop
@@ -133,21 +132,28 @@ export default function NewsAndInfo() {
 						</Swiper>
 
 						{/* Navigations */}
-						<ArrowLeft onClick={handlePrev} className="absolute left-2 md:left-5 z-10 top-1/2 -translate-y-1/2" />
-          	<ArrowRight onClick={handleNext} className="absolute right-2 md:right-5 z-10 top-1/2 -translate-y-1/2" />
+            <ArrowLeft 
+  onClick={handlePrev} 
+  className="absolute left-2 md:left-5 z-10 bottom-25" 
+/>
+
+<ArrowRight 
+  onClick={handleNext} 
+  className="absolute right-2 md:right-5 z-10 bottom-25" 
+/>
+
         </div>
 
         {/* Card */}
-        <div className="relative flex flex-col items-center w-full md:w-3/5 mt-6 md:mt-10">
-          <img
-            src="text-card.webp"
-            className="w-11/12 md:w-5/6 h-auto absolute top-2 md:top-4"
-            alt="Brimvahl-Crown-Text-Card"
-          />
-          <div className="w-5/6 md:w-2/3 text-sm md:text-lg relative py-12 md:py-18">
-            <p className="w-full text-center">{activeNews.desc}</p>
+        <div className="relative flex flex-col items-center w-full md:w-3/5 mt-2 sm:mt-6 md:mt-10">
+          <div className="relative w-11/12 md:w-5/6">
+            <img src="text-card.webp" className="w-full h-auto"alt="Brimvahl-Crown-Text-Card"/>
+            <div className="absolute inset-0 flex items-center justify-center px-4">
+              <p className="text-center text-sm md:text-lg">{activeNews.desc}</p>
+            </div>
           </div>
         </div>
+
       </div>
     </SectionContainer>
   )
