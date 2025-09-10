@@ -6,31 +6,55 @@ import LinkButton from "../../../components/Button"
 export default function PageHero() {
 	return (
 		<SectionContainer className="min-h-screen">
-			<video autoPlay muted loop className="w-screen h-screen object-cover object-center absolute top-0 left-0 z-[-10] brightness-[0.4]" style={{ objectFit: 'cover' }}>
+			<video
+				autoPlay
+				muted
+				loop
+				className="w-screen h-screen object-cover object-center absolute top-0 left-0 z-[-10] brightness-[0.4]"
+				style={{ objectFit: "cover" }}
+			>
 				<source src="/page-hero-animation2.mp4" type="video/mp4" />
 			</video>
 
-			<div className="flex h-full w-full mt-22 pb-10 justify-center items-end">
-				<div className="flex flex-col justify-center items-center w-1/2">
+			<div className="flex h-full w-full mt-10 lg:mt-22 pb-10 justify-center items-center lg:items-end">
+				<div className="flex flex-col justify-center items-center w-11/12 sm:w-4/5 md:w-1/2 text-center">
 					{/* Logo and text card */}
 					<div className="w-full flex flex-col items-center justify-center animate-brimvahl-crown-logo">
-						<img src="/logo-homepage.webp" className="w-3/4 z-5 drop-shadow-[#000000]" alt="Brimvahl-Crown-Logo" />
+						<img
+							src="/logo-homepage.webp"
+							className="w-3/4 sm:w-2/3 md:w-3/4 z-5 drop-shadow-[#000000]"
+							alt="Brimvahl-Crown-Logo"
+						/>
 					</div>
 
 					{/* Download button */}
-					<div className="flex gap-4 mt-5">
-						<LinkButton to="https://store.steampowered.com/app/3179140/HR_Simulator/" text="Download Now" className="w-[250px]" />
+					<div className="flex flex-col sm:flex-row gap-4 mt-5 w-full justify-center items-center">
+						<LinkButton
+							to="https://store.steampowered.com/app/3179140/HR_Simulator/"
+							text="Download Now"
+							className="w-[200px] sm:w-[250px]"
+						/>
 					</div>
 
 					{/* Scroll to bottom to view more */}
-					<div className="mt-6 flex flex-col items-center w-fit mb-16">
-						<p className="text-white text-sm">Scroll down for more info</p>
-						<img src="/arrow-down-white.webp" className="w-10 mt-2" alt="Brimvahl-Crown-Arrow" />
+					<div className="mt-6 flex flex-col items-center w-fit mb-12 sm:mb-16">
+						<p className="text-white text-xs sm:text-sm">
+							Scroll down for more info
+						</p>
+						<img
+							src="/arrow-down-white.webp"
+							className="w-6 sm:w-8 md:w-10 mt-2"
+							alt="Brimvahl-Crown-Arrow"
+						/>
 					</div>
 
 					{/* Bottom Battlements */}
-					<div className="w-full absolute bottom-0 z-10 flex gap-6 h-[100px]">
-						<img src="/battlements-bottom.webp" className="w-full h-full absolute" alt="Brimvahl-Crown-Bottom-Separator" />
+					<div className="w-full absolute bottom-0 z-10 flex gap-6 h-[60px] sm:h-[80px] md:h-[100px]">
+						<img
+							src="/battlements-bottom.webp"
+							className="w-full h-full absolute"
+							alt="Brimvahl-Crown-Bottom-Separator"
+						/>
 					</div>
 				</div>
 			</div>
