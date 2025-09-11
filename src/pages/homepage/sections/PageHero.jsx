@@ -6,7 +6,7 @@ import LinkButton from "../../../components/Button"
 export default function PageHero() {
 	return (
 		<SectionContainer className="min-h-screen">
-			<img src="/pageherobg.webp" className="w-screen h-screen absolute brightness-60" alt="Brimvahl-Crown-Homepage-Image" />
+			<img src="/pageherobg.webp" className="w-screen h-screen absolute brightness-60 object-cover object-right xl:object-center" alt="Brimvahl-Crown-Homepage-Image" />
 
 			<div className="flex h-full w-full mt-10 lg:mt-22 pb-10 justify-center items-center lg:items-end">
 				<div className="flex flex-col justify-center items-center w-11/12 sm:w-4/5 md:w-1/2 text-center">

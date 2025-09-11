@@ -302,12 +302,12 @@ export default function Characters() {
 
       <img
         src="/pillar-left.webp"
-        className="hidden lg:block absolute h-screen top-0 left-0 z-9"
+        className="hidden xl:block absolute h-screen top-0 left-0 z-9"
         alt="pillar-left"
       />
       <img
         src="/pillar-right.webp"
-        className="hidden lg:block absolute h-screen top-0 right-0 z-9"
+        className="hidden xl:block absolute h-screen top-0 right-0 z-9"
         alt="pillar-right"
       />
 
