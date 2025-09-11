@@ -140,6 +140,22 @@ const characters = [
 		voiceline: '/characters/voicelines/unknown.ogg',
 		VA: 'Vannes Theo Sudarsono',
 	},
+	{
+		faction: 'brimvahl-guards',
+		weapon: 'brimvahl-spear',
+
+		slug: 'kazmiel-elandys-armored',
+		title: 'The Pantocrator',
+		fullName: 'Kazmiel Elandys',
+		nickName: 'Kazmiel',
+		sprite: '/characters/sprites/kazmiel-armor.webp',
+		icon: '/characters/icons/kazmiel-armor.webp',
+		half: '/characters/half-kazmiel-armor.webp',
+		desc: 'Mariel’s firstborn, a half-seraph, was born without wings, a mark of no divinity. Yet, when her father was slain, Kazmiel awakened her latent power, manifesting glowing wings and ascending as one of history’s most formidable warriors. Her plundering missions brought immeasurable wealth to Eldynia, but her love for a lowlander led to her abandoning war. Deemed a traitor to the crown, she was exiled, removed from history.',
+
+		voiceline: '/characters/voicelines/unknown.ogg',
+		VA: 'Vannes Theo Sudarsono',
+	},
 	
 	// ===== Fennora Village ===== //
 	{

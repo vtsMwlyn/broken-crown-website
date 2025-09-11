@@ -4,7 +4,7 @@ import characters from "../../data/characters"
 import SectionContainer from "../../../components/SectionContainer"
 import LinkButton from "../../../components/Button";
 
-const highlightedCharacters = ['flaire-eladryn', 'kazmiel-elandys', 'deathless-king'];
+const highlightedCharacters = ['flaire-eladryn', 'kazmiel-elandys-armored', 'deathless-king'];
 
 function CharacterCard({ character, className, style }) {
   const chara = characters.find(c => c.slug === character);
