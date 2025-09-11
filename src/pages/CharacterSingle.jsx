@@ -35,17 +35,13 @@ export default function CharacterSingle() {
 
 	return (
 		<SectionContainer
-			className="
-				min-h-screen overflow-y-auto 
-				pt-24 md:pt-20   /* jarak dari navbar di mobile lebih besar */
-				pb-24 md:pb-10   /* jarak dari footer di mobile lebih besar */
-			"
+			className="h-fit xl:min-h-screen overflow-y-auto pt-40 pb-30"
 			backgroundImage="url('/single-character-bg.webp')"
 		>
-			<div className="w-full h-fit flex flex-col lg:flex-row items-center">
-				<div className="w-full lg:w-1/2 flex flex-col pr-0 lg:pr-20 mt-6 lg:mt-0">
+			<div className="w-full h-fit flex flex-col-reverse xl:flex-row items-center gap-20 xl:gap-0">
+				<div className="w-full xl:w-1/2 flex flex-col pr-0 lg:pr-20 mt-6 lg:mt-0">
 					{/* Character/Weapon name and underline */}
-					<div className="flex flex-col w-full px-6 lg:px-16">
+					<div className="flex flex-col w-full px-6 xl:px-16">
 						<h1 className="text-3xl lg:text-4xl font-bold text-white uppercase">
 							{currentlyShowing === "character" ? character?.fullName : weapon?.name}
 						</h1>
@@ -64,7 +60,7 @@ export default function CharacterSingle() {
 	
 					{/* VA Credit */}
 					{currentlyShowing === "character" && (
-						<div className="flex items-center gap-3 px-6 lg:pl-16 mt-4">
+						<div className="flex items-center gap-3 px-6 xl:pl-16 mt-4">
 							<audio
 								src={character?.voiceline}
 								ref={audioRef}
@@ -108,7 +104,7 @@ export default function CharacterSingle() {
 					{/* Switch Character/Weapon */}
 					<button
 						onClick={() => setCurrentlyShowing("character")}
-						className="w-20 absolute top-1/4 sm:top-1/3 right-6 lg:right-16 hover:drop-shadow-[0px_0px_5px_oklch(79.5%_0.184_86.047)] cursor-pointer"
+						className="w-20 absolute top-1/7 lg:top-1/5 xl:top-1/4 right-6 lg:right-13 xl:right-16 hover:drop-shadow-[0px_0px_5px_oklch(79.5%_0.184_86.047)] cursor-pointer"
 					>
 						<img
 							src={character?.icon}
@@ -119,7 +115,7 @@ export default function CharacterSingle() {
 	
 					<button
 						onClick={() => setCurrentlyShowing("weapon")}
-						className="w-20 absolute bottom-1/4 sm:bottom-1/3 right-6 lg:right-16 hover:drop-shadow-[0px_0px_5px_oklch(79.5%_0.184_86.047)] cursor-pointer"
+						className="w-20 absolute bottom-1/7 lg:bottom-1/5 xl:bottom-1/4 right-6 lg:right-13 xl:right-16 hover:drop-shadow-[0px_0px_5px_oklch(79.5%_0.184_86.047)] cursor-pointer"
 					>
 						<img
 							src={weapon?.icon}
