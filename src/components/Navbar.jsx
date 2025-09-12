@@ -29,7 +29,7 @@ export default function Navbar() {
         className="w-screen h-full absolute scale-100 sm:scale-125 md:scale-110 lg:scale-100 origin-top transition-transform duration-500"
       />
 
-      <div className="hidden md:flex justify-between items-center w-11/12 xl:w-5/6 mx-auto relative">
+      <div className="hidden md:flex justify-between items-center w-11/12 xl:w-5/6 mx-auto relative xl:px-20">
         <img
           src="/navbar-logo.webp"
           alt="Brimvahl-Crown-Navbar-Logo"
@@ -38,23 +38,25 @@ export default function Navbar() {
           }`}
         />
 
-        <div className="flex gap-3 ml-10 relative top-[-40px] h-25">
-          <Link to="/" className="relative text-white hover:text-yellow-500">
-            <img src="/navbar-menu-bg-blue.webp" alt="menu" className="w-[160px]" />
-            <div className="absolute top-6 text-center w-full">Homepage</div>
-          </Link>
-          <Link to="/characters" className="relative text-white hover:text-yellow-500">
-            <img src="/navbar-menu-bg-blue.webp" alt="menu" className="w-[160px]" />
-            <div className="absolute top-6 text-center w-full">Characters</div>
-          </Link>
-          <Link to="/background" className="relative text-white hover:text-yellow-500">
-            <img src="/navbar-menu-bg-blue.webp" alt="menu" className="w-[160px]" />
-            <div className="absolute top-6 text-center w-full">Background</div>
-          </Link>
+        <div className="w-full flex gap-3 ml-10 relative top-[-40px] h-25 justify-end xl:justify-start">
+          <div className="flex gap-3">
+            <Link to="/" className="relative text-white hover:text-yellow-500">
+              <img src="/navbar-menu-bg-blue.webp" alt="menu" className="w-[160px]" />
+              <div className="absolute top-6 text-center w-full">Homepage</div>
+            </Link>
+            <Link to="/characters" className="relative text-white hover:text-yellow-500">
+              <img src="/navbar-menu-bg-blue.webp" alt="menu" className="w-[160px]" />
+              <div className="absolute top-6 text-center w-full">Characters</div>
+            </Link>
+            <Link to="/background" className="relative text-white hover:text-yellow-500">
+              <img src="/navbar-menu-bg-blue.webp" alt="menu" className="w-[160px]" />
+              <div className="absolute top-6 text-center w-full">Background</div>
+            </Link>
+          </div>
 
           <button
             onClick={() => setIsExpanded(!isExpanded)}
-            className="relative top-[-20px] text-white hover:text-yellow-500 flex flex-col items-center"
+            className="relative top-[-60px] text-white hover:text-yellow-500 flex flex-col items-center"
           >
             <img
               src="/navbar-menu-bg-red.webp"
@@ -65,7 +67,7 @@ export default function Navbar() {
             />
             <div
               className={`absolute top-0 w-5/6 text-center transition duration-500 ${
-                isExpanded ? "translate-y-[185px] scale-0" : "translate-y-[55px] scale-100"
+                isExpanded ? "translate-y-[185px] scale-0" : "translate-y-[85px] scale-100"
               }`}
             >
               More
@@ -74,7 +76,7 @@ export default function Navbar() {
               src="/navbar-more-arrow.webp"
               alt="More-Arrow"
               className={`absolute transition duration-500 ${
-                isExpanded ? "translate-y-[200px] rotate-180" : "translate-y-[90px] rotate-0"
+                isExpanded ? "translate-y-[200px] rotate-180" : "translate-y-[125px] rotate-0"
               } w-[40px]`}
             />
             <div
@@ -93,12 +95,13 @@ export default function Navbar() {
         </div>
       </div>
 
+      {/* Mobile/tablet */}
       <div className="md:hidden overflow-hidden flex justify-between items-center px-4 sticky top-0">
         <img
           src="/navbar-logo.webp"
           alt="Brimvahl-Crown-Navbar-Logo"
-          className={`h-[100px] sm:h-[150px] relative z-50 top-0 transition ease-in-out duration-1000 ${
-            isAtThePageTop ? "translate-y-[-250px]" : "translate-y-[-67px] sm:translate-y-[-45px]"
+          className={`h-[110px] sm:h-[150px] relative z-50 top-0 transition ease-in-out duration-1000 ${
+            isAtThePageTop ? "translate-y-[-250px]" : "translate-y-[-100px] sm:translate-y-[-45px]"
           }`}
         />
 
@@ -109,13 +112,13 @@ export default function Navbar() {
           <img
             src="/navbar-menu-bg-red.webp"
             alt="Navbar Menu"
-            className={`w-[120px] transition-transform duration-500 ${
-              isExpanded ? "translate-y-[-10px]" : "-translate-y-[110px]"
+            className={`w-[120px] h-[300px] transition-transform duration-500 ${
+              isExpanded ? "translate-y-[0px]" : "-translate-y-[170px]"
             }`}
           />
           <div
-            className={`absolute top-0 w-5/6 text-center text-lg font-base transition duration-500 ${
-              isExpanded ? "translate-y-[160px] scale-0 opacity-0" : "translate-y-[20px] scale-100 opacity-100"
+            className={`absolute top-0 w-5/6 text-center text-sm font-base transition duration-500 ${
+              isExpanded ? "translate-y-[160px] scale-0 opacity-0" : "translate-y-[15px] scale-100 opacity-100"
             }`}
           >
             Menu
@@ -124,7 +127,7 @@ export default function Navbar() {
             src="/navbar-more-arrow.webp"
             alt="More Arrow"
             className={`absolute left-1/2 -translate-x-1/2 w-[40px] transition duration-500 ${
-              isExpanded ? "translate-y-[160px] rotate-180 scale-75" : "translate-y-[60px] rotate-0"
+              isExpanded ? "translate-y-[220px] rotate-180 scale-75" : "translate-y-[50px] rotate-0"
             }`}
           />
           <div
@@ -132,7 +135,7 @@ export default function Navbar() {
               isExpanded ? "translate-y-0 opacity-100" : "-translate-y-[50px] opacity-0 pointer-events-none"
             }`}
           >
-            <div className="flex flex-col gap-3 font-base pb-10">
+            <div className="flex flex-col gap-6 font-base pb-10">
               <Link to="/" className="text-white hover:text-yellow-500">
                 Homepage
               </Link>

@@ -64,18 +64,18 @@ function TableMerch({ merch }) {
     <Link
       to={merch?.link}
       target="_blank"
-      className="relative max-w-[200px] lg:max-w-[300px] h-90 flex flex-col items-center hover:drop-shadow-[0px_0px_5px_oklch(79.5%_0.184_86.047)] cursor-pointer"
+      className="relative w-full lg:max-w-[300px] hover:drop-shadow-[0px_0px_5px_oklch(79.5%_0.184_86.047)] cursor-pointer"
     >
-      <div className="relative">
+      <div className="relative w-full h-70 lg:h-90 flex flex-col items-center">
         <img  
           src={merch?.image}
           className="ml-2 lg:ml-5 h-40 lg:h-60 relative z-5 left-0 bottom-[-5px] lg:bottom-[-10px] object-contain object-bottom"
           alt={merch?.title}/>
 
-        <img src="/merch-carpet.webp" className="w-40 lg:w-60 absolute left-0 top-52 lg:top-56 ml-4 lg:ml-10" alt="carpet"/>
+        <img src="/merch-carpet.webp" className="w-50 lg:w-60 absolute lg:left-0 top-40 lg:top-56 ml-4 lg:ml-10" alt="carpet"/>
 
         <div
-          className="w-fit h-fit py-1 px-2 lg:py-2 lg:px-4 absolute left-0 top-65"
+          className="w-fit h-fit py-1 px-2 lg:py-2 lg:px-4 absolute left-20 lg:left-0 top-50 lg:top-65"
           style={{ background: `url('/merch-label.webp') no-repeat center center / cover` }} >
           <div className="text-center text-base lg:text-2xl">{merch?.title}</div>
         </div>
@@ -231,8 +231,8 @@ export default function Merch() {
               ))}
             </Swiper>
 
-            <ArrowLeft onClick={handlePrevMobile} className="absolute left-10 z-30 bottom-10" type={2}/>
-            <ArrowRight onClick={handleNextMobile} className="absolute right-10 z-30 bottom-10" type={2} />
+            <ArrowLeft onClick={handlePrevMobile} className="absolute left-5 z-30 bottom-30" type={2}/>
+            <ArrowRight onClick={handleNextMobile} className="absolute right-5 z-30 bottom-30" type={2} />
           </div>
         </div>
       </div>
