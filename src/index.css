@@ -1,6 +1,11 @@
 @import "tailwindcss";
 @tailwind utilities;
 
+@theme {
+  --breakpoint-4xl: 2300px;
+  --breakpoint-3xl: 1300px;
+}
+
 body {
   font-family: "Della Respira", serif;
   font-weight: 400;

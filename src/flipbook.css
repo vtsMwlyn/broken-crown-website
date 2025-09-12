@@ -3,7 +3,7 @@
 }
 
 .my-page .page-content {
-  padding: 20px;
+  /* padding-top: 20px; */
   background-color: transparent;
   display: flex;
   flex-direction: column;
