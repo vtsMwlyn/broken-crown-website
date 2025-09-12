@@ -6,7 +6,7 @@ export default function Footer() {
       className="w-full text-black md:text-lg lg:text-xl 2xl:text-4xl flex flex-col items-center relative"
       style={{ background: 'url("/footer-bg.webp") no-repeat center / cover' }}
     >
-      <div className="w-11/12 xl:w-5/6 max-w-[1500px] flex flex-col xl:flex-row gap-10 xl:gap-20 py-12 md:py-20 relative z-5">
+      <div className="w-11/12 xl:w-5/6 2xl:w-full max-w-5/6 flex flex-col xl:flex-row gap-10 xl:gap-20 py-12 md:py-20 relative z-5">
         {/* Brand */}
         <div className="w-full xl:w-1/3 flex flex-col text-center sm:text-left">
           <h1 className="font-bold mb-4 md:mb-8">Brimvahl Crown</h1>
