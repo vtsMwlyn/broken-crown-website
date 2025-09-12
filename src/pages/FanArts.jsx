@@ -15,12 +15,12 @@ function HorizontalFanArtCard({ fanart }) {
       <div className="w-full h-full relative flex items-center justify-center">
         <img
           src="/fanart-card-horizontal.webp"
-          className="w-[280px] h-[200px] sm:w-[400px] sm:h-[280px] lg:w-[580px] lg:h-[400px]"
+          className="w-[280px] h-[200px] lg:w-[580px] lg:h-[360px]"
           alt="Brimvahl-Crown-Fan-Art-Border"
         />
         <img
           src={fanart?.image}
-          className="absolute z-5 w-[240px] h-[160px] sm:w-[340px] sm:h-[220px] lg:w-[500px] lg:h-[320px] object-cover object-center rounded-2xl"
+          className="absolute z-5 w-[240px] h-[160px] lg:w-[400px] lg:h-[280px] xl:w-[490px] object-cover object-center rounded-2xl"
           alt="Brimvahl-Crown-Fan-Art"
         />
       </div>
@@ -37,12 +37,12 @@ function VerticalFanArtCard({ fanart }) {
       <div className="w-full h-full relative flex items-center justify-center">
         <img
           src="/fanart-card-vertical.webp"
-          className="w-[200px] h-[300px] sm:w-[280px] sm:h-[420px] lg:w-[380px] lg:h-[580px]"
+          className="w-[200px] h-[300px] lg:w-[340px] lg:h-[500px]"
           alt="Brimvahl-Crown-Fan-Art-Border"
         />
         <img
           src={fanart?.image}
-          className="absolute z-5 w-[160px] h-[240px] sm:w-[220px] sm:h-[340px] lg:w-[300px] lg:h-[500px] object-cover object-center rounded-2xl"
+          className="absolute z-5 w-[160px] h-[240px] lg:w-[240px] lg:h-[420px] object-cover object-center rounded-2xl"
           alt="Brimvahl-Crown-Fan-Art"
         />
       </div>
@@ -91,20 +91,20 @@ export default function FanArts() {
             <SwiperSlide key={i}>
               <div className="flex flex-col items-center">
                 {/* First row (landscape) */}
-                <div className="w-fit grid gap-5 sm:gap-10 lg:gap-30 grid-cols-1 sm:grid-cols-2">
+                <div className="w-fit grid gap-5 xl:gap-30 grid-cols-1 sm:grid-cols-2">
                   <HorizontalFanArtCard fanart={f[0]} />
                   <HorizontalFanArtCard fanart={f[1]} />
                 </div>
 
                 {/* Second row (portrait) */}
-                <div className="w-fit grid gap-3 sm:gap-5 lg:gap-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-6 sm:mt-10">
+                <div className="w-fit grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-6 sm:mt-10">
                   <VerticalFanArtCard fanart={f[2]} />
                   <VerticalFanArtCard fanart={f[3]} />
                   <VerticalFanArtCard fanart={f[4]} />
                 </div>
 
                 {/* Third row (landscape) */}
-                <div className="w-fit grid gap-5 sm:gap-10 lg:gap-30 grid-cols-1 sm:grid-cols-2 mt-6 sm:mt-10">
+                <div className="w-fit grid gap-5 xl:gap-30 grid-cols-1 sm:grid-cols-2 mt-6 sm:mt-10">
                   <HorizontalFanArtCard fanart={f[5]} />
                   <HorizontalFanArtCard fanart={f[6]} />
                 </div>

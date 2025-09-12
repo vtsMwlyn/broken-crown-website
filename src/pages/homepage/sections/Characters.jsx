@@ -4,7 +4,7 @@ import characters from "../../data/characters"
 import SectionContainer from "../../../components/SectionContainer"
 import LinkButton from "../../../components/Button";
 
-const highlightedCharacters = ['flaire-eladryn', 'kazmiel-elandys', 'deathless-king'];
+const highlightedCharacters = ['flaire-eladryn', 'kazmiel-elandys-armored', 'deathless-king'];
 
 function CharacterCard({ character, className, style }) {
   const chara = characters.find(c => c.slug === character);
@@ -15,7 +15,7 @@ function CharacterCard({ character, className, style }) {
       className={`w-full relative flex flex-col items-center text-white transition-transform ease-in-out duration-500 hover:translate-y-[-30px] hover:drop-shadow-[0px_0px_5px_oklch(79.5%_0.184_86.047)] cursor-pointer ${className}`}
       style={style}
     >
-      <div className="w-full h-full relative flex flex-col items-center">
+      <div className="w-3/4 lg:w-full h-full relative flex flex-col items-center">
         <img
           src="/character-card.webp"
           className="w-full h-full"
@@ -39,7 +39,7 @@ function CharacterCard({ character, className, style }) {
 
 export default function Characters() {
   return (
-    <SectionContainer className="min-h-screen py-6 px-4" backgroundImage="url('/highlighted-characters-bg.webp')">
+    <SectionContainer className="xl:min-h-screen py-6 px-4" backgroundImage="url('/highlighted-characters-bg.webp')">
       <div className="w-full h-full flex flex-col items-center justify-between gap-8">
         
         {/* Section Title */}
@@ -55,7 +55,7 @@ export default function Characters() {
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full lg:w-3/4 gap-6 lg:gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full xl:w-3/4 gap-6 lg:gap-10">
           {highlightedCharacters.map((slug, i) => (
             <CharacterCard key={i} character={slug} />
           ))}

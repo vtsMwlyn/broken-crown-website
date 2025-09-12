@@ -6,23 +6,15 @@ import LinkButton from "../../../components/Button"
 export default function PageHero() {
 	return (
 		<SectionContainer className="min-h-screen">
-			<video
-				autoPlay
-				muted
-				loop
-				className="w-screen h-screen object-cover object-center absolute top-0 left-0 z-[-10] brightness-[0.4]"
-				style={{ objectFit: "cover" }}
-			>
-				<source src="/page-hero-animation2.mp4" type="video/mp4" />
-			</video>
+			<img src="/pageherobg.webp" className="w-screen h-screen absolute brightness-60 object-cover object-right xl:object-center" alt="Brimvahl-Crown-Homepage-Image" />
 
-			<div className="flex h-full w-full mt-10 lg:mt-22 pb-10 justify-center items-center lg:items-end">
+			<div className="flex h-full w-full mt-10 lg:mt-22 lg:pb-10 justify-center items-center xl:items-end">
 				<div className="flex flex-col justify-center items-center w-11/12 sm:w-4/5 md:w-1/2 text-center">
 					{/* Logo and text card */}
 					<div className="w-full flex flex-col items-center justify-center animate-brimvahl-crown-logo">
 						<img
 							src="/logo-homepage.webp"
-							className="w-3/4 sm:w-2/3 md:w-3/4 z-5 drop-shadow-[#000000]"
+							className="w-full xl:w-3/4 z-5 drop-shadow-[#000000]"
 							alt="Brimvahl-Crown-Logo"
 						/>
 					</div>
@@ -32,7 +24,7 @@ export default function PageHero() {
 						<LinkButton
 							to="https://store.steampowered.com/app/3179140/HR_Simulator/"
 							text="Download Now"
-							className="w-[200px] sm:w-[250px]"
+							className="w-[250px]"
 						/>
 					</div>
 

@@ -1,7 +1,7 @@
 const characters = [
 	// ===== The Elandys Family ===== //
 	{
-		faction: 'elandys-family',
+		faction: 'fennora-village',
 		weapon: 'unknown',
 
 		slug: 'mariel-elandys',
@@ -13,23 +13,7 @@ const characters = [
 		desc: 'The current Queen of Eldynia and the final pure-blooded seraph, Mariel rules with calculated aggression and unshakable confidence. Though she lacks the overwhelming strength of her ancestors, her sharp wit and commanding presence deter challengers. Through sheer force of will, she maintains the illusion of invincibility, ensuring her kingdom’s survival in an era of decline.',
 
 		voiceline: '/characters/voicelines/unknown.ogg',
-		VA: 'Vannes Theo Sudarsono',
-	},
-	{
-		faction: 'elandys-family',
-		weapon: 'dyrnazel',
-
-		slug: 'kazmiel-elandys',
-		title: 'The Pantocrator',
-		fullName: 'Kazmiel Elandys',
-		nickName: 'Kazmiel',
-		sprite: '/characters/sprites/kazmiel.webp',
-		half: '/characters/half-kazmiel.webp',
-		icon: '/characters/icons/kazmiel.webp',
-		desc: 'Mariel’s firstborn, a half-seraph, was born without wings, a mark of no divinity. Yet, when her father was slain, Kazmiel awakened her latent power, manifesting glowing wings and ascending as one of history’s most formidable warriors. Her plundering missions brought immeasurable wealth to Eldynia, but her love for a lowlander led to her abandoning war. Deemed a traitor to the crown, she was exiled, removed from history.',
-
-		voiceline: '/characters/voicelines/unknown.ogg',
-		VA: 'Vannes Theo Sudarsono',
+		VA: 'Xanthe Huynh',
 	},
 	{
 		faction: 'elandys-family',
@@ -44,7 +28,23 @@ const characters = [
 		desc: 'The second child of Queen Mariel, Vael was born with wings, a symbol of his boundless potential. As a youth, he achieved the impossible by drawing the legendary Seraphic Blade Extharion from the stone at Castle Vrosk’s gardens, a feat none before him could accomplish. With his prodigious strength and divine destiny, he represents Eldynia’s brightest hope for restoration.',
 
 		voiceline: '/characters/voicelines/unknown.ogg',
-		VA: 'Vannes Theo Sudarsono',
+		VA: 'Brenna Larsen',
+	},
+	{
+		faction: 'elandys-family',
+		weapon: 'brimvahl-spear',
+
+		slug: 'kazmiel-elandys-armored',
+		title: 'The Pantocrator',
+		fullName: 'Kazmiel Elandys',
+		nickName: 'Kazmiel',
+		sprite: '/characters/sprites/kazmiel-armor.webp',
+		icon: '/characters/icons/kazmiel-armor.webp',
+		half: '/characters/half-kazmiel-armor.webp',
+		desc: 'Mariel’s firstborn, a half-seraph, was born without wings, a mark of no divinity. Yet, when her father was slain, Kazmiel awakened her latent power, manifesting glowing wings and ascending as one of history’s most formidable warriors. Her plundering missions brought immeasurable wealth to Eldynia, but her love for a lowlander led to her abandoning war. Deemed a traitor to the crown, she was exiled, removed from history.',
+
+		voiceline: '/characters/voicelines/unknown.ogg',
+		VA: 'Brenna Larsen',
 	},
 	{
 		faction: 'elandys-family',
@@ -60,7 +60,7 @@ const characters = [
 		desc: 'The enigmatic Grand Mage of Eldynia, Flaire serves as both advisor and caretaker to the royal family. Despite her claims of being human, her unnaturally long life, spanning even the Queen’s reign, hints at hidden origins. Knowledgeable, discreet, and impossibly ancient, she has guided three generations of Elandys rulers, her true motives as veiled as her past.',
 
 		voiceline: '/characters/voicelines/unknown.ogg',
-		VA: 'Vannes Theo Sudarsono',
+		VA: 'Lizzie Freeman',
 	},
 	{
 		faction: 'elandys-family',
@@ -76,7 +76,7 @@ const characters = [
 		desc: 'A swordsman with extraordinary powers.',
 
 		voiceline: '/characters/voicelines/unknown.ogg',
-		VA: 'Jordy Sword',
+		VA: 'Andrew Russell',
 	},
 	
 	// ===== The Brimvahl Guards ===== //
@@ -123,7 +123,7 @@ const characters = [
 		desc: 'Durnas units are predominantly composed of orcs and even giants, leveraging their immense strength and near-impenetrable defenses. While their size may hinder speed, they compensate with devastating offensive capabilities and unmatched resilience. Their primary role is to overwhelm and demoralize enemy forces, serving as the vanguard in large-scale assaults to crush opposition through sheer force.',
 
 		voiceline: '/characters/voicelines/unknown.ogg',
-		VA: 'Vannes Theo Sudarsono',
+		VA: 'Jordy Sword',
 	},
 	{
 		faction: 'brimvahl-guards',
@@ -138,10 +138,26 @@ const characters = [
 		desc: 'The Guards represent Eldynia’s most coveted profession, offering unmatched pay, residence in Castle Vrosk, and open recruitment to all, regardless of background and status. The sole requirement? Surviving the grueling Arena Challenge, where applicants must endure five minutes against an elite guard. Those who succeed join the ranks of Eldynia’s guards and on their path to become an elite guard after surviving a minimum of 5 pillage missions.',
 
 		voiceline: '/characters/voicelines/unknown.ogg',
-		VA: 'Vannes Theo Sudarsono',
+		VA: 'Yanaidul',
 	},
 	
 	// ===== Fennora Village ===== //
+	{
+		faction: 'fennora-village',
+		weapon: 'dyrnazel',
+
+		slug: 'kazmiel-elandys',
+		title: 'The Pantocrator',
+		fullName: 'Kazmiel Elandys',
+		nickName: 'Kazmiel',
+		sprite: '/characters/sprites/kazmiel.webp',
+		half: '/characters/half-kazmiel.webp',
+		icon: '/characters/icons/kazmiel.webp',
+		desc: 'Mariel’s firstborn, a half-seraph, was born without wings, a mark of no divinity. Yet, when her father was slain, Kazmiel awakened her latent power, manifesting glowing wings and ascending as one of history’s most formidable warriors. Her plundering missions brought immeasurable wealth to Eldynia, but her love for a lowlander led to her abandoning war. Deemed a traitor to the crown, she was exiled, removed from history.',
+
+		voiceline: '/characters/voicelines/unknown.ogg',
+		VA: 'Brenna Larsen',
+	},
 	{
 		faction: 'fennora-village',
 		weapon: 'unknown',
@@ -188,53 +204,6 @@ const characters = [
 
 		voiceline: '/characters/voicelines/unknown.ogg',
 		VA: 'Sky Santacruz',
-	},
-	
-	// ===== Unknown Faction ===== //
-	{
-		faction: 'unknown',
-		weapon: 'unknown',
-
-		slug: 'unknown',
-		title: null,
-		fullName: 'Unknown 1',
-		nickName: 'Unknown 1',
-		sprite: '/characters/sprites/unknown.webp',
-		icon: '/characters/icons/unknown.webp',
-		desc: 'Unknown character, still searching for its information...',
-
-		voiceline: '/characters/voicelines/unknown.ogg',
-		VA: 'Vannes Theo Sudarsono',
-	},
-	{
-		faction: 'unknown',
-		weapon: 'unknown',
-
-		slug: 'unknown',
-		title: null,
-		fullName: 'Unknown 2',
-		nickName: 'Unknown 2',
-		sprite: '/characters/sprites/unknown.webp',
-		icon: '/characters/icons/unknown.webp',
-		desc: 'Also unknown character, still searching for its information...',
-
-		voiceline: '/characters/voicelines/unknown.ogg',
-		VA: 'Vannes Theo Sudarsono',
-	},
-	{
-		faction: 'unknown',
-		weapon: 'unknown',
-
-		slug: 'unknown',
-		title: null,
-		fullName: 'Unknown 3',
-		nickName: 'Unknown 3',
-		sprite: '/characters/sprites/unknown.webp',
-		icon: '/characters/icons/unknown.webp',
-		desc: 'Another unknown character again, still searching for its information...',
-
-		voiceline: '/characters/voicelines/unknown.ogg',
-		VA: 'Vannes Theo Sudarsono',
 	},
 ];
 

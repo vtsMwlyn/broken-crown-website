@@ -60,7 +60,7 @@ export default function NewsAndInfo() {
 
   return (
     <SectionContainer
-      className="min-h-screen px-4 md:px-0"
+      className="h-fit xl:min-h-screen px-4 md:px-0"
       id="news-and-info"
       backgroundImage="url('/news-and-info-section-bg.webp')"
     >
@@ -68,80 +68,81 @@ export default function NewsAndInfo() {
         {/* Background */}
         <img
           src="/wooden-board.webp"
-          className="w-full md:w-3/4 h-[400px] md:h-[650px] absolute top-10 md:top-20"
+          className="w-full md:w-3/4 h-[300px] md:h-[650px] absolute top-10 md:top-20"
           alt="Brimvahl-Crown-News-And-Info-Board"
         />
 
         {/* Content */}
         <div className="w-full md:w-1/2 relative">
           {/* Section Title */}
-          <div className="h-1/6 relative mt-16 md:mt-20 flex justify-center items-center">
+          <div className="h-1/6 relative mt-8 md:mt-20 flex justify-center items-center">
             <img
               src="/title-card.webp"
               className="w-[250px] md:w-[400px]"
               alt="Brimvahl-Crown-Title-Card"
             />
-            <div className="font-3 font-bold absolute top-4 sm:top-5 md:top-5 lg:top-9 w-full flex justify-center items-center text-lg sm:text-xl md:text-3xl lg:text-4xl">
+            <div className="font-3 font-bold absolute top-5 md:top-5 lg:top-9 w-full flex justify-center items-center text-lg sm:text-xl md:text-3xl lg:text-4xl">
               News and Info
             </div>
           </div>
 
-          <Swiper
-							modules={[Pagination]}
-							pagination={{ clickable: true }}
-							onSlideChange={handleSlideChange}
-							className="cursor-grab w-full bg-black rounded-xl md:rounded-3xl aspect-video md:top-8" 
-							slidesPerView={1}
-							ref={swiperRef}
-							loop
-						>
-							{news.map((n, index) => {
-								if (n.type === 'image') {
-									return (
-										<SwiperSlide key={index}>
-											<img
-												src={n.source}
-												className="w-full h-full object-cover rounded-xl"
-												alt="Brimvahl-Crown-News-And-Info"
-											/>
-										</SwiperSlide>
-									)
-								} else if (n.type === 'video') {
-									return (
-										<SwiperSlide key={index}>
-											<video className="w-full h-full rounded-xl" controls>
-												<source src={n.source} type={`video/${n.source.split('.').pop()}`} />
-											</video>
-										</SwiperSlide>
-									)
-								} else if (n.type === 'youtube') {
-									return (
-										<SwiperSlide key={index}>
-											<iframe
-												className="w-full h-full rounded-xl"
-												src={n.source}
-												title="YouTube video player"
-												allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-												referrerPolicy="strict-origin-when-cross-origin"
-												allowFullScreen
-											></iframe>
-										</SwiperSlide>
-									)
-								}
-							})}
-						</Swiper>
+          <div className="relative w-full flex items-center">
+            <Swiper
+                modules={[Pagination]}
+                pagination={{ clickable: true }}
+                onSlideChange={handleSlideChange}
+                className="cursor-grab w-5/6 xl:w-full bg-black rounded-xl md:rounded-3xl aspect-video md:top-8" 
+                slidesPerView={1}
+                ref={swiperRef}
+                loop
+              >
+                {news.map((n, index) => {
+                  if (n.type === 'image') {
+                    return (
+                      <SwiperSlide key={index}>
+                        <img
+                          src={n.source}
+                          className="w-full h-full object-cover rounded-xl"
+                          alt="Brimvahl-Crown-News-And-Info"
+                        />
+                      </SwiperSlide>
+                    )
+                  } else if (n.type === 'video') {
+                    return (
+                      <SwiperSlide key={index}>
+                        <video className="w-full h-full rounded-xl" controls>
+                          <source src={n.source} type={`video/${n.source.split('.').pop()}`} />
+                        </video>
+                      </SwiperSlide>
+                    )
+                  } else if (n.type === 'youtube') {
+                    return (
+                      <SwiperSlide key={index}>
+                        <iframe
+                          className="w-full h-full rounded-xl"
+                          src={n.source}
+                          title="YouTube video player"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          referrerPolicy="strict-origin-when-cross-origin"
+                          allowFullScreen
+                        ></iframe>
+                      </SwiperSlide>
+                    )
+                  }
+                })}
+              </Swiper>
 
-						{/* Navigations */}
-            <ArrowLeft 
-  onClick={handlePrev} 
-  className="absolute left-2 md:left-5 z-10 bottom-25" 
-/>
+              {/* Navigations */}
+              <ArrowLeft 
+                onClick={handlePrev} 
+                className="absolute left-5 z-10 xl:mt-14" 
+              />
 
-<ArrowRight 
-  onClick={handleNext} 
-  className="absolute right-2 md:right-5 z-10 bottom-25" 
-/>
-
+              <ArrowRight 
+                onClick={handleNext} 
+                className="absolute right-5 z-10 xl:mt-14" 
+              />
+          </div>
         </div>
 
         {/* Card */}
@@ -149,7 +150,7 @@ export default function NewsAndInfo() {
           <div className="relative w-11/12 md:w-5/6">
             <img src="text-card.webp" className="w-full h-auto"alt="Brimvahl-Crown-Text-Card"/>
             <div className="absolute inset-0 flex items-center justify-center px-4">
-              <p className="text-center text-sm md:text-lg">{activeNews.desc}</p>
+              <p className="text-center text-sm md:text-lg px-4">{activeNews.desc}</p>
             </div>
           </div>
         </div>

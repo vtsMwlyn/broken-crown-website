@@ -27,13 +27,6 @@ const factions = [
 		banner: '/factions/banners/laughing-death.webp',
 		desc: 'The Wardens of the Grove are ancient protectors bound by a primeval pact to safeguard the balance of nature. Drawing power from the very elements, their druids and rangers are masters of both earth magic and guerrilla warfare, guided by the Archdruid Elara Whisperwind. They can command forests to rise and rivers to change course, making their territory impassable to invaders. Their deep connection to the land and its creatures makes them a patient but overwhelming force when the natural order is threatened.',
 	},
-	{
-		slug: 'unknown',
-		name: 'Unknown Faction',
-		logo: '/factions/logos/unknown.webp',
-		banner: '/factions/banners/unknown.webp',
-		desc: 'The Shadow Syndicate operates from hidden enclaves, their members trained in the forgotten arts of espionage and illusion. Guided by a mysterious council known only as the Veiled Hand, they manipulate events from behind the scenes. Their agents are masters of disguise and silent infiltration, capable of toppling kingdoms without ever drawing a sword. Their influence is a closely guarded secret, making them one of the most powerful yet unseen forces in the realm, now under the rumored direction of a spymaster called "The Whisper."',
-	},
 ];
 
 export default factions;
