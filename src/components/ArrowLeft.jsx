@@ -8,8 +8,8 @@ export default function ArrowLeft({ onClick, className = "", type = 1 }) {
         src={type === 1 ? "/arrow-left.webp" : "/arrow-left-white.webp"}
         className={
           type === 1
-            ? "w-10 sm:w-14 md:w-20 lg:w-24" 
-            : "w-6 sm:w-8 md:w-12 lg:w-16"   
+            ? "extra-sm:w-15 sm:w-18 md:w-20 lg:w-24 xl:w-32 2xl:w-44"
+            : "extra-sm:w-15 sm:w-8 md:w-12 lg:w-16 xl:w-32 2xl:w-44"
         }
         alt="Brimvahl-Crown-Arrow"
       />
