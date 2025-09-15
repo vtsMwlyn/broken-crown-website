@@ -1,7 +1,7 @@
 const characters = [
 	// ===== The Elandys Family ===== //
 	{
-		faction: 'fennora-village',
+		faction: 'elandys-family',
 		weapon: 'unknown',
 
 		slug: 'mariel-elandys',
