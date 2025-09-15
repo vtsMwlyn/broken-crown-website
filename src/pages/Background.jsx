@@ -31,22 +31,26 @@ function Flipbook({ onNextClick, onPrevClick }) {
       if (bookRef.current) {
         pageFlipInstance.current = new PageFlip(bookRef.current, {
           width:
-            window.innerWidth <= 2560 //layar dekstop
+            window.innerWidth >= 2500 // 3XL | layar dekstop ~~~✅
               ? 700
-              : window.innerWidth >= 1728 //layar dekstop
-              ? 470
-              : window.innerWidth >= 1440 //leptop L
-              ? 380
-              : window.innerWidth >= 1336 //leptop gw
-              ? 350
-              : window.innerWidth >= 1024 //
-              ? 290
+              : window.innerWidth >= 1700 // 2XL | layar dekstop✅
+              ? 583
+              : window.innerWidth >= 1280 // XL | leptop L✅
+              ? 420
+              : window.innerWidth >= 1024 // LG | leptop
+              ? 327
               : window.innerWidth >= 768
               ? 225
               : 123,
           height:
-            window.innerWidth <= 2560 //layar dekstop
-              ? 720
+            window.innerWidth >= 2500 //layar dekstop ~~~✅
+              ? 718
+              : window.innerWidth >= 1700 //layar dekstop✅
+              ? 645
+              : window.innerWidth >= 1280 //layar dekstop✅
+              ? 431
+              : window.innerWidth >= 1024 // LG | leptop
+              ? 328
               : 400,
           showCover: false, // <-- Change this to false
           maxShadowOpacity: 0.5,
@@ -93,7 +97,11 @@ function Flipbook({ onNextClick, onPrevClick }) {
   }, []);
 
   return (
-    <div className="flipbook-container cursor-grab" ref={bookRef}>
+    <div
+      className="flipbook-container cursor-grab"
+      // style={{background: 'black', opacity: .3}}
+      ref={bookRef}
+    >
       {/* Dynamic pages */}
       {backgrounds?.map((b, index) => (
         <div key={index}>
@@ -121,7 +129,10 @@ function Flipbook({ onNextClick, onPrevClick }) {
           </div>
           <div className="my-page">
             <div className="page-content">
-              <div className="overflow-hidden pt-5 pl-10 pr-5 pb-5 h-full w-full">
+              <div
+                className="overflow-hidden pt-5 pl-10 pr-5 pb-5 h-full w-full"
+                // style={{ background: "white" }}
+              >
                 <img
                   src={b.gallery[2]}
                   className="w-full h-full rounded-tl-4xl"
@@ -136,11 +147,11 @@ function Flipbook({ onNextClick, onPrevClick }) {
 
       <ArrowLeft
         onClick={handlePrevPage}
-        className="absolute left-[-120px] top-60 4xl:left-[-280px] rotate-5"
+        className="absolute left-[-120px] xl:top-40 2xl:top-60 xl:-left-[180px] 2xl:left-[-250px] 3xl:left-[-280px] rotate-5"
       />
       <ArrowRight
         onClick={handleNextPage}
-        className="absolute right-[-120px] top-70 4xl:right-[-310px] rotate-5"
+        className="absolute right-[-120px] xl:top-50 2xl:top-70 xl:-right-[200px] 2xl:right-[-250px] 3xl:right-[-310px] rotate-5"
       />
     </div>
   );
@@ -168,7 +179,7 @@ export default function Background() {
 
   return (
     <SectionContainer
-      className="min-h-screen pb-140"
+      className="min-h-screen lg:pb-90 xl:pb-90 2xl:pb-125 3xl:pb-140"
       id="background"
       backgroundImage="url('/background-section-bg.webp')"
     >
@@ -179,21 +190,21 @@ export default function Background() {
         </h1>
         <img
           src="/underline-gold.webp"
-          className="w-2/3"
+          className="w-1/6"
           alt="Brimvahl-Crown-Underline"
         />
       </div>
 
       {/* Main content */}
-      <div className="flex flex-col w-[1500px] items-center relative top-50">
+      <div className="flex flex-col lg:w-[700px] xl:w-[900px] 2xl:w-[1250px] 3xl:w-[1500px] items-center relative lg:top-[50px] xl:top-25 2xl:top-40 3xl:top-50 ">
         <img
           src="/book.png"
-          className="h-[1000px] mt-30 relative z-0 rotate-z-[7.5deg] rotate-x-25"
+          className=" xl:h-[600px] 2xl:h-[900px] 3xl:h-[1000px] mt-30 relative z-0 rotate-z-[7.5deg] rotate-x-25"
           alt="Brimvahl-Crown-Background-Book"
         />
 
         {/* Galery on book */}
-        <div className="absolute top-82 flex w-full h-3/5 right-[9px] transform origin-right skew-y-[-1.2deg] gap-16 z-5 rotate-z-[8.6deg] rotate-x-[25deg]">
+        <div className="absolute lg:top-[166px] xl:top-[191px] 2xl:top-[230px] 3xl:top-[242px] lg:right-[3px] xl:right-[3.5px] 2xl:right-[3px] 3xl:right-[3px] flex w-full h-3/5 transform origin-center -skew-y-[1.2deg] gap-16 z-5 rotate-z-[8.5deg] rotate-x-[25deg] rotate-y-[0deg]">
           <Flipbook
             onNextClick={handleNextClick}
             onPrevClick={handlePrevClick}
@@ -201,17 +212,19 @@ export default function Background() {
         </div>
 
         {/* Card */}
-        <div className="absolute flex flex-col items-center w-4/5 top-[75%] z-10">
+        <div className="absolute flex flex-col items-center lg:w-5/6 xl:w-full 2xl:w-4/5 top-[75%] z-10">
           <img
             src="/text-card.webp"
-            className="w-full h-[90%] absolute top-8"
+            className="lg:w-[90%] xl:w-5/6 2xl:w-full lg:h-[90%] xl:h-[80%] 2xl:h-[90%] absolute top-8"
             alt="Brimvahl-Crown-Text-Card"
           />
-          <div className="w-5/6 text-base relative py-20 px-4 space-y-10">
-            <h1 className="text-xl 4xl:text-5xl font-bold">
+          <div className="lg:w-[80%] xl:w-3/4 2xl:w-5/6 text-base relative py-20 px-4 xl:space-y-5 2xl:space-y-10">
+            <h1 className="lg:text-md xl:text-lg 2xl:text-4xl 3xl:text-5xl font-bold">
               {activeBackground.title}
             </h1>
-            <p className="w-full 4xl:text-3xl mt-4">{activeBackground.desc}</p>
+            <p className="w-full lg:text-sm xl:text-md 2xl:text-2xl 3xl:text-3xl mt-4">
+              {activeBackground.desc}
+            </p>
           </div>
         </div>
       </div>
