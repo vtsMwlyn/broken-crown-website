@@ -113,7 +113,7 @@ function Flipbook({ onNextClick, onPrevClick }) {
       {/* Dynamic pages */}
       {backgrounds?.map((b, index) => (
         <div key={index}>
-          <div className="my-page">
+          <div className="my-page active:cursor-grabbing">
             <div className="page-content">
               <div
                 className="flex flex-col w-full h-full 
@@ -142,10 +142,10 @@ function Flipbook({ onNextClick, onPrevClick }) {
               </div>
             </div>
           </div>
-          <div className="my-page">
+          <div className="my-page active:cursor-grabbing">
             <div className="page-content">
               <div
-                className="overflow-hidden h-full w-full 
+                className="overflow-hidden h-full w-full
                 pt-1.5 sm:pt-2 lg:pt-3 3xl:pt-5 
                 pl-1.5 sm:pl-3 lg:pl-5 3xl:pl-10 
                 pr-1.5 sm:pr-2 lg:pr-3 3xl:pr-5 

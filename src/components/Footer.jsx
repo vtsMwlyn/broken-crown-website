@@ -97,17 +97,20 @@ export default function Footer() {
       {/* Back to home */}
       <Link
         to="/"
-        className="absolute -top-6 sm:-top-8 md:-top-10 right-5 md:right-10 lg:right-20 z-20 text-white hover:text-yellow-500 hover:drop-shadow-[0px_0px_5px_oklch(79.5%_0.184_86.047)]"
+        className="absolute 
+        -top-6 sm:-top-8 md:-top-10 
+        right-5 md:right-10 lg:right-20 z-20 
+        text-white hover:text-yellow-500 hover:drop-shadow-[0px_0px_5px_oklch(79.5%_0.184_86.047)]"
       >
         <img
           src="/footer-menu-bg-red.webp"
-          className="w-[80px] xs:w-[90px] sm:w-[110px] xl:w-[130px]"
+          className="w-[80px] xs:w-[90px] sm:w-[110px] xl:w-[130px] 3xl:w-[200px]"
           alt="Brimvahl-Crown-Navbar-Menu"
         />
         <div
           className="absolute w-full text-center
-        top-3 xs:top-4 sm:top-3 md:top-4
-        text-[10px] xs:text-xs sm:text-sm md:text-[15px] xl:text-[20px]"
+        top-3 xs:top-4 sm:top-3 md:top-4 3xl:top-6
+        text-[10px] xs:text-xs sm:text-sm md:text-[15px] xl:text-[20px] 3xl:text-3xl"
         >
           Back to
           <br />
