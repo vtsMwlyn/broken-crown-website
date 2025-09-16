@@ -2,9 +2,8 @@
 @tailwind utilities;
 
 @theme {
-  --breakpoint-3xl: 156.25rem; /* 2500px */
-  --breakpoint-2xl: 106.25rem; /* 1700px */
-  --breakpoint-extra-sm: 26.5625rem; /* 245px */
+  --breakpoint-3xl: 125rem; /* 2000px */
+  --breakpoint-xs: 26.5625rem; /* 245px */
 }
 
 body {
@@ -29,7 +28,8 @@ html {
 
 /* For characters section swiper (border for selected slide item) */
 @layer utilities {
-  button, a {
+  button,
+  a {
     @apply cursor-pointer;
   }
 
@@ -46,17 +46,17 @@ html {
 
 /* Characters grid indentation */
 .grid-container {
-    display: grid;
-    /* Change the '3' here if you want more or fewer columns */
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.5rem;
-    padding: 1rem ;
+  display: grid;
+  /* Change the '3' here if you want more or fewer columns */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  padding: 1rem;
 }
 
 .grid-container > a:nth-child(6n + 4),
 .grid-container > a:nth-child(6n + 5),
 .grid-container > a:nth-child(6n + 6) {
-    transform: translateX(6rem);
+  transform: translateX(6rem);
 }
 
 /* For swipers that need custom pagination (bullets navigations) */
@@ -71,7 +71,7 @@ html {
 }
 
 #news-and-info .swiper-pagination-bullet-active {
-  background-color: #A5784C !important;
+  background-color: #a5784c !important;
   opacity: 1;
 }
 
@@ -86,7 +86,7 @@ html {
 }
 
 #gameplay-feature .swiper-pagination-bullet-active {
-  background-color: #A5784C !important;
+  background-color: #a5784c !important;
   opacity: 1;
   margin: 0 10px;
 }
@@ -103,7 +103,7 @@ html {
   opacity: 0.5;
   margin: auto 10px;
   transform: scale(0.7);
-} 
+}
 
 #fan-arts .swiper-pagination-bullet-active {
   background-color: white !important;
@@ -145,7 +145,12 @@ html {
   transform: translateY(-40px) !important;
 }
 
-#merchs .swiper-slide-next + .swiper-slide + .swiper-slide + .swiper-slide + .swiper-slide {
+#merchs
+  .swiper-slide-next
+  + .swiper-slide
+  + .swiper-slide
+  + .swiper-slide
+  + .swiper-slide {
   transform: translateY(200px) !important;
 }
 
@@ -162,7 +167,8 @@ html {
 }
 
 @keyframes float-left-right {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateX(0);
   }
   50% {
@@ -171,7 +177,8 @@ html {
 }
 
 @keyframes float-right-left {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateX(0);
   }
   50% {
@@ -180,7 +187,8 @@ html {
 }
 
 @keyframes big-small {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(100%);
   }
   50% {
