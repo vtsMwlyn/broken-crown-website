@@ -9,8 +9,9 @@ import ArrowLeft from "../components/ArrowLeft";
 import ArrowRight from "../components/ArrowRight";
 import { useEffect } from "react";
 import { AlignCenter } from "lucide-react";
+import { useCallback } from "react";
 
-function Flipbook({ onNextClick, onPrevClick }) {
+function Flipbook({ onNextClick, onPrevClick, onFlipToPage }) {
   const bookRef = useRef(null);
   const pageFlipInstance = useRef(null);
 
@@ -80,6 +81,11 @@ function Flipbook({ onNextClick, onPrevClick }) {
           pageFlipInstance.current.on("flip", (e) => {
             // e.data is the page number that was just flipped (e.g., 2)
             const currentPageNum = e.data;
+            const backgroundIndex = Math.floor(currentPageNum / 2);
+
+            if (typeof onFlipToPage === "function") {
+              onFlipToPage(backgroundIndex);
+            }
 
             document.querySelectorAll(".my-page").forEach((page, index) => {
               if (index <= currentPageNum) {
@@ -102,7 +108,7 @@ function Flipbook({ onNextClick, onPrevClick }) {
         pageFlipInstance.current = null;
       }
     };
-  }, []);
+  }, [onFlipToPage]);
 
   return (
     <div
@@ -202,6 +208,11 @@ export default function Background() {
     }
   };
 
+  const handleFlipToPage = useCallback((pageIndex) => {
+    setCurrentPage(pageIndex);
+    setActiveBackground(backgrounds[pageIndex]);
+  }, []);
+
   return (
     <SectionContainer
       className="min-h-screen pb-100 xs:pb-140 sm:pb-140 md:pb-110 lg:pb-90 xl:pb-100 3xl:pb-140"
@@ -248,6 +259,7 @@ export default function Background() {
           <Flipbook
             onNextClick={handleNextClick}
             onPrevClick={handlePrevClick}
+            onFlipToPage={handleFlipToPage}
           />
         </div>
 
