@@ -33,98 +33,102 @@ export default function CharacterSingle() {
     setIsPlayingAudio(!isPlayingAudio);
   };
 
-	return (
-		<SectionContainer
-			className="h-fit xl:min-h-screen overflow-y-auto pt-40 pb-30"
-			backgroundImage="url('/single-character-bg.webp')"
-		>
-			<div className="w-full h-fit flex flex-col-reverse xl:flex-row items-center gap-20 xl:gap-0">
-				<div className="w-full xl:w-1/2 flex flex-col pr-0 lg:pr-20 mt-6 lg:mt-0">
-					{/* Character/Weapon name and underline */}
-					<div className="flex flex-col w-full px-6 xl:px-16">
-						<h1 className="text-3xl lg:text-4xl font-bold text-white uppercase">
-							{currentlyShowing === "character" ? character?.fullName : weapon?.name}
-						</h1>
-						{currentlyShowing === "character" && character?.title !== null && (
-							<h2 className="text-white text-lg lg:text-xl">{character?.title}</h2>
-						)}
-						<div className="flex w-full items-center mt-2">
-							<img
-								src="/character-name-underline-verticle.webp"
-								className="w-8 lg:w-10"
-								alt="Brimvahl-Crown-Character-Underline"
-							/>
-							<div className="h-2 w-full ml-[-10px] bg-[#C29948] rounded-r-lg"></div>
-						</div>
-					</div>
-	
-					{/* VA Credit */}
-					{currentlyShowing === "character" && (
-						<div className="flex items-center gap-3 px-6 xl:pl-16 mt-4">
-							<audio
-								src={character?.voiceline}
-								ref={audioRef}
-								onEnded={() => setIsPlayingAudio(false)}
-							/>
-							<button onClick={toggleAudioPlay} className="w-10 h-10">
-								<img
-									src="/va-icon.webp"
-									className="w-full h-full"
-									alt="Brimvahl-Crown-VA-Icon"
-								/>
-							</button>
-							<h1 className="text-[#C29948] text-lg lg:text-xl">
-								VA: {character?.VA}
-							</h1>
-						</div>
-					)}
-	
-					{/* Character/Weapon description */}
-					<p className="px-6 lg:pl-8 mt-4 text-base lg:text-xl text-white text-justify">
-						{currentlyShowing === "character" ? character?.desc : weapon?.desc}
-					</p>
-				</div>
-	
-				<div className="w-full lg:w-1/2 flex flex-col items-center relative mt-8 lg:mt-0">
-					<img
-						src="/character-circle.webp"
-						className="w-full"
-						alt="Brimvahl-Crown-Character-Circle"
-					/>
-					<img
-						src={
-							currentlyShowing === "character"
-								? character?.sprite
-								: weapon?.sprite
-						}
-						className="w-3/4 absolute top-0 h-full object-contain"
-						alt="Brimvahl-Crown-Character-Sprite"
-					/>
-	
-					{/* Switch Character/Weapon */}
-					<button
-						onClick={() => setCurrentlyShowing("character")}
-						className="w-20 absolute top-1/7 lg:top-1/5 xl:top-1/4 right-6 lg:right-13 xl:right-16 hover:drop-shadow-[0px_0px_5px_oklch(79.5%_0.184_86.047)] cursor-pointer"
-					>
-						<img
-							src={character?.icon}
-							className="w-full object-contain"
-							alt="Character Icon"
-						/>
-					</button>
-	
-					<button
-						onClick={() => setCurrentlyShowing("weapon")}
-						className="w-20 absolute bottom-1/7 lg:bottom-1/5 xl:bottom-1/4 right-6 lg:right-13 xl:right-16 hover:drop-shadow-[0px_0px_5px_oklch(79.5%_0.184_86.047)] cursor-pointer"
-					>
-						<img
-							src={weapon?.icon}
-							className="w-full object-contain"
-							alt="Weapon Icon"
-						/>
-					</button>
-				</div>
-			</div>
-		</SectionContainer>
-	);	
+  return (
+    <SectionContainer
+      className="h-fit xl:min-h-screen overflow-y-auto pt-40 pb-30"
+      backgroundImage="url('/single-character-bg.webp')"
+    >
+      <div className="w-full h-fit flex flex-col-reverse xl:flex-row items-center gap-20 xl:gap-0">
+        <div className="w-full xl:w-1/2 flex flex-col pr-0 lg:pr-20 mt-6 lg:mt-0">
+          {/* Character/Weapon name and underline */}
+          <div className="flex flex-col w-full px-6 xl:px-16">
+            <h1 className="text-3xl lg:text-4xl font-bold text-white uppercase">
+              {currentlyShowing === "character"
+                ? character?.fullName
+                : weapon?.name}
+            </h1>
+            {currentlyShowing === "character" && character?.title !== null && (
+              <h2 className="text-white text-lg lg:text-xl">
+                {character?.title}
+              </h2>
+            )}
+            <div className="flex w-full items-center mt-2">
+              <img
+                src="/character-name-underline-verticle.webp"
+                className="w-8 lg:w-10"
+                alt="Brimvahl-Crown-Character-Underline"
+              />
+              <div className="h-2 w-full ml-[-10px] bg-[#C29948] rounded-r-lg"></div>
+            </div>
+          </div>
+
+          {/* VA Credit */}
+          {currentlyShowing === "character" && (
+            <div className="flex items-center gap-3 px-6 xl:pl-16 mt-4">
+              <audio
+                src={character?.voiceline}
+                ref={audioRef}
+                onEnded={() => setIsPlayingAudio(false)}
+              />
+              <button onClick={toggleAudioPlay} className="w-10 h-10">
+                <img
+                  src="/va-icon.webp"
+                  className="w-full h-full"
+                  alt="Brimvahl-Crown-VA-Icon"
+                />
+              </button>
+              <h1 className="text-[#C29948] text-lg lg:text-xl">
+                VA: {character?.VA}
+              </h1>
+            </div>
+          )}
+
+          {/* Character/Weapon description */}
+          <p className="px-6 lg:pl-8 mt-4 text-base lg:text-xl text-white text-justify">
+            {currentlyShowing === "character" ? character?.desc : weapon?.desc}
+          </p>
+        </div>
+
+        <div className="w-full lg:w-1/2 flex flex-col items-center relative mt-8 lg:mt-0">
+          <img
+            src="/character-circle.webp"
+            className="w-full"
+            alt="Brimvahl-Crown-Character-Circle"
+          />
+          <img
+            src={
+              currentlyShowing === "character"
+                ? character?.sprite
+                : weapon?.sprite
+            }
+            className="w-3/4 absolute top-0 h-full object-contain"
+            alt="Brimvahl-Crown-Character-Sprite"
+          />
+
+          {/* Switch Character/Weapon */}
+          <button
+            onClick={() => setCurrentlyShowing("character")}
+            className="w-20 absolute top-1/7 lg:top-1/5 xl:top-1/4 right-6 lg:right-13 xl:right-16 hover:drop-shadow-[0px_0px_5px_oklch(79.5%_0.184_86.047)] cursor-pointer"
+          >
+            <img
+              src={character?.icon}
+              className="w-full object-contain"
+              alt="Character Icon"
+            />
+          </button>
+
+          <button
+            onClick={() => setCurrentlyShowing("weapon")}
+            className="w-20 absolute bottom-1/7 lg:bottom-1/5 xl:bottom-1/4 right-6 lg:right-13 xl:right-16 hover:drop-shadow-[0px_0px_5px_oklch(79.5%_0.184_86.047)] cursor-pointer"
+          >
+            <img
+              src={weapon?.icon}
+              className="w-full object-contain"
+              alt="Weapon Icon"
+            />
+          </button>
+        </div>
+      </div>
+    </SectionContainer>
+  );
 }

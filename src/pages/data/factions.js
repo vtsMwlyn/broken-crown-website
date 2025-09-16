@@ -9,7 +9,7 @@ const factions = [
 	{
 		slug: 'brimvahl-guards',
 		name: 'Brimvahl Guards',
-		logo: '/factions/logos/brimvahl-guards.webp',
+		logo: '/factions/logos/laughing-death.webp',
 		banner: '/factions/banners/brimvahl-guards.webp',
 		desc: 'The Brimvahl Guards are elite warriors hardened through countless battles and pillaging campaigns. Personally trained by grandmaster Kazmiel and grand mage Flaire, they master both spear combat and fundamental battle magic, making them versatile and formidable opponents on any battlefield. Their extensive experience and dual expertise in martial and arcane warfare establish them as one of Eldynia\'s most respected and feared fighting forces. They are now led by their new grandmaster Trixarina Moonwhisper.',
 	},
@@ -23,7 +23,7 @@ const factions = [
 	{
 		slug: 'laughing-death',
 		name: 'The Laughing Death',
-		logo: '/factions/logos/laughing-death.webp',
+		logo: '/factions/logos/brimvahl-guards.webp',
 		banner: '/factions/banners/laughing-death.webp',
 		desc: 'The Wardens of the Grove are ancient protectors bound by a primeval pact to safeguard the balance of nature. Drawing power from the very elements, their druids and rangers are masters of both earth magic and guerrilla warfare, guided by the Archdruid Elara Whisperwind. They can command forests to rise and rivers to change course, making their territory impassable to invaders. Their deep connection to the land and its creatures makes them a patient but overwhelming force when the natural order is threatened.',
 	},

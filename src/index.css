@@ -4,7 +4,7 @@
 @theme {
   --breakpoint-3xl: 156.25rem; /* 2500px */
   --breakpoint-2xl: 106.25rem; /* 1700px */
-  --breakpoint-extra-sm: 26.5625rem;
+  --breakpoint-extra-sm: 26.5625rem; /* 245px */
 }
 
 body {
