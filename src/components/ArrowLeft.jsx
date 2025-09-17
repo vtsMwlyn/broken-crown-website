@@ -7,7 +7,7 @@ export default function ArrowLeft({ onClick, className, style, type = 1 }) {
     >
       <img
         src={type === 1 ? "/arrow-left.webp" : "/arrow-left-white.webp"}
-        className={type == 1 ? "w-10 xs:w-15 sm:w-20 md:w-25 xl:w-28 3xl:w-40" : "w-15"}
+        className={type == 1 ? "w-9 xs:w-13 sm:w-20 md:w-25 xl:w-28 3xl:w-40" : "w-15"}
         alt="Brimvahl-Crown-Arrow"
       />
     </button>

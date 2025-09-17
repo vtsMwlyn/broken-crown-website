@@ -3,7 +3,7 @@
 
 @theme {
   --breakpoint-3xl: 125rem; /* 2000px */
-  --breakpoint-xs: 26.5625rem; /* 245px */
+  --breakpoint-xs: 25rem; /* 400px */
 }
 
 body {
@@ -154,26 +154,24 @@ html {
   transform: translateY(200px) !important;
 }
 
-.animate-arrow-left {
-  animation: float-left-right 1.5s ease-in-out infinite;
+.animate-arrow-right {
+  --offset-r: 3px;
+  animation: float-right-left 1.5s ease-in-out infinite;
+  @media (min-width: 640px) {
+    --offset-r: 10px;
+  }
 }
 
-.animate-arrow-right {
-  animation: float-right-left 1.5s ease-in-out infinite;
+.animate-arrow-left {
+  --offset-l: 3px;
+  animation: float-left-right 1.5s ease-in-out infinite;
+  @media (min-width: 640px) {
+    --offset-l: 10px;
+  }
 }
 
 .animate-brimvahl-crown-logo {
   animation: big-small 3s ease-in-out infinite;
-}
-
-@keyframes float-left-right {
-  0%,
-  100% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(10px);
-  }
 }
 
 @keyframes float-right-left {
@@ -182,7 +180,17 @@ html {
     transform: translateX(0);
   }
   50% {
-    transform: translateX(-10px);
+    transform: translateX(var(--offset-r));
+  }
+}
+
+@keyframes float-left-right {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(var(--offset-l));
   }
 }
 
