@@ -8,7 +8,6 @@ import SectionContainer from "../components/SectionContainer";
 import ArrowLeft from "../components/ArrowLeft";
 import ArrowRight from "../components/ArrowRight";
 import { useEffect } from "react";
-import { AlignCenter } from "lucide-react";
 import { useCallback } from "react";
 
 function Flipbook({ onNextClick, onPrevClick, onFlipToPage }) {
@@ -167,16 +166,16 @@ function Flipbook({ onNextClick, onPrevClick, onFlipToPage }) {
 
       <ArrowLeft
         onClick={handlePrevPage}
-        className="absolute 
+        className="absolute
         top-13 xs:top-20 sm:top-27 md:top-30 lg:top-25 xl:top-35 3xl:top-70
-        -left-[40px] xs:-left-14 sm:-left-25 md:-left-[115px] lg:left-[-140px] xl:-left-[150px] 3xl:left-[-200px] 
+        -left-[50px] xs:-left-14 sm:-left-25 md:-left-[115px] lg:left-[-140px] xl:-left-[150px] 3xl:left-[-200px] 
         rotate-6 lg:rotate-5"
       />
       <ArrowRight
         onClick={handleNextPage}
-        className="absolute 
+        className="absolute
         top-16 xs:top-25 sm:top-30 md:top-40 lg:top-35 xl:top-45 3xl:top-80
-        -right-[40px] xs:-right-[55px] sm:-right-28 md:-right-[130px] lg:right-[-150px] xl:-right-[170px] 3xl:right-[-230px] 
+        -right-[50px] xs:-right-[55px] sm:-right-28 md:-right-[130px] lg:right-[-150px] xl:-right-[170px] 3xl:right-[-230px] 
         rotate-8 lg:rotate-5"
       />
     </div>
@@ -210,14 +209,14 @@ export default function Background() {
 
   return (
     <SectionContainer
-      className="min-h-screen pb-120 xs:pb-140 sm:pb-140 md:pb-110 lg:pb-90 xl:pb-100 3xl:pb-140"
+      className="min-h-screen pb-120 xs:pb-140 sm:pb-140 md:pb-110 lg:pb-90 xl:pb-130 3xl:pb-140"
       id="background"
       backgroundImage="url('/background-section-bg.webp')"
     >
       {/* Header */}
       <div
         className="absolute 
-      top-40 xs:top-50 sm:top-30 md:top-25 xl:top-30 
+      top-30 lg:top-40 xl:top-30
       sm:-right-50 md:-right-50 lg:-right-50 xl:-right-36 3xl:right-40 
       flex flex-col items-center"
       >
@@ -236,7 +235,7 @@ export default function Background() {
         className="flex flex-col 
       items-center relative 
       w-[255px] xs:w-[335px] sm:w-[450px] md:w-[600px] lg:w-[700px] xl:w-[900px] 3xl:w-[1500px] 
-      top-20 xs:top-28 sm:top-25 md:top-[50px] lg:top-[50px] xl:top-25 3xl:top-50"
+      top-20 xl:top-40"
       >
         <img
           src="/book.png"
