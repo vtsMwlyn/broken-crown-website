@@ -1,11 +1,21 @@
 @import "tailwindcss";
 @tailwind utilities;
 
+@theme {
+  --breakpoint-3xl: 125rem; /* 2000px */
+  --breakpoint-xs: 25rem; /* 400px */
+}
+
 body {
   font-family: "Della Respira", serif;
   font-weight: 400;
   font-style: normal;
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+html {
+  overflow-x: hidden;
 }
 
 .font-2 {
@@ -18,7 +28,8 @@ body {
 
 /* For characters section swiper (border for selected slide item) */
 @layer utilities {
-  button, a {
+  button,
+  a {
     @apply cursor-pointer;
   }
 
@@ -35,17 +46,17 @@ body {
 
 /* Characters grid indentation */
 .grid-container {
-    display: grid;
-    /* Change the '3' here if you want more or fewer columns */
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.5rem;
-    padding: 1rem ;
+  display: grid;
+  /* Change the '3' here if you want more or fewer columns */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  padding: 1rem;
 }
 
 .grid-container > a:nth-child(6n + 4),
 .grid-container > a:nth-child(6n + 5),
 .grid-container > a:nth-child(6n + 6) {
-    transform: translateX(6rem);
+  transform: translateX(6rem);
 }
 
 /* For swipers that need custom pagination (bullets navigations) */
@@ -60,7 +71,7 @@ body {
 }
 
 #news-and-info .swiper-pagination-bullet-active {
-  background-color: #A5784C !important;
+  background-color: #a5784c !important;
   opacity: 1;
 }
 
@@ -75,7 +86,7 @@ body {
 }
 
 #gameplay-feature .swiper-pagination-bullet-active {
-  background-color: #A5784C !important;
+  background-color: #a5784c !important;
   opacity: 1;
   margin: 0 10px;
 }
@@ -92,7 +103,7 @@ body {
   opacity: 0.5;
   margin: auto 10px;
   transform: scale(0.7);
-} 
+}
 
 #fan-arts .swiper-pagination-bullet-active {
   background-color: white !important;
@@ -134,42 +145,58 @@ body {
   transform: translateY(-40px) !important;
 }
 
-#merchs .swiper-slide-next + .swiper-slide + .swiper-slide + .swiper-slide + .swiper-slide {
+#merchs
+  .swiper-slide-next
+  + .swiper-slide
+  + .swiper-slide
+  + .swiper-slide
+  + .swiper-slide {
   transform: translateY(200px) !important;
 }
 
-.animate-arrow-left {
-  animation: float-left-right 1.5s ease-in-out infinite;
+.animate-arrow-right {
+  --offset-r: 3px;
+  animation: float-right-left 1.5s ease-in-out infinite;
+  @media (min-width: 640px) {
+    --offset-r: 10px;
+  }
 }
 
-.animate-arrow-right {
-  animation: float-right-left 1.5s ease-in-out infinite;
+.animate-arrow-left {
+  --offset-l: 3px;
+  animation: float-left-right 1.5s ease-in-out infinite;
+  @media (min-width: 640px) {
+    --offset-l: 10px;
+  }
 }
 
 .animate-brimvahl-crown-logo {
   animation: big-small 3s ease-in-out infinite;
 }
 
-@keyframes float-left-right {
-  0%, 100% {
+@keyframes float-right-left {
+  0%,
+  100% {
     transform: translateX(0);
   }
   50% {
-    transform: translateX(10px);
+    transform: translateX(var(--offset-r));
   }
 }
 
-@keyframes float-right-left {
-  0%, 100% {
+@keyframes float-left-right {
+  0%,
+  100% {
     transform: translateX(0);
   }
   50% {
-    transform: translateX(-10px);
+    transform: translateX(var(--offset-l));
   }
 }
 
 @keyframes big-small {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(100%);
   }
   50% {

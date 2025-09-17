@@ -9,94 +9,98 @@ import ArrowLeft from "../../../components/ArrowLeft";
 import ArrowRight from "../../../components/ArrowRight";
 
 const features = [
-	{
-		id: 1,
-		image: '/gameplay-features/battlearena.webp',
-		desc: 'Engage in classic one on one cinematic boss fights with quick time events.'
-	},
-	{
-		id: 2,
-		image: '/gameplay-features/mechanics.webp',
-		desc: 'Fully voiced visual novel and comics where choices affects the combat! (Yes even the side quests are voiced)'
-	},
-	{
-		id: 3,
-		image: '/gameplay-features/visualization.webp',
-		desc: 'Mix and match Kazmiel\'s armor and make her the best version of herself.'
-	},
+  {
+    id: 1,
+    image: '/gameplay-features/battlearena.webp',
+    desc: 'Engage in classic one on one cinematic boss fights with quick time events.'
+  },
+  {
+    id: 2,
+    image: '/gameplay-features/mechanics.webp',
+    desc: 'Fully voiced visual novel and comics where choices affects the combat! (Yes even the side quests are voiced)'
+  },
+  {
+    id: 3,
+    image: '/gameplay-features/visualization.webp',
+    desc: 'Mix and match Kazmiel\'s armor and make her the best version of herself.'
+  },
 ];
 
 export default function GameplayFeature() {
-	/* SWIPER NAVIGATION BUTTONS MECHANISM */
-	const swiperRef = useRef(null); // Create a reference for the Swiper instance
+  const swiperRef = useRef(null);
+  const [activeFeatures, setActiveFeatures] = useState(features[0]);
 
-	// Function to handle the next slide
-	function handleNext() {
-		if (swiperRef.current) {
-			swiperRef.current.swiper.slideNext();
-		}
-	};
+  function handleNext() {
+    if (swiperRef.current) {
+      swiperRef.current.swiper.slideNext();
+    }
+  }
 
-	// Function to handle the previous slide
-	function handlePrev() {
-		if (swiperRef.current) {
-			swiperRef.current.swiper.slidePrev();
-		}
-	};
+  function handlePrev() {
+    if (swiperRef.current) {
+      swiperRef.current.swiper.slidePrev();
+    }
+  }
 
-	const [activeFeatures, setActiveFeatures] = useState(features[0]); // Start with the first character
+  const handleSlideChange = (swiper) => {
+    const currentIndex = swiper.realIndex;
+    setActiveFeatures(features[currentIndex]);
+  };
 
-	// Function to handle the slide change event
-	const handleSlideChange = (swiper) => {
-		// swiper.realIndex gives the correct index even in loop mode
-		const currentIndex = swiper.realIndex;
-		const currentCharacter = features[currentIndex];
-		setActiveFeatures(currentCharacter);
-	};
+  return (
+    <SectionContainer
+      className="h-fit xl:min-h-screen mb-10 md:mb-20 px-4"
+      id="gameplay-feature"
+      backgroundImage="url('/gameplay-feature-section-bg.webp')"
+    >
+      <div className="h-full w-full flex flex-col items-center justify-center relative z-10">
+        {/* Border */}
+        <div className="hidden lg:block absolute inset-0 max-h-[900px] w-full max-w-[1500px] px-10 lg:px-30 py-10 lg:py-20">
+          <img src="/fancy-border.webp" className="h-full w-full" alt="Brimvahl-Crown-Fancy-Border"/>
+        </div>
 
-	return (
-		<SectionContainer className="min-h-screen mb-20" id="gameplay-feature" backgroundImage="url('/gameplay-feature-section-bg.webp')">
-			<div className="h-full w-full flex flex-col items-center justify-center relative z-10">
-				{/* Border */}
-				<div className="absolute h-full max-h-[900px] w-full max-w-[1500px] px-30 py-20">
-					<img src="/fancy-border.webp" className="h-full w-full" alt="Brimvahl-Crown-Fancy-Border" />
+        {/* Section Title */}
+        <div className="relative z-10 mt-8 md:mt-20 flex justify-center">
+          <img src="/title-card.webp" className="w-[250px] md:w-[530px]" alt="Brimvahl-Crown-Title-Card" />
+          <div className="font-3 font-bold absolute top-5 sm:top-5 md:top-14 lg:top-13 w-full flex justify-center items-center text-lg sm:text-xl md:text-3xl lg:text-4xl">
+					Gameplay Features
 				</div>
 
-				{/* Section Title */}
-				<div className="relative z-10 mt-20">
-					<img src="/title-card.webp" className="w-[530px]" alt="Brimvahl-Crown-Title-Card" />
-					<div className="font-3 font-bold absolute top-13 w-full flex justify-center items-center text-4xl">Gameplay Features</div>
-				</div>
+        </div>
 
-				{/* Slider */}
-				<Swiper
-					modules={[Pagination]}
-					pagination={{ clickable: true }}
-					onSlideChange={handleSlideChange}
-					className="cursor-grab w-7/9 h-[680px] bg-white rounded-[350px_350px_100px_100px] z-5 mt-[-60px]"
-					slidesPerView={1}
-					ref={swiperRef}
-					loop
-				>
-					{features && features.map((n, index) => (
-						<SwiperSlide key={index}>
-							<img src={n.image} className="w-full h-full" alt="Brimvahl-Crown-Features-And-Info" />
-						</SwiperSlide>
-					))}
+        {/* Slider */}
+        <div className="relative w-full md:w-4/5 lg:w-3/4 mt-6 md:mt-[-60px]">
+          <Swiper
+            modules={[Pagination]}
+            pagination={{ clickable: true }}
+            onSlideChange={handleSlideChange}
+            className="cursor-grab w-full aspect-[4/3] md:aspect-video bg-white rounded-[50px] md:rounded-[350px_350px_100px_100px] z-5"
+            slidesPerView={1}
+            ref={swiperRef}
+            loop
+          >
+            {features.map((n, index) => (
+              <SwiperSlide key={index}>
+                <img src={n.image} className="w-full h-full object-cover rounded-[50px] md:rounded-[350px_350px_100px_100px]" alt="Brimvahl-Crown-Features" />
+              </SwiperSlide>
+            ))}
+          </Swiper>
 
-					{/* Navigations */}
-					<ArrowLeft onClick={handlePrev} className="absolute left-5 z-10 top-84" />
-					<ArrowRight onClick={handleNext} className="absolute right-5 z-10 top-84" />
-				</Swiper>
+          {/* Navigations */}
+          <ArrowLeft onClick={handlePrev} className="absolute left-2 md:left-5 z-10 top-1/2 -translate-y-1/2" />
+          <ArrowRight onClick={handleNext} className="absolute right-2 md:right-5 z-10 top-1/2 -translate-y-1/2" />
+        </div>
 
-				{/* Card */}
-				<div className="relative bottom-0 flex flex-col items-center w-3/5 z-10">
-					<img src="/text-paper.webp" className="w-full h-full absolute top-0" alt="Brimvahl-Crown-Text-Card" />
-					<div className="w-4/5 text-2xl relative py-10">
-						<p className="w-full">{activeFeatures.desc}</p>
-					</div>
-				</div>
-			</div>
-		</SectionContainer>
-	)
+        {/* Card */}
+        <div className="relative flex flex-col items-center w-full md:w-3/5 z-10 mt-[-60px]">
+          <img src="/text-paper.webp" className="w-11/12 md:w-full h-full absolute top-0" alt="Brimvahl-Crown-Text-Card" />
+          <div className="w-5/6 relative py-6 sm:py-8 md:py-10">
+            <p className="relative text-center text-xs sm:text-sm md:text-lg lg:text-xl xl:text-2xl leading-relaxed">
+              {activeFeatures.desc}
+            </p>
+          </div>
+        </div>
+      </div>
+    </SectionContainer>
+  )
 }

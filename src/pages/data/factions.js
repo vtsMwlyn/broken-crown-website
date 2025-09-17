@@ -9,7 +9,7 @@ const factions = [
 	{
 		slug: 'brimvahl-guards',
 		name: 'Brimvahl Guards',
-		logo: '/factions/logos/brimvahl-guards.webp',
+		logo: '/factions/logos/laughing-death.webp',
 		banner: '/factions/banners/brimvahl-guards.webp',
 		desc: 'The Brimvahl Guards are elite warriors hardened through countless battles and pillaging campaigns. Personally trained by grandmaster Kazmiel and grand mage Flaire, they master both spear combat and fundamental battle magic, making them versatile and formidable opponents on any battlefield. Their extensive experience and dual expertise in martial and arcane warfare establish them as one of Eldynia\'s most respected and feared fighting forces. They are now led by their new grandmaster Trixarina Moonwhisper.',
 	},
@@ -23,16 +23,9 @@ const factions = [
 	{
 		slug: 'laughing-death',
 		name: 'The Laughing Death',
-		logo: '/factions/logos/laughing-death.webp',
+		logo: '/factions/logos/brimvahl-guards.webp',
 		banner: '/factions/banners/laughing-death.webp',
 		desc: 'The Wardens of the Grove are ancient protectors bound by a primeval pact to safeguard the balance of nature. Drawing power from the very elements, their druids and rangers are masters of both earth magic and guerrilla warfare, guided by the Archdruid Elara Whisperwind. They can command forests to rise and rivers to change course, making their territory impassable to invaders. Their deep connection to the land and its creatures makes them a patient but overwhelming force when the natural order is threatened.',
-	},
-	{
-		slug: 'unknown',
-		name: 'Unknown Faction',
-		logo: '/factions/logos/unknown.webp',
-		banner: '/factions/banners/unknown.webp',
-		desc: 'The Shadow Syndicate operates from hidden enclaves, their members trained in the forgotten arts of espionage and illusion. Guided by a mysterious council known only as the Veiled Hand, they manipulate events from behind the scenes. Their agents are masters of disguise and silent infiltration, capable of toppling kingdoms without ever drawing a sword. Their influence is a closely guarded secret, making them one of the most powerful yet unseen forces in the realm, now under the rumored direction of a spymaster called "The Whisper."',
 	},
 ];
 
