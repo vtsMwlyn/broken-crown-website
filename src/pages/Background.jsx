@@ -209,7 +209,7 @@ export default function Background() {
 
   return (
     <SectionContainer
-      className="min-h-screen pb-120 xs:pb-140 sm:pb-140 md:pb-110 lg:pb-90 xl:pb-130 3xl:pb-140"
+      className="min-h-screen pb-20 xs:pb-40 sm:pb-40 md:pb-30 lg:pb-50 xl:pb-130 3xl:pb-140"
       id="background"
       backgroundImage="url('/background-section-bg.webp')"
     >
@@ -275,6 +275,25 @@ export default function Background() {
           </div>
         </div>
       </div>
+    
+      <div className="w-full mt-120 flex flex-col items-center px-4 sm:px-8 md:px-16 lg:px-32 xl:px-48 2xl:px-64">
+        <h2 className="text-3xl text-[#C29948] font-bold mb-8">
+          Map Preview
+        </h2>
+        <video
+          key={currentPage}
+          src={activeBackground.video}
+          className="w-full max-w-5xl h-auto rounded-lg shadow-lg"
+          controls
+          muted
+          autoPlay
+          loop
+          playsInline
+        >
+          Your browser does not support the video tag.
+        </video>
+      </div>
     </SectionContainer>
+    
   );
 }

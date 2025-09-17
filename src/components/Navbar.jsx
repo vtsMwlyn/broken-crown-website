@@ -62,7 +62,7 @@ export default function Navbar() {
               src="/navbar-menu-bg-red.webp"
               alt="Navbar-Menu"
               className={`w-[160px] transition duration-500 ${
-                isExpanded ? "translate-y-0" : "translate-y-[-100px]"
+                isExpanded ? "translate-y-0" : "translate-y-[-100px] md:translate-y-[-20px]"
               }`}
             />
             <div
@@ -96,24 +96,24 @@ export default function Navbar() {
       </div>
 
       {/* Mobile/tablet */}
-      <div className="md:hidden overflow-hidden flex justify-between items-center px-4 sticky top-0">
+      <div className="md:hidden flex justify-between items-center px-4 sticky top-0">
         <img
           src="/navbar-logo.webp"
           alt="Brimvahl-Crown-Navbar-Logo"
           className={`h-[110px] sm:h-[150px] relative z-50 top-0 transition ease-in-out duration-1000 ${
-            isAtThePageTop ? "translate-y-[-250px]" : "translate-y-[-100px] sm:translate-y-[-45px]"
+            isAtThePageTop ? "translate-y-[-250px]" : "translate-y-[0px] sm:translate-y-[-45px]"
           }`}
         />
 
         <button
           onClick={() => setIsExpanded(!isExpanded)}
-          className="relative flex flex-col items-center text-white hover:text-yellow-500 transition"
+          className="relative flex flex-col items-center text-white hover:text-yellow-500 transition h-[100px] w-[120px]"
         >
           <img
             src="/navbar-menu-bg-red.webp"
             alt="Navbar Menu"
             className={`w-[120px] h-[300px] transition-transform duration-500 ${
-              isExpanded ? "translate-y-[0px]" : "-translate-y-[170px]"
+              isExpanded ? "translate-y-[-10px]" : "-translate-y-[120px]"
             }`}
           />
           <div
@@ -127,15 +127,15 @@ export default function Navbar() {
             src="/navbar-more-arrow.webp"
             alt="More Arrow"
             className={`absolute left-1/2 -translate-x-1/2 w-[40px] transition duration-500 ${
-              isExpanded ? "translate-y-[220px] rotate-180 scale-75" : "translate-y-[50px] rotate-0"
+              isExpanded ? "translate-y-[160px] rotate-180 scale-75" : "translate-y-[50px] rotate-0"
             }`}
           />
           <div
-            className={`absolute top-0 mt-[20px] flex flex-col items-center w-[100px] text-sm font-medium transition duration-500 ${
+            className={`absolute top-0 mt-[15px] flex flex-col items-center w-[100px] text-sm font-medium transition duration-500 ${
               isExpanded ? "translate-y-0 opacity-100" : "-translate-y-[50px] opacity-0 pointer-events-none"
             }`}
           >
-            <div className="flex flex-col gap-6 font-base pb-10">
+            <div className="flex flex-col gap-3 font-base pb-10">
               <Link to="/" className="text-white hover:text-yellow-500">
                 Homepage
               </Link>
