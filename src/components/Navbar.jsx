@@ -62,7 +62,7 @@ export default function Navbar() {
               src="/navbar-menu-bg-red.webp"
               alt="Navbar-Menu"
               className={`w-[160px] transition duration-500 ${
-                isExpanded ? "translate-y-0" : "translate-y-[-100px] md:translate-y-[-20px]"
+                isExpanded ? "translate-y-0" : "translate-y-[-100px]"
               }`}
             />
             <div
