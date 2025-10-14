@@ -42,7 +42,7 @@ function VerticalFanArtCard({ fanart }) {
         />
         <img
           src={fanart?.image}
-          className="absolute z-5 w-[160px] h-[240px] lg:w-[240px] lg:h-[420px] object-cover object-center rounded-2xl"
+          className="absolute z-5 w-[160px] h-[240px] lg:w-[240px] lg:h-[420px] object-contain rounded-2xl"
           alt="Brimvahl-Crown-Fan-Art"
         />
       </div>
@@ -91,10 +91,10 @@ export default function FanArts() {
             <SwiperSlide key={i}>
               <div className="flex flex-col items-center">
                 {/* First row (landscape) */}
-                <div className="w-fit grid gap-5 xl:gap-30 grid-cols-1 sm:grid-cols-2">
+                {/* <div className="w-fit grid gap-5 xl:gap-30 grid-cols-1 sm:grid-cols-2">
                   <HorizontalFanArtCard fanart={f[0]} />
                   <HorizontalFanArtCard fanart={f[1]} />
-                </div>
+                </div> */}
 
                 {/* Second row (portrait) */}
                 <div className="w-fit grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-6 sm:mt-10">
@@ -104,18 +104,18 @@ export default function FanArts() {
                 </div>
 
                 {/* Third row (landscape) */}
-                <div className="w-fit grid gap-5 xl:gap-30 grid-cols-1 sm:grid-cols-2 mt-6 sm:mt-10">
+                {/* <div className="w-fit grid gap-5 xl:gap-30 grid-cols-1 sm:grid-cols-2 mt-6 sm:mt-10">
                   <HorizontalFanArtCard fanart={f[5]} />
                   <HorizontalFanArtCard fanart={f[6]} />
-                </div>
+                </div> */}
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
 
         {/* Arrows */}
-        <ArrowLeft onClick={handlePrev} className="absolute bottom-22 sm:bottom-20 left-5 sm:left-20 z-10" type={2} />
-        <ArrowRight  onClick={handleNext} className="absolute bottom-22 sm:bottom-20 right-5 sm:right-20 z-10" type={2}/>
+        {/* <ArrowLeft onClick={handlePrev} className="absolute bottom-22 sm:bottom-20 left-5 sm:left-20 z-10" type={2} />
+        <ArrowRight  onClick={handleNext} className="absolute bottom-22 sm:bottom-20 right-5 sm:right-20 z-10" type={2}/> */}
       </div>
       
     </SectionContainer>

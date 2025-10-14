@@ -11,17 +11,23 @@ import ArrowRight from "../../../components/ArrowRight";
 const features = [
   {
     id: 1,
-    image: '/gameplay-features/battlearena.webp',
+    src: '/gameplay-features/boss-fight.mp4',
+    type: 'video',
+    ext: 'mp4',
     desc: 'Engage in classic one on one cinematic boss fights with quick time events.'
   },
   {
     id: 2,
-    image: '/gameplay-features/mechanics.webp',
+    src: '/gameplay-features/armor.mp4',
+    type: 'video',
+    ext: 'mp4',
     desc: 'Fully voiced visual novel and comics where choices affects the combat! (Yes even the side quests are voiced)'
   },
   {
     id: 3,
-    image: '/gameplay-features/visualization.webp',
+    src: '/gameplay-features/comic.png',
+    type: 'image',
+    ext: 'png',
     desc: 'Mix and match Kazmiel\'s armor and make her the best version of herself.'
   },
 ];
@@ -81,7 +87,14 @@ export default function GameplayFeature() {
           >
             {features.map((n, index) => (
               <SwiperSlide key={index}>
-                <img src={n.image} className="w-full h-full object-cover rounded-[50px] md:rounded-[350px_350px_100px_100px]" alt="Brimvahl-Crown-Features" />
+                {n.type === 'image' && (
+                  <img src={n.src} className="w-full h-full object-cover rounded-[50px] md:rounded-[350px_350px_100px_100px]" alt="Brimvahl-Crown-Features" />
+                )}
+                {n.type === 'video' && (
+                  <video autoPlay muted loop className="w-full h-full object-cover rounded-[50px] md:rounded-[350px_350px_100px_100px]">
+                    <source src={n.src} type={`${n.type}/${n.ext}`} />
+                  </video>
+                )}
               </SwiperSlide>
             ))}
           </Swiper>

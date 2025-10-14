@@ -32,7 +32,7 @@ const weapons = [
 		name: 'Unknown',
 		sprite: '/weapons/sprites/unknown.webp',
 		icon: '/weapons/icons/unknown.webp',
-		desc: 'The enigmatic Grand Mage of Eldynia, Flaire serves as both advisor and caretaker to the royal family. Despite her claims of being human, her unnaturally long life, spanning even the Queen’s reign, hints at hidden origins. Knowledgeable, discreet, and impossibly ancient, she has guided three generations of Elandys rulers, her true motives as veiled as her past.',
+		desc: 'This is one of the legendary weapon people talk, still until now no one ever found it anywhere.',
 	},
 ];
 

@@ -43,27 +43,27 @@ export default function Footer() {
           {/* Socials */}
           <div className="w-full flex flex-col text-center sm:text-left">
             <h1 className="font-bold mb-4 md:mb-8">Follow Our Social Media</h1>
-            <Link to="#" className="hover:text-yellow-800 hover:font-semibold">
+            <a to="#" className="hover:text-yellow-800 hover:font-semibold">
               <i class="bi bi-youtube"></i> YouTube
-            </Link>
-            <Link to="#" className="hover:text-yellow-800 hover:font-semibold">
+            </a>
+            <a to="https://www.instagram.com/brimvahlcrowngame" target="_blank" className="hover:text-yellow-800 hover:font-semibold">
               <i className="bi bi-instagram"></i> Instagram
-            </Link>
-            <Link to="#" className="hover:text-yellow-800 hover:font-semibold">
+            </a>
+            <a to="#" target="_blank" className="hover:text-yellow-800 hover:font-semibold">
               <i className="bi bi-facebook"></i> Facebook
-            </Link>
-            <Link to="#" className="hover:text-yellow-800 hover:font-semibold">
+            </a>
+            <a to="https://x.com/brimvahlcrown" target="_blank" className="hover:text-yellow-800 hover:font-semibold">
               <i className="bi bi-twitter-x"></i> X
-            </Link>
-            <Link to="#" className="hover:text-yellow-800 hover:font-semibold">
+            </a>
+            <a to="#" target="_blank" className="hover:text-yellow-800 hover:font-semibold">
               <i className="bi bi-discord"></i> Discord
-            </Link>
-            <Link to="#" className="hover:text-yellow-800 hover:font-semibold">
+            </a>
+            <a to="#" target="_blank" className="hover:text-yellow-800 hover:font-semibold">
               <i className="bi bi-reddit"></i> Reddit
-            </Link>
-            <Link to="#" className="hover:text-yellow-800 hover:font-semibold">
+            </a>
+            <a to="#" target="_blank" className="hover:text-yellow-800 hover:font-semibold">
               <i className="bi bi-bluesky"></i> Bluesky
-            </Link>
+            </a>
           </div>
 
           {/* Contact */}
