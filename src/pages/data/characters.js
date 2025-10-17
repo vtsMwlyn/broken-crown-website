@@ -138,7 +138,7 @@ const characters = [
 		desc: 'The Guards represent Eldynia’s most coveted profession, offering unmatched pay, residence in Castle Vrosk, and open recruitment to all, regardless of background and status. The sole requirement? Surviving the grueling Arena Challenge, where applicants must endure five minutes against an elite guard. Those who succeed join the ranks of Eldynia’s guards and on their path to become an elite guard after surviving a minimum of 5 pillage missions.',
 
 		voiceline: '/characters/voicelines/unknown.ogg',
-		VA: 'Yanaidul',
+		VA: 'N/A',
 	},
 	
 	// ===== Fennora Village ===== //

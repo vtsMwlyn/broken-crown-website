@@ -18,16 +18,16 @@ const features = [
   },
   {
     id: 2,
-    src: '/gameplay-features/armor.mp4',
-    type: 'video',
-    ext: 'mp4',
+    src: '/gameplay-features/comic.webp',
+    type: 'image',
+    ext: 'webp',
     desc: 'Fully voiced visual novel and comics where choices affects the combat! (Yes even the side quests are voiced)'
   },
   {
     id: 3,
-    src: '/gameplay-features/comic.png',
-    type: 'image',
-    ext: 'png',
+    src: '/gameplay-features/armor.mp4',
+    type: 'video',
+    ext: 'mp4',
     desc: 'Mix and match Kazmiel\'s armor and make her the best version of herself.'
   },
 ];

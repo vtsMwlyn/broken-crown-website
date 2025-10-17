@@ -12,27 +12,21 @@ const news = [
   {
     id: 1,
     type: 'image',
-    source: '/news-and-info/livingroom.webp',
-    desc: 'Concept artists are developing variative visual story backgrounds. The living room is one of them, where Kazmiel spend her morning and night, before and after her adventure.'
+    source: '/news-and-info/deathlessking-cv.webp',
+    desc: 'Andrew Russell ascends the throne as the Deathless King. With a voice already honed in the fires of villainy, he is destined to crown this game with a performance of terrifying power and unforgettable presence.'
   },
   {
     id: 2,
-    type: 'video',
-    source: '/news-and-info/gameplay.mp4',
-    desc: 'The game programmer is really working hard on implementing the UI/UX and the game design into real gameplay!'
+    type: 'image',
+    source: '/news-and-info/flaire-cv.webp',
+    desc: 'Stepping into the spotlight as the enigmatic Flaire Eldryn is the talented Lizzie Freeman. But forget the heroes you know! This time, Lizzie unveils her voice as a sophisticated and cunning villainess, a role she sought to conquer for a new artistic challenge.'
   },
   {
     id: 3,
     type: 'image',
-    source: '/news-and-info/map.webp',
-    desc: '3D artists are developing the 3D map area for battles Kazmiel encountered during her adventure!'
+    source: '/news-and-info/kazmiel-official-trailer.webp',
+    desc: 'At the heart of our tale stands Brenna Larsen, who embodies our lead role, Kazmiel Australis Elandys. With a performance of profound emotional depth, she doesn\'t just tell a story, she breathes life into it, elevating our narrative to an art form.'
   },
-  {
-    id: 4,
-    type: 'youtube',
-    source: 'https://www.youtube.com/embed/eW_SOi1Xr-U?si=PBuLZAf2Xsfob41N',
-    desc: 'Sangnila has uploaded their recent tutorial, check it out and get a new knowledge!'
-  }
 ];
 
 export default function NewsAndInfo() {
