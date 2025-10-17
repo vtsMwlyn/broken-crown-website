@@ -2,29 +2,29 @@ const fanarts = [
 	[
 		// Top
 		{
-			image: '/fan-arts/CMFlaireEmote.png',
+			image: '/fan-arts/CMFlaireEmote.webp',
 			title: 'Kazmiel in Battle',
 			name: 'Audrey',
 		},
 		{
-			image: '/fan-arts/CMKazmielTP.png',
+			image: '/fan-arts/CMKazmielTP.webp',
 			title: 'Kazmiel Face Expression',
 			name: 'Reva',
 		},
 
 		// Middle
 		{
-			image: '/fan-arts/CMFlaireEmote.png',
+			image: '/fan-arts/CMFlaireEmote.webp',
 			title: 'Flaire Emote',
 			name: 'Arielle',
 		},
 		{
-			image: '/fan-arts/KazmielDrinking.png',
+			image: '/fan-arts/KazmielDrinking.webp',
 			title: 'Kazmiel Fan Art',
 			name: 'Sherren',
 		},
 		{
-			image: '/fan-arts/CMKazmielTP.png',
+			image: '/fan-arts/CMKazmielTP.webp',
 			title: 'Kazmiel Emote',
 			name: 'Arielle',
 		},

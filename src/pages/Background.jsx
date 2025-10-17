@@ -238,7 +238,7 @@ export default function Background() {
       top-20 xl:top-40"
       >
         <img
-          src="/book.png"
+          src="/book.webp"
           className="-translate-x-0.5 xs:-translate-x-1 sm:translate-x-0 h-[230px] xs:h-[310px] sm:h-[410px] md:h-[500px] xl:h-[600px] 3xl:h-[1000px] mt-30 relative z-0 rotate-z-[7.5deg] rotate-x-25"
           alt="Brimvahl-Crown-Background-Book"
         />
