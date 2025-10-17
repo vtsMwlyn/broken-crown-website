@@ -20,13 +20,13 @@ export default function PageHero() {
 					</div>
 
 					{/* Download button */}
-					<div className="flex flex-col sm:flex-row gap-4 mt-5 w-full justify-center items-center">
+					{/* <div className="flex flex-col sm:flex-row gap-4 mt-5 w-full justify-center items-center">
 						<LinkButton
-							to="https://store.steampowered.com/app/3179140/HR_Simulator/"
+							to="#"
 							text="Download Now"
 							className="w-[250px]"
 						/>
-					</div>
+					</div> */}
 
 					{/* Scroll to bottom to view more */}
 					<div className="mt-6 flex flex-col items-center w-fit mb-12 sm:mb-16">
