@@ -20,22 +20,22 @@ export default function Footer() {
           {/* Links 1 */}
           <div className="w-full flex flex-col text-center sm:text-left">
             <h1 className="font-bold mb-4 md:mb-8">Brimvahl Crown</h1>
-            <Link to="#" className="hover:text-yellow-800 hover:font-semibold">
+            <Link to="/" className="hover:text-yellow-800 hover:font-semibold">
               Characters
             </Link>
-            <Link to="#" className="hover:text-yellow-800 hover:font-semibold">
+            <Link to="/" className="hover:text-yellow-800 hover:font-semibold">
               News and Info
             </Link>
-            <Link to="#" className="hover:text-yellow-800 hover:font-semibold">
+            <Link to="/" className="hover:text-yellow-800 hover:font-semibold">
               Gameplay Feature
             </Link>
-            <Link to="#" className="hover:text-yellow-800 hover:font-semibold">
+            <Link to="/background" className="hover:text-yellow-800 hover:font-semibold">
               Background
             </Link>
-            <Link to="#" className="hover:text-yellow-800 hover:font-semibold">
+            <Link to="/merch" className="hover:text-yellow-800 hover:font-semibold">
               Merch
             </Link>
-            <Link to="#" className="hover:text-yellow-800 hover:font-semibold">
+            <Link to="/fan-arts" className="hover:text-yellow-800 hover:font-semibold">
               Fan Arts
             </Link>
           </div>
@@ -43,25 +43,25 @@ export default function Footer() {
           {/* Socials */}
           <div className="w-full flex flex-col text-center sm:text-left">
             <h1 className="font-bold mb-4 md:mb-8">Follow Our Social Media</h1>
-            <a to="#" className="hover:text-yellow-800 hover:font-semibold">
+            <a href="#" className="hover:text-yellow-800 hover:font-semibold">
               <i class="bi bi-youtube"></i> YouTube
             </a>
-            <a to="https://www.instagram.com/brimvahlcrowngame" target="_blank" className="hover:text-yellow-800 hover:font-semibold">
+            <a href="https://www.instagram.com/brimvahlcrowngame" target="_blank" className="hover:text-yellow-800 hover:font-semibold">
               <i className="bi bi-instagram"></i> Instagram
             </a>
-            <a to="#" target="_blank" className="hover:text-yellow-800 hover:font-semibold">
+            <a href="#" target="_blank" className="hover:text-yellow-800 hover:font-semibold">
               <i className="bi bi-facebook"></i> Facebook
             </a>
-            <a to="https://x.com/brimvahlcrown" target="_blank" className="hover:text-yellow-800 hover:font-semibold">
+            <a href="https://x.com/brimvahlcrown" target="_blank" className="hover:text-yellow-800 hover:font-semibold">
               <i className="bi bi-twitter-x"></i> X
             </a>
-            <a to="#" target="_blank" className="hover:text-yellow-800 hover:font-semibold">
+            <a href="#" target="_blank" className="hover:text-yellow-800 hover:font-semibold">
               <i className="bi bi-discord"></i> Discord
             </a>
-            <a to="#" target="_blank" className="hover:text-yellow-800 hover:font-semibold">
+            <a href="#" target="_blank" className="hover:text-yellow-800 hover:font-semibold">
               <i className="bi bi-reddit"></i> Reddit
             </a>
-            <a to="#" target="_blank" className="hover:text-yellow-800 hover:font-semibold">
+            <a href="#" target="_blank" className="hover:text-yellow-800 hover:font-semibold">
               <i className="bi bi-bluesky"></i> Bluesky
             </a>
           </div>
