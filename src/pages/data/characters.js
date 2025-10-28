@@ -20,11 +20,11 @@ const characters = [
 		weapon: 'unknown',
 
 		slug: 'vael-elandys',
-		title: 'The Pantocrator The Crown’s Final Hope',
+		title: 'The Crown’s Final Hope',
 		fullName: 'Vael Elandys',
 		nickName: 'Vael',
-		sprite: '/characters/sprites/unknown.webp',
-		icon: '/characters/icons/unknown.webp',
+		sprite: '/characters/sprites/vael.webp',
+		icon: '/characters/icons/vael.webp',
 		desc: 'The second child of Queen Mariel, Vael was born with wings, a symbol of his boundless potential. As a youth, he achieved the impossible by drawing the legendary Seraphic Blade Extharion from the stone at Castle Vrosk’s gardens, a feat none before him could accomplish. With his prodigious strength and divine destiny, he represents Eldynia’s brightest hope for restoration.',
 
 		voiceline: '/characters/voicelines/unknown.ogg',
