@@ -7,6 +7,9 @@ const publicFolder = path.join(__dirname, 'public');
 const supportedExtensions = ['.jpeg', '.jpg', '.png', '.tiff', '.svg'];
 
 async function convertImage(filePath) {
+  const base = path.basename(filePath).toLowerCase();
+  if (base === "website-logo.png") return;
+
   const ext = path.extname(filePath).toLowerCase();
   if (!supportedExtensions.includes(ext)) return;
 
