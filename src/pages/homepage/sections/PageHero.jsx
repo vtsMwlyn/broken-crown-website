@@ -20,13 +20,19 @@ export default function PageHero() {
 					</div>
 
 					{/* Download button */}
-					{/* <div className="flex flex-col sm:flex-row gap-4 mt-5 w-full justify-center items-center">
+					<div className="flex flex-col sm:flex-row gap-4 xl:gap-30 mt-5 w-full justify-center items-center">
 						<LinkButton
 							to="#"
-							text="Download Now"
+							text="Play Demo"
 							className="w-[250px]"
 						/>
-					</div> */}
+						<LinkButton
+							newTab={false}
+							to="/sign-up"
+							text="Sign Up"
+							className="w-[250px]"
+						/>
+					</div>
 
 					{/* Scroll to bottom to view more */}
 					<div className="mt-6 flex flex-col items-center w-fit mb-12 sm:mb-16">

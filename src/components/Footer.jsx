@@ -44,7 +44,7 @@ export default function Footer() {
           <div className="w-full flex flex-col text-center sm:text-left">
             <h1 className="font-bold mb-4 md:mb-8">Follow Our Social Media</h1>
             <a href="#" className="hover:text-yellow-800 hover:font-semibold">
-              <i class="bi bi-youtube"></i> YouTube
+              <i className="bi bi-youtube"></i> YouTube
             </a>
             <a href="https://www.instagram.com/brimvahlcrowngame" target="_blank" className="hover:text-yellow-800 hover:font-semibold">
               <i className="bi bi-instagram"></i> Instagram
@@ -73,21 +73,21 @@ export default function Footer() {
               to="mailto:admin@brimvahlcrown.com"
               className="hover:text-yellow-800 hover:font-semibold"
             >
-              <i class="bi bi-envelope-fill"></i> admin@brimvahlcrown.com
+              <i className="bi bi-envelope-fill"></i> admin@brimvahlcrown.com
             </Link>
             <Link
               to="https://wa.me/6591190186"
               target="_blank"
               className="hover:text-yellow-800 hover:font-semibold"
             >
-              <i class="bi bi-whatsapp"></i> +65 9119 0186
+              <i className="bi bi-whatsapp"></i> +65 9119 0186
             </Link>
             <Link
               to="https://maps.app.goo.gl/j6wrFCFZNP8RuGN18"
               target="_blank"
               className="hover:text-yellow-800 hover:font-semibold"
             >
-              <i class="bi bi-geo-alt-fill"></i> 60 Paya Lebar Road, # 10-20
+              <i className="bi bi-geo-alt-fill"></i> 60 Paya Lebar Road, # 10-20
               Paya Lebar Square Singapore 409051
             </Link>
           </div>

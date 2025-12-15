@@ -8,8 +8,8 @@ import CharacterSingle from './pages/CharacterSingle';
 import Merch from './pages/Merch';
 import FanArts from './pages/FanArts';
 import Background from './pages/Background';
+import SignUp from './pages/SignUp';
 
-import SectionSeparator from "./components/SectionSeparator"
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
 
@@ -42,6 +42,7 @@ export default function App() {
             <Route path="/merch" element={<Merch />} />
             <Route path="/fan-arts" element={<FanArts />} />
             <Route path="/background" element={<Background />} />
+            <Route path="/sign-up" element={<SignUp />} />
 
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
