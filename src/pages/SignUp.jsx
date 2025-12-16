@@ -19,22 +19,14 @@ export default function SignUp() {
         body: JSON.stringify({ email, name }),
       });
 
-      console.log("status:", res.status);
-      console.log("ok:", res.ok);
-
-      const text = await res.text();
-      console.log("RAW RESPONSE:", text);
-
-      const data = await res.json();
-      console.log(data);
-      setMessage(data.message || "Signed up successfully!");
-
+      setMessage("Signed up successfully!");
       setEmail("");
       setName("");
-    } catch (err) {
-      console.log(err)
+    }
+    catch (err) {
       setMessage("Something went wrong. Try again.");
-    } finally {
+    }
+    finally {
       setLoading(false);
     }
   };
@@ -74,12 +66,9 @@ export default function SignUp() {
             required
           />
 
-          <button
-            type="submit"
-            disabled={loading}
-            className="mt-4 py-3 bg-black text-white text-xl hover:bg-black/80 transition disabled:opacity-50"
-          >
-            {loading ? "Submitting..." : "Sign Up"}
+          <button className="w-[250px] self-center relative text-white hover:text-yellow-500 hover:drop-shadow-[0px_0px_5px_oklch(79.5%_0.184_86.047)]" type="submit" disabled={loading}>
+            <img src="/button-bg.webp" className="w-full" alt="Brimvahl-Crown-Button" />
+            <div className="absolute top-3.5 w-full text-center text-xl">{loading ? "Submitting..." : "Submit"}</div>
           </button>
         </form>
 
