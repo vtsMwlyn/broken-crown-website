@@ -26,12 +26,12 @@ export default function PageHero() {
 							text="Download Demo"
 							className="w-[250px]"
 						/>
-						{/* <LinkButton
+						<LinkButton
 							newTab={false}
 							to="/sign-up"
 							text="Sign Up"
 							className="w-[250px]"
-						/> */}
+						/>
 					</div>
 
 					{/* Scroll to bottom to view more */}

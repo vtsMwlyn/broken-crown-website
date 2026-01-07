@@ -43,7 +43,7 @@ export default function App() {
             <Route path="/merch" element={<Merch />} />
             <Route path="/fan-arts" element={<FanArts />} />
             <Route path="/background" element={<Background />} />
-            {/* <Route path="/sign-up" element={<SignUp />} /> */}
+            <Route path="/sign-up" element={<SignUp />} />
 
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
