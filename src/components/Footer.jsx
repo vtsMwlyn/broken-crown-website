@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { X } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -8,18 +9,26 @@ export default function Footer() {
     >
       <div className="w-11/12 xl:w-5/6 max-w-[1500px] flex flex-col xl:flex-row gap-10 xl:gap-20 py-12 md:py-20 relative z-5">
         {/* Brand */}
-        <div className="w-full xl:w-1/3 flex flex-col text-center sm:text-left">
+        <div className="w-full xl:w-1/3 flex flex-col items-center xl:items-start">
           <h1 className="font-bold mb-4 md:mb-8">Brimvahl Crown</h1>
           <p className="font-semibold">
-            Copyright &copy; 2025 - All Rights Reserved
+            Copyright &copy; 2026 - All Rights Reserved
           </p>
-          <p>Chubby Puppy - Sangnila</p>
+          <div className="flex gap-2 items-center">
+            <a href="https://chubbypuppy.brimvahlcrown.com" target="_blank" className="hover:text-yellow-800 hover:font-semibold">
+              <img src="/Chubby_Puppy_Logo.webp" className="brightness-0 h-22" alt="Chubby Puppy" />
+            </a>
+            <X className="mt-0.5 size-8" />
+            <a href="https://sangnilaindonesia.com" target="_blank" className="hover:text-yellow-800 hover:font-semibold">
+              <img src="/Sangnila_Logo.webp" className="brightness-0 h-15 mt-2" alt="Sangnila" />
+            </a>
+          </div>
         </div>
 
         <div className="w-full xl:w-2/3 grid grid-cols-1 xl:grid-cols-3 gap-10 xl:gap-0">
           {/* Links 1 */}
           <div className="w-full flex flex-col text-center sm:text-left">
-            <h1 className="font-bold mb-4 md:mb-8">Brimvahl Crown</h1>
+            <h1 className="font-bold mb-4 md:mb-8">Explore Our Game</h1>
             <Link to="/" className="hover:text-yellow-800 hover:font-semibold">
               Characters
             </Link>
@@ -41,7 +50,7 @@ export default function Footer() {
           </div>
 
           {/* Socials */}
-          <div className="w-full flex flex-col text-center sm:text-left">
+          <div className="w-full flex xl:hidden flex-col text-center sm:text-left">
             <h1 className="font-bold mb-4 md:mb-8">Follow Our Social Media</h1>
             <a href="#" className="hover:text-yellow-800 hover:font-semibold">
               <i className="bi bi-youtube"></i> YouTube
@@ -95,26 +104,11 @@ export default function Footer() {
       </div>
 
       {/* Back to home */}
-      <Link
-        to="/"
-        className="absolute 
-        -top-6 sm:-top-8 md:-top-10 
-        right-5 md:right-10 lg:right-20 z-20 
-        text-white hover:text-yellow-500 hover:drop-shadow-[0px_0px_5px_oklch(79.5%_0.184_86.047)]"
-      >
-        <img
-          src="/footer-menu-bg-red.webp"
-          className="w-[80px] xs:w-[90px] sm:w-[110px] xl:w-[130px] 3xl:w-[200px]"
-          alt="Brimvahl-Crown-Navbar-Menu"
+      <Link to="/" className="absolute -top-6 sm:-top-8 md:-top-10 right-5 md:right-10 xl:right-40 z-20 text-white hover:text-yellow-500 hover:drop-shadow-[0px_0px_5px_oklch(79.5%_0.184_86.047)]">
+        <img src="/footer-menu-bg-red.webp" className="w-[80px] xs:w-[90px] sm:w-[110px] xl:w-[130px] 3xl:w-[200px]" alt="Brimvahl-Crown-Navbar-Menu"
         />
-        <div
-          className="absolute w-full text-center
-        top-3 xs:top-4 sm:top-3 md:top-4 3xl:top-6
-        text-[10px] xs:text-xs sm:text-sm md:text-[15px] xl:text-[20px] 3xl:text-3xl"
-        >
-          Back to
-          <br />
-          Home
+        <div className="absolute w-full text-center top-3 xs:top-4 sm:top-3 md:top-4 3xl:top-6 text-[10px] xs:text-xs sm:text-sm md:text-[15px] xl:text-[20px] 3xl:text-3xl">
+          Back to<br />Home
         </div>
       </Link>
     </footer>

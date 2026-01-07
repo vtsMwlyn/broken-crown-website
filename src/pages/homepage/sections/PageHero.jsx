@@ -23,15 +23,15 @@ export default function PageHero() {
 					<div className="flex flex-col sm:flex-row gap-4 xl:gap-30 mt-5 w-full justify-center items-center">
 						<LinkButton
 							to="/Brimvahl-Crown%20Demo.zip"
-							text="Play Demo"
+							text="Download Demo"
 							className="w-[250px]"
 						/>
-						<LinkButton
+						{/* <LinkButton
 							newTab={false}
 							to="/sign-up"
 							text="Sign Up"
 							className="w-[250px]"
-						/>
+						/> */}
 					</div>
 
 					{/* Scroll to bottom to view more */}

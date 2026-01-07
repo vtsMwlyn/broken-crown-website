@@ -8,7 +8,7 @@ const supportedExtensions = ['.jpeg', '.jpg', '.png', '.tiff', '.svg'];
 
 async function convertImage(filePath) {
   const base = path.basename(filePath).toLowerCase();
-  if (base === "website-logo.png") return;
+  if (base === "website-logo.png" || base.startsWith('favicon') || base.startsWith('apple-touch')) return;
 
   const ext = path.extname(filePath).toLowerCase();
   if (!supportedExtensions.includes(ext)) return;
