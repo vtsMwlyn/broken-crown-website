@@ -14,7 +14,7 @@ const merchs = {
 			link: '#'
 		},
 		{
-			title: 'Deadless King T-Shirt',
+			title: 'Deathless King T-Shirt',
 			image: '/merchs/tshirt-deadlessking.webp',
 			price: 0,
 			link: '#'
@@ -36,7 +36,7 @@ const merchs = {
 			link: '#'
 		},
 		{
-			title: 'Deadless King T-Shirt',
+			title: 'Deathless King T-Shirt',
 			image: '/merchs/tshirt-deadlessking.webp',
 			price: 0,
 			link: '#'
@@ -54,7 +54,7 @@ const merchs = {
 			link: '#'
 		},
 		{
-			title: 'Deadless King T-Shirt',
+			title: 'Deathless King T-Shirt',
 			image: '/merchs/tshirt-deadlessking.webp',
 			price: 0,
 			link: '#'
@@ -72,7 +72,7 @@ const merchs = {
 			link: '#'
 		},
 		{
-			title: 'Deadless King T-Shirt',
+			title: 'Deathless King T-Shirt',
 			image: '/merchs/tshirt-deadlessking.webp',
 			price: 0,
 			link: '#'
