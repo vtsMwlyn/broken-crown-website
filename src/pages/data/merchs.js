@@ -2,92 +2,80 @@ const merchs = {
 	// Highlight/featured (4 at the top)
 	featured: [
 		{
-			title: 'Blubberbeast Plushies',
-			image: '/merchs/blubberbeast-plushies.webp',
+			title: 'Mousepad',
+			image: '/merchs/mousepad.webp',
 			price: 0,
-			link: 'https://genshinfans.com/'
+			link: '#'
 		},
 		{
-			title: 'Citlali Pillow',
-			image: '/merchs/citlali-pillow.webp',
+			title: 'Kazmiel T-Shirt',
+			image: '/merchs/tshirt-kazmiel.webp',
 			price: 0,
-			link: 'https://genshinfans.com/'
+			link: '#'
 		},
 		{
-			title: 'Figure - Hutao',
-			image: '/merchs/hutao-figure.webp',
+			title: 'Deadless King T-Shirt',
+			image: '/merchs/tshirt-deadlessking.webp',
 			price: 0,
-			link: 'https://genshinfans.com/'
-		},
-		{
-			title: 'Saurian Plushies',
-			image: '/merchs/saurian-plushies.webp',
-			price: 0,
-			link: 'https://genshinfans.com/'
+			link: '#'
 		},
 	],
 
 	// Others, for slider
 	others: [
 		{
-			title: 'Tartaglia Frame',
-			image: '/merchs/tartaglia-frame.webp',
+			title: 'Mousepad',
+			image: '/merchs/mousepad.webp',
 			price: 0,
-			link: 'https://genshinfans.com/'
+			link: '#'
 		},
 		{
-			title: 'Custom Visions',
-			image: '/merchs/vision.webp',
+			title: 'Kazmiel T-Shirt',
+			image: '/merchs/tshirt-kazmiel.webp',
 			price: 0,
-			link: 'https://genshinfans.com/'
+			link: '#'
 		},
 		{
-			title: 'Figure - Wriothesley',
-			image: '/merchs/wriothesley-figure.webp',
+			title: 'Deadless King T-Shirt',
+			image: '/merchs/tshirt-deadlessking.webp',
 			price: 0,
-			link: 'https://genshinfans.com/'
+			link: '#'
 		},
 		{
-			title: 'Fox Yae Miko',
-			image: '/merchs/fox-yae-miko.webp',
+			title: 'Mousepad',
+			image: '/merchs/mousepad.webp',
 			price: 0,
-			link: 'https://genshinfans.com/'
+			link: '#'
 		},
 		{
-			title: 'Yae Miko Joystick',
-			image: '/merchs/yae-miko-joystick.webp',
+			title: 'Kazmiel T-Shirt',
+			image: '/merchs/tshirt-kazmiel.webp',
 			price: 0,
-			link: 'https://genshinfans.com/'
+			link: '#'
 		},
 		{
-			title: 'Hutao Keyboard',
-			image: '/merchs/hutao-keyboard.webp',
+			title: 'Deadless King T-Shirt',
+			image: '/merchs/tshirt-deadlessking.webp',
 			price: 0,
-			link: 'https://genshinfans.com/'
+			link: '#'
 		},
 		{
-			title: 'Alhaitham Totebag',
-			image: '/merchs/alhaitham-totebag.webp',
+			title: 'Mousepad',
+			image: '/merchs/mousepad.webp',
 			price: 0,
-			link: 'https://genshinfans.com/'
+			link: '#'
 		},
 		{
-			title: 'TCG Mousepad',
-			image: '/merchs/tcg-mousepad.webp',
+			title: 'Kazmiel T-Shirt',
+			image: '/merchs/tshirt-kazmiel.webp',
 			price: 0,
-			link: 'https://genshinfans.com/'
+			link: '#'
 		},
 		{
-			title: 'Furina Figure',
-			image: '/merchs/furina-figure.webp',
+			title: 'Deadless King T-Shirt',
+			image: '/merchs/tshirt-deadlessking.webp',
 			price: 0,
-			link: 'https://genshinfans.com/'
-		},
-		{
-			title: 'Cacucu Plushie',
-			image: '/merchs/cacucu-plushie.webp',
-			price: 0,
-			link: 'https://genshinfans.com/'
+			link: '#'
 		},
 	]
 }

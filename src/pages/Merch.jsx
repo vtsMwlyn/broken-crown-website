@@ -133,7 +133,7 @@ export default function Merch() {
       className="w-full flex justify-center relative lg:min-h-screen"
       style={{ background: `url('/merch-bg.webp') no-repeat center center / cover` }}
     >
-      {/* <div className="w-full flex flex-col justify-between items-center">
+      <div className="w-full flex flex-col justify-between items-center">
         <div className="flex flex-col items-center mt-28 md:mt-60 lg:mt-36 text-center">
           <h1 className="text-2xl lg:text-5xl text-white font-3 font-bold">
             Merch Store
@@ -234,9 +234,6 @@ export default function Merch() {
             <ArrowRight onClick={handleNextMobile} className="absolute right-5 z-30 bottom-30" type={2} />
           </div>
         </div>
-      </div> */}
-      <div className="h-screen w-full flex items-center justify-center">
-        <h1 className="text-3xl xl:text-6xl text-white">Coming Soon!</h1>
       </div>
     </div>
   )
