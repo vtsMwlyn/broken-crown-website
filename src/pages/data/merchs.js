@@ -3,19 +3,19 @@ const merchs = {
 	featured: [
 		{
 			title: 'Mousepad',
-			image: '/merchs/mousepad.webp',
+			image: '/assets/merchs/mousepad.webp',
 			price: 0,
 			link: '#'
 		},
 		{
 			title: 'Kazmiel T-Shirt',
-			image: '/merchs/tshirt-kazmiel.webp',
+			image: '/assets/merchs/tshirt-kazmiel.webp',
 			price: 0,
 			link: '#'
 		},
 		{
 			title: 'Deathless King T-Shirt',
-			image: '/merchs/tshirt-deadlessking.webp',
+			image: '/assets/merchs/tshirt-deadlessking.webp',
 			price: 0,
 			link: '#'
 		},
@@ -25,55 +25,55 @@ const merchs = {
 	others: [
 		{
 			title: 'Mousepad',
-			image: '/merchs/mousepad.webp',
+			image: '/assets/merchs/mousepad.webp',
 			price: 0,
 			link: '#'
 		},
 		{
 			title: 'Kazmiel T-Shirt',
-			image: '/merchs/tshirt-kazmiel.webp',
+			image: '/assets/merchs/tshirt-kazmiel.webp',
 			price: 0,
 			link: '#'
 		},
 		{
 			title: 'Deathless King T-Shirt',
-			image: '/merchs/tshirt-deadlessking.webp',
+			image: '/assets/merchs/tshirt-deadlessking.webp',
 			price: 0,
 			link: '#'
 		},
 		{
 			title: 'Mousepad',
-			image: '/merchs/mousepad.webp',
+			image: '/assets/merchs/mousepad.webp',
 			price: 0,
 			link: '#'
 		},
 		{
 			title: 'Kazmiel T-Shirt',
-			image: '/merchs/tshirt-kazmiel.webp',
+			image: '/assets/merchs/tshirt-kazmiel.webp',
 			price: 0,
 			link: '#'
 		},
 		{
 			title: 'Deathless King T-Shirt',
-			image: '/merchs/tshirt-deadlessking.webp',
+			image: '/assets/merchs/tshirt-deadlessking.webp',
 			price: 0,
 			link: '#'
 		},
 		{
 			title: 'Mousepad',
-			image: '/merchs/mousepad.webp',
+			image: '/assets/merchs/mousepad.webp',
 			price: 0,
 			link: '#'
 		},
 		{
 			title: 'Kazmiel T-Shirt',
-			image: '/merchs/tshirt-kazmiel.webp',
+			image: '/assets/merchs/tshirt-kazmiel.webp',
 			price: 0,
 			link: '#'
 		},
 		{
 			title: 'Deathless King T-Shirt',
-			image: '/merchs/tshirt-deadlessking.webp',
+			image: '/assets/merchs/tshirt-deadlessking.webp',
 			price: 0,
 			link: '#'
 		},

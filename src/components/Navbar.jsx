@@ -44,11 +44,11 @@ export default function Navbar() {
               <img src="/navbar-menu-bg-blue.webp" alt="menu" className="w-[160px]" />
               <div className="absolute top-6 text-center w-full">Homepage</div>
             </Link>
-            <Link to="/characters" className="relative text-white hover:text-yellow-500">
+            <Link to="/assets/characters" className="relative text-white hover:text-yellow-500">
               <img src="/navbar-menu-bg-blue.webp" alt="menu" className="w-[160px]" />
               <div className="absolute top-6 text-center w-full">Characters</div>
             </Link>
-            <Link to="/background" className="relative text-white hover:text-yellow-500">
+            <Link to="/assets/backgrounds" className="relative text-white hover:text-yellow-500">
               <img src="/navbar-menu-bg-blue.webp" alt="menu" className="w-[160px]" />
               <div className="absolute top-6 text-center w-full">Background</div>
             </Link>
@@ -87,7 +87,7 @@ export default function Navbar() {
               <Link to="/merch" className="text-white hover:text-yellow-500">
                 Merch
               </Link>
-              <Link to="/fan-arts" className="text-white hover:text-yellow-500">
+              <Link to="/assets/fan-arts" className="text-white hover:text-yellow-500">
                 Fan Arts
               </Link>
             </div>
@@ -139,16 +139,16 @@ export default function Navbar() {
               <Link to="/" className="text-white hover:text-yellow-500">
                 Homepage
               </Link>
-              <Link to="/characters" className="text-white hover:text-yellow-500">
+              <Link to="/assets/characters" className="text-white hover:text-yellow-500">
                 Characters
               </Link>
-              <Link to="/background" className="text-white hover:text-yellow-500">
+              <Link to="/assets/backgrounds" className="text-white hover:text-yellow-500">
                 Background
               </Link>
               <Link to="/merch" className="text-white hover:text-yellow-500">
                 Merch
               </Link>
-              <Link to="/fan-arts" className="text-white hover:text-yellow-500">
+              <Link to="/assets/fan-arts" className="text-white hover:text-yellow-500">
                 Fan Arts
               </Link>
             </div>

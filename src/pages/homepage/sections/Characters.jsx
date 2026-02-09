@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import characters from "../../data/characters"
+import characters from "../../data/assets/characters"
 
 import SectionContainer from "../../../components/SectionContainer"
 import LinkButton from "../../../components/Button";
@@ -11,7 +11,7 @@ function CharacterCard({ character, className, style }) {
 
   return (
     <Link
-      to={`/characters/${chara?.slug}`}
+      to={`/assets/characters/${chara?.slug}`}
       className={`w-full relative flex flex-col items-center text-white transition-transform ease-in-out duration-500 hover:translate-y-[-30px] hover:drop-shadow-[0px_0px_5px_oklch(79.5%_0.184_86.047)] cursor-pointer ${className}`}
       style={style}
     >
@@ -62,7 +62,7 @@ export default function Characters() {
         </div>
 
         {/* View More */}
-        <LinkButton to="/characters" text="View More" className="w-[200px] md:w-[250px]" />
+        <LinkButton to="/assets/characters" text="View More" className="w-[200px] md:w-[250px]" />
       </div>
     </SectionContainer>
   )

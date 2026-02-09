@@ -38,13 +38,13 @@ export default function Footer() {
             <Link to="/" className="hover:text-yellow-800 hover:font-semibold">
               Gameplay Feature
             </Link>
-            <Link to="/background" className="hover:text-yellow-800 hover:font-semibold">
+            <Link to="/assets/backgrounds" className="hover:text-yellow-800 hover:font-semibold">
               Background
             </Link>
             <Link to="/merch" className="hover:text-yellow-800 hover:font-semibold">
               Merch
             </Link>
-            <Link to="/fan-arts" className="hover:text-yellow-800 hover:font-semibold">
+            <Link to="/assets/fan-arts" className="hover:text-yellow-800 hover:font-semibold">
               Fan Arts
             </Link>
           </div>

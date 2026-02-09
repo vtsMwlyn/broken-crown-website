@@ -1,4 +1,4 @@
-import merchs from "./data/merchs";
+import merchs from "./data/assets/merchs";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
 import { useRef } from "react";

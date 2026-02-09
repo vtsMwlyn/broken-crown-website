@@ -3,11 +3,11 @@ import { useLocation, Navigate } from 'react-router-dom';
 import { useEffect } from 'react';
 
 import Home from './pages/homepage/Index';
-import Characters from './pages/Characters';
-import CharacterSingle from './pages/CharacterSingle';
+import Characters from './pages/assets/characters';
+import CharacterSingle from './pages/assets/charactersingle';
 import Merch from './pages/Merch';
 import FanArts from './pages/FanArts';
-import Background from './pages/Background';
+import Background from './pages/assets/backgrounds';
 import SignUp from './pages/SignUp';
 
 import Navbar from "./components/Navbar"
@@ -38,10 +38,10 @@ export default function App() {
           
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/characters" element={<Characters />} />
-            <Route path="/characters/:slug" element={<CharacterSingle />} />
-            <Route path="/merch" element={<Merch />} />
-            <Route path="/fan-arts" element={<FanArts />} />
+            <Route path="/character" element={<Characters />} />
+            <Route path="/character/:slug" element={<CharacterSingle />} />
+            <Route path="/assets/merchs" element={<Merch />} />
+            <Route path="/fan-art" element={<FanArts />} />
             <Route path="/background" element={<Background />} />
             <Route path="/sign-up" element={<SignUp />} />
 

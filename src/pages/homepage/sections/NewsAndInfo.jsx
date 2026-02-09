@@ -12,19 +12,19 @@ const news = [
   {
     id: 1,
     type: 'image',
-    source: '/news-and-info/deathlessking-cv.webp',
+    source: '/assets/news-and-info/deathlessking-cv.webp',
     desc: 'Andrew Russell ascends the throne as the Deathless King. With a voice already honed in the fires of villainy, he is destined to crown this game with a performance of terrifying power and unforgettable presence.'
   },
   {
     id: 2,
     type: 'image',
-    source: '/news-and-info/flaire-cv.webp',
+    source: '/assets/news-and-info/flaire-cv.webp',
     desc: 'Stepping into the spotlight as the enigmatic Flaire Eldryn is the talented Lizzie Freeman. But forget the heroes you know! This time, Lizzie unveils her voice as a sophisticated and cunning villainess, a role she sought to conquer for a new artistic challenge.'
   },
   {
     id: 3,
     type: 'image',
-    source: '/news-and-info/kazmiel-official-trailer.webp',
+    source: '/assets/news-and-info/kazmiel-official-trailer.webp',
     desc: 'At the heart of our tale stands Brenna Larsen, who embodies our lead role, Kazmiel Australis Elandys. With a performance of profound emotional depth, she doesn\'t just tell a story, she breathes life into it, elevating our narrative to an art form.'
   },
 ];
@@ -56,7 +56,7 @@ export default function NewsAndInfo() {
     <SectionContainer
       className="h-fit xl:min-h-screen px-4 md:px-0"
       id="news-and-info"
-      backgroundImage="url('/news-and-info-section-bg.webp')"
+      backgroundImage="url('/assets/news-and-info-section-bg.webp')"
     >
       <div className="w-full flex flex-col items-center justify-center relative mb-10 md:mb-20">
         {/* Background */}

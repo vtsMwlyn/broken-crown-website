@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
-import characters from "./data/characters";
-import weapons from "./data/weapons";
+import characters from "./data/assets/characters";
+import weapons from "./data/assets/weapons";
 
 import SectionContainer from "../components/SectionContainer";
 import { useState, useRef, useEffect } from "react";
@@ -66,7 +66,7 @@ export default function CharacterSingle() {
           {currentlyShowing === "character" && (
             <div className="flex items-center gap-3 px-6 xl:pl-16 mt-4">
               <audio
-                src={character?.voiceline !== '/characters/voicelines/unknown.ogg' && character?.voiceline}
+                src={character?.voiceline !== '/assets/characters/voicelines/unknown.ogg' && character?.voiceline}
                 ref={audioRef}
                 onEnded={() => setIsPlayingAudio(false)}
               />

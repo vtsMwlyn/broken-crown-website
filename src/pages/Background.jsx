@@ -2,7 +2,7 @@
 import { useRef, useState } from "react";
 import { PageFlip } from "page-flip";
 import "../flipbook.css";
-import backgrounds from "./data/backgrounds";
+import backgrounds from "./data/assets/backgroundss";
 
 import SectionContainer from "../components/SectionContainer";
 import ArrowLeft from "../components/ArrowLeft";
@@ -211,7 +211,7 @@ export default function Background() {
     <SectionContainer
       className="min-h-screen pb-20 xs:pb-40 sm:pb-40 md:pb-30 lg:pb-50 xl:pb-130 3xl:pb-140"
       id="background"
-      backgroundImage="url('/background-section-bg.webp')"
+      backgroundImage="url('/assets/backgrounds-section-bg.webp')"
     >
       {/* Header */}
       <div

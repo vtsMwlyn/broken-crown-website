@@ -11,21 +11,21 @@ import ArrowRight from "../../../components/ArrowRight";
 const features = [
   {
     id: 1,
-    src: '/gameplay-features/boss-fight.mp4',
+    src: '/assets/gameplay-features/boss-fight.mp4',
     type: 'video',
     ext: 'mp4',
     desc: 'Engage in classic one on one cinematic boss fights with quick time events.'
   },
   {
     id: 2,
-    src: '/gameplay-features/comic.webp',
+    src: '/assets/gameplay-features/comic.webp',
     type: 'image',
     ext: 'webp',
     desc: 'Fully voiced visual novel and comics where choices affects the combat! (Yes even the side quests are voiced)'
   },
   {
     id: 3,
-    src: '/gameplay-features/armor.mp4',
+    src: '/assets/gameplay-features/armor.mp4',
     type: 'video',
     ext: 'mp4',
     desc: 'Mix and match Kazmiel\'s armor and make her the best version of herself.'
