@@ -66,7 +66,7 @@ export default function CharacterSingle() {
           {currentlyShowing === "character" && (
             <div className="flex items-center gap-3 px-6 xl:pl-16 mt-4">
               <audio
-                src={character?.voiceline !== '/assets/characters/voicelines/unknown.ogg' && character?.voiceline}
+                src={character?.voiceline !== '/res/characters/voicelines/unknown.ogg' && character?.voiceline}
                 ref={audioRef}
                 onEnded={() => setIsPlayingAudio(false)}
               />

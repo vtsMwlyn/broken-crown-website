@@ -3,19 +3,19 @@ const merchs = {
 	featured: [
 		{
 			title: 'Mousepad',
-			image: '/assets/merchs/mousepad.webp',
+			image: '/res/merchs/mousepad.webp',
 			price: 0,
 			link: '#'
 		},
 		{
 			title: 'Kazmiel T-Shirt',
-			image: '/assets/merchs/tshirt-kazmiel.webp',
+			image: '/res/merchs/tshirt-kazmiel.webp',
 			price: 0,
 			link: '#'
 		},
 		{
 			title: 'Deathless King T-Shirt',
-			image: '/assets/merchs/tshirt-deadlessking.webp',
+			image: '/res/merchs/tshirt-deadlessking.webp',
 			price: 0,
 			link: '#'
 		},
@@ -25,55 +25,55 @@ const merchs = {
 	others: [
 		{
 			title: 'Mousepad',
-			image: '/assets/merchs/mousepad.webp',
+			image: '/res/merchs/mousepad.webp',
 			price: 0,
 			link: '#'
 		},
 		{
 			title: 'Kazmiel T-Shirt',
-			image: '/assets/merchs/tshirt-kazmiel.webp',
+			image: '/res/merchs/tshirt-kazmiel.webp',
 			price: 0,
 			link: '#'
 		},
 		{
 			title: 'Deathless King T-Shirt',
-			image: '/assets/merchs/tshirt-deadlessking.webp',
+			image: '/res/merchs/tshirt-deadlessking.webp',
 			price: 0,
 			link: '#'
 		},
 		{
 			title: 'Mousepad',
-			image: '/assets/merchs/mousepad.webp',
+			image: '/res/merchs/mousepad.webp',
 			price: 0,
 			link: '#'
 		},
 		{
 			title: 'Kazmiel T-Shirt',
-			image: '/assets/merchs/tshirt-kazmiel.webp',
+			image: '/res/merchs/tshirt-kazmiel.webp',
 			price: 0,
 			link: '#'
 		},
 		{
 			title: 'Deathless King T-Shirt',
-			image: '/assets/merchs/tshirt-deadlessking.webp',
+			image: '/res/merchs/tshirt-deadlessking.webp',
 			price: 0,
 			link: '#'
 		},
 		{
 			title: 'Mousepad',
-			image: '/assets/merchs/mousepad.webp',
+			image: '/res/merchs/mousepad.webp',
 			price: 0,
 			link: '#'
 		},
 		{
 			title: 'Kazmiel T-Shirt',
-			image: '/assets/merchs/tshirt-kazmiel.webp',
+			image: '/res/merchs/tshirt-kazmiel.webp',
 			price: 0,
 			link: '#'
 		},
 		{
 			title: 'Deathless King T-Shirt',
-			image: '/assets/merchs/tshirt-deadlessking.webp',
+			image: '/res/merchs/tshirt-deadlessking.webp',
 			price: 0,
 			link: '#'
 		},

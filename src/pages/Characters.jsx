@@ -196,7 +196,7 @@ export default function Characters() {
               .filter((c) => c.faction === activeFaction.slug)
               .map((c, index) => (
                 <Link
-                  to={`/assets/characters/${c.slug}`}
+                  to={`/res/characters/${c.slug}`}
                   key={index}
                   className="w-16 lg:w-32 flex items-center justify-center hover:drop-shadow-[0px_0px_5px_oklch(79.5%_0.184_86.047)] cursor-pointer"
                 >
