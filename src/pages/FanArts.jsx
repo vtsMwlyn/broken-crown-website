@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
 import { Pagination } from 'swiper/modules';
 import 'swiper/css/pagination';
-import allFanarts from "./data/assets/fan-arts";
+import allFanarts from "./data/fan-arts";
 
 import SectionContainer from "../components/SectionContainer";
 import ArrowLeft from "../components/ArrowLeft";

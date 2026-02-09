@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
-import characters from "./data/assets/characters";
-import weapons from "./data/assets/weapons";
+import characters from "./data/characters";
+import weapons from "./data/weapons";
 
 import SectionContainer from "../components/SectionContainer";
 import { useState, useRef, useEffect } from "react";

@@ -56,7 +56,7 @@ export default function NewsAndInfo() {
     <SectionContainer
       className="h-fit xl:min-h-screen px-4 md:px-0"
       id="news-and-info"
-      backgroundImage="url('/assets/news-and-info-section-bg.webp')"
+      backgroundImage="url('/news-and-info-section-bg.webp')"
     >
       <div className="w-full flex flex-col items-center justify-center relative mb-10 md:mb-20">
         {/* Background */}

@@ -29,7 +29,7 @@ export default function Footer() {
           {/* Links 1 */}
           <div className="w-full flex flex-col text-center sm:text-left">
             <h1 className="font-bold mb-4 md:mb-8">Explore Our Game</h1>
-            <Link to="/" className="hover:text-yellow-800 hover:font-semibold">
+            <Link to="/characters" className="hover:text-yellow-800 hover:font-semibold">
               Characters
             </Link>
             <Link to="/" className="hover:text-yellow-800 hover:font-semibold">
@@ -38,13 +38,13 @@ export default function Footer() {
             <Link to="/" className="hover:text-yellow-800 hover:font-semibold">
               Gameplay Feature
             </Link>
-            <Link to="/assets/backgrounds" className="hover:text-yellow-800 hover:font-semibold">
+            <Link to="/background" className="hover:text-yellow-800 hover:font-semibold">
               Background
             </Link>
             <Link to="/merch" className="hover:text-yellow-800 hover:font-semibold">
               Merch
             </Link>
-            <Link to="/assets/fan-arts" className="hover:text-yellow-800 hover:font-semibold">
+            <Link to="/fan-arts" className="hover:text-yellow-800 hover:font-semibold">
               Fan Arts
             </Link>
           </div>

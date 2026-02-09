@@ -3,8 +3,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import { Link } from "react-router-dom";
 
-import factions from "./data/assets/factions";
-import characters from "./data/assets/characters";
+import factions from "./data/factions";
+import characters from "./data/characters";
 
 import SectionContainer from "../components/SectionContainer";
 import ArrowLeft from "../components/ArrowLeft";
@@ -40,7 +40,7 @@ export default function Characters() {
     <SectionContainer
       className="min-h-screen"
       id="characters"
-      backgroundImage="url('/assets/factions-selection-bg.webp')"
+      backgroundImage="url('/factions-selection-bg.webp')"
       isFullWidth={true}
     >
       <div className="absolute top-24 lg:top-25 z-20 h-1/6 flex flex-col items-center md:mt-5 mb-20 lg:mb-0">
@@ -168,7 +168,7 @@ export default function Characters() {
                 .filter((c) => c.faction === activeFaction.slug)
                 .map((c, index) => (
                   <Link
-                    to={`/assets/characters/${c.slug}`}
+                    to={`/characters/${c.slug}`}
                     key={index}
                     className="w-25 flex items-center justify-center hover:drop-shadow-[0px_0px_5px_oklch(79.5%_0.184_86.047)] cursor-pointer"
                   >
