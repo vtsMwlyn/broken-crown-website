@@ -1,9 +1,12 @@
 import { useParams } from "react-router-dom";
+import { useState, useRef, useEffect } from "react";
+
+import CharaWeaponFrame from "../components/CharaWeaponFrame";
+import SectionContainer from "../components/SectionContainer";
+
 import characters from "./data/characters";
 import weapons from "./data/weapons";
 
-import SectionContainer from "../components/SectionContainer";
-import { useState, useRef, useEffect } from "react";
 
 export default function CharacterSingle() {
   const params = useParams();
@@ -110,22 +113,14 @@ export default function CharacterSingle() {
             onClick={() => setCurrentlyShowing("character")}
             className="w-20 absolute top-1/7 lg:top-1/5 xl:top-1/4 right-6 lg:right-13 xl:right-16 hover:drop-shadow-[0px_0px_5px_oklch(79.5%_0.184_86.047)] cursor-pointer"
           >
-            <img
-              src={character?.icon}
-              className="w-full object-contain"
-              alt="Character Icon"
-            />
+            <CharaWeaponFrame className="w-20 xl:w-25" img={character?.sprite} customImageClassName={character?.customImageClassName} />
           </button>
 
           <button
             onClick={() => setCurrentlyShowing("weapon")}
             className="w-20 absolute bottom-1/7 lg:bottom-1/5 xl:bottom-1/4 right-6 lg:right-13 xl:right-16 hover:drop-shadow-[0px_0px_5px_oklch(79.5%_0.184_86.047)] cursor-pointer"
           >
-            <img
-              src={weapon?.icon}
-              className="w-full object-contain"
-              alt="Weapon Icon"
-            />
+            <CharaWeaponFrame className="w-20 xl:w-25" img={weapon?.sprite} />
           </button>
         </div>
       </div>

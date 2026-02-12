@@ -9,6 +9,7 @@ import characters from "./data/characters";
 import SectionContainer from "../components/SectionContainer";
 import ArrowLeft from "../components/ArrowLeft";
 import ArrowRight from "../components/ArrowRight";
+import CharaWeaponFrame from "../components/CharaWeaponFrame";
 
 export default function Characters() {
   const desktopSwiperRef = useRef(null);
@@ -172,7 +173,7 @@ export default function Characters() {
                     key={index}
                     className="w-25 flex items-center justify-center hover:drop-shadow-[0px_0px_5px_oklch(79.5%_0.184_86.047)] cursor-pointer"
                   >
-                    <img src={c.icon} alt={c.name} />
+                    <CharaWeaponFrame className="w-30" img={c.sprite} customImageClassName={c.customImageClassName} />
                   </Link>
                 ))}
             </div>
@@ -200,7 +201,7 @@ export default function Characters() {
                   key={index}
                   className="w-16 lg:w-32 flex items-center justify-center hover:drop-shadow-[0px_0px_5px_oklch(79.5%_0.184_86.047)] cursor-pointer"
                 >
-                  <img src={c.icon} alt={c.name} />
+                  <CharaWeaponFrame className="w-20" img={c.sprite} customImageClassName={c.customImageClassName} />
                 </Link>
               ))}
           </div>

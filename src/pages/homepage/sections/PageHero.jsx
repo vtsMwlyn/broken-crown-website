@@ -22,7 +22,7 @@ export default function PageHero() {
 					{/* Download button */}
 					<div className="flex flex-col sm:flex-row gap-4 xl:gap-30 mt-5 w-full justify-center items-center">
 						<LinkButton
-							to="/Brimvahl-Crown%20Demo.zip"
+							to="/Brimvahl%20Demo%20V0.33.rar"
 							text="Download Demo"
 							className="w-[250px]"
 						/>

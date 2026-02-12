@@ -9,7 +9,7 @@ const factions = [
 	{
 		slug: 'brimvahl-guards',
 		name: 'Brimvahl Guards',
-		logo: '/res/factions/logos/unknown.webp',
+		logo: '/res/factions/logos/brimvahl-guards.webp',
 		banner: '/res/factions/banners/unknown.webp',
 		desc: 'The Brimvahl Guards are elite warriors hardened through countless battles and pillaging campaigns. Personally trained by grandmaster Kazmiel and grand mage Flaire, they master both spear combat and fundamental battle magic, making them versatile and formidable opponents on any battlefield. Their extensive experience and dual expertise in martial and arcane warfare establish them as one of Eldynia\'s most respected and feared fighting forces. They are now led by their new grandmaster Trixarina Moonwhisper.',
 	},
@@ -28,11 +28,11 @@ const factions = [
 		desc: 'The Wardens of the Grove are ancient protectors bound by a primeval pact to safeguard the balance of nature. Drawing power from the very elements, their druids and rangers are masters of both earth magic and guerrilla warfare, guided by the Archdruid Elara Whisperwind. They can command forests to rise and rivers to change course, making their territory impassable to invaders. Their deep connection to the land and its creatures makes them a patient but overwhelming force when the natural order is threatened.',
 	},
 	{
-		slug: 'unknown',
-		name: 'More Upcoming...',
-		logo: '/res/factions/logos/unknown.webp',
+		slug: 'knight-of-star-table',
+		name: 'Knight of Star Table',
+		logo: '/res/factions/logos/knight-of-star-table.webp',
 		banner: '/res/factions/banners/unknown.webp',
-		desc: 'Stay tuned for more factions and characters...',
+		desc: 'They served as Castle Vrosk’s main force. They also undertake dangerous missions, most notably the destruction of the deathless king’s followers and quest for the seraphic relics.',
 	},
 ];
 
