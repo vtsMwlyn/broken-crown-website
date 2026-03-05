@@ -27,9 +27,9 @@ export default function PageHero() {
 							className="w-[250px]"
 						/>
 						<LinkButton
-							newTab={false}
-							to="/sign-up"
-							text="Sign Up"
+							newTab={true}
+							to="https://www.kickstarter.com/projects/brimvahlcrown/brimvahl-crown"
+							text="Kickstarter"
 							className="w-[250px]"
 						/>
 					</div>
